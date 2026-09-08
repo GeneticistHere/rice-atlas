@@ -134,7 +134,7 @@ def grain_frame(axis, side_hint):
     s2 = v_norm(v_cross(a, s1))
     return a, s1, s2
 
-def grain_mesh(center, axis, side_hint, length=8.4, width=3.6, thickness=2.5, lat=7, lon=12,
+def grain_mesh(center, axis, side_hint, length=8.4, width=3.6, thickness=2.5, lat=6, lon=10,
                tint=WHITE, ridges=0.05):
     """A husked rice grain: a gently pointed ellipsoid with longitudinal lemma ridges."""
     a, s1, s2 = grain_frame(axis, side_hint)
@@ -142,7 +142,7 @@ def grain_mesh(center, axis, side_hint, length=8.4, width=3.6, thickness=2.5, la
     for i in range(lat+1):
         phi = math.pi*i/lat
         y = math.cos(phi)
-        r = math.sin(phi)**0.92  # slightly pointed ends
+        r = math.sin(phi)**0.86  # pointed at the apiculus and base
         for j in range(lon):
             th = 2*math.pi*j/lon
             rs = 1 + ridges*math.cos(5*th)  # five ridges of the lemma and palea
@@ -243,50 +243,53 @@ STAGES = {
     senescence=[0.0, 0.0, 0.0, 0.0], seed_husk=True,
  ),
  "tillering": dict(
-    crown_y=230, tillers=5, roots=30, root_steps=(20, 30), root_nsteps=8, root_r=1.3,
-    leaf_ranks=[(210, 8.5, 55, 95), (280, 10.0, 58, 88), (340, 11.5, 62, 80), (385, 12.5, 66, 60)],
-    internode_fracs=(0.18, 0.22, 0.28, 0.32), r0=4.0, r_step=0.5,
+    crown_y=230, tillers=5, late_tillers=1, roots=30, root_steps=(20, 30), root_nsteps=8, root_r=1.3,
+    leaf_ranks=[(180, 7.5, 55, 100), (240, 9.0, 57, 92), (300, 10.5, 60, 84),
+                (350, 11.5, 62, 76), (385, 12.5, 66, 62), (360, 12.0, 70, 50)],
+    internode_fracs=(0.06, 0.09, 0.13, 0.18, 0.25, 0.29), r0=4.0, r_step=0.42,
     height_main=(290, 340), height_tiller=(250, 310), sheath_extra=1.0,
-    blade_colors=['#659740', '#579039', '#4b8a33', '#428630'],
-    sheath_colors=['#6f9c48', '#639845', '#579442', '#4e9040'],
-    internode_colors=['#8aa851', '#80a54d', '#76a249', '#6d9f46'],
+    blade_colors=['#6f9c45', '#659740', '#5b923a', '#529036', '#4a8a32', '#458730'],
+    sheath_colors=['#78a04b', '#6f9c48', '#659947', '#5c9544', '#549241', '#4e9040'],
+    internode_colors=['#93aa55', '#8aa851', '#82a64e', '#79a34b', '#71a048', '#699e46'],
     crown_color='#8ba64f', root_color='#af9168',
     panicle=None, flag=False, cutaway=False, ligule_h=3.0,
-    senescence=[0.3, 0.1, 0.0, 0.0],
+    senescence=[0.5, 0.25, 0.1, 0.0, 0.0, 0.0],
  ),
  "heading": dict(
-    crown_y=330, tillers=8, roots=44, root_steps=(26, 40), root_nsteps=9, root_r=1.55,
-    leaf_ranks=[(320, 11.5, 52, 112), (420, 13.5, 55, 106), (505, 15.5, 58, 100),
-                (555, 16.5, 60, 92), (375, 14.0, 76, 44)],
-    internode_fracs=(0.09, 0.14, 0.19, 0.26, 0.32), r0=5.4, r_step=0.62,
+    crown_y=330, tillers=8, late_tillers=2, roots=44, root_steps=(26, 40), root_nsteps=9, root_r=1.55,
+    leaf_ranks=[(200, 7.0, 48, 130), (290, 9.0, 50, 122), (380, 11.0, 53, 114),
+                (460, 13.0, 55, 106), (530, 15.0, 57, 98), (555, 16.5, 59, 90),
+                (480, 15.5, 64, 70), (375, 14.0, 76, 44)],
+    internode_fracs=(0.02, 0.03, 0.04, 0.06, 0.10, 0.17, 0.26, 0.32), r0=5.6, r_step=0.42,
     height_main=(1060, 1120), height_tiller=(900, 1060), sheath_extra=1.25,
-    blade_colors=['#6d9a44', '#5c9139', '#4f8b34', '#468631', '#3f822c'],
-    sheath_colors=['#78994a', '#6d9846', '#619343', '#579041', '#4f8c3e'],
-    internode_colors=['#9aa656', '#8fa452', '#84a14e', '#7a9d4a', '#719a47'],
+    blade_colors=['#7d9a49', '#719743', '#65943e', '#5a903a', '#508c36', '#488832', '#428430', '#3d812d'],
+    sheath_colors=['#849d4d', '#7a9b49', '#709846', '#679544', '#5e9241', '#568f3f', '#508c3d', '#4b8a3b'],
+    internode_colors=['#a2a95a', '#9aa756', '#92a552', '#8aa24f', '#82a04c', '#7a9d49', '#729a47', '#6b9845'],
     crown_color='#8ea653', root_color='#ab8a60',
     panicle=dict(theta_end=(58, 84), droop=(0.35, 0.65), blen=(65, 88), rachis=(185, 215),
                  grain_len=(7.2, 8.2), grain_w=(3.0, 3.4), grain_t=(2.0, 2.4), awn=(9, 17),
                  ripeness=(0.0, 0.45), axis_a='#87a04a', axis_b='#96a04a',
                  grain_a='#9db35c', grain_b='#b3a94e'),
     flag=True, cutaway=False, ligule_h=4.0,
-    senescence=[0.45, 0.28, 0.14, 0.06, 0.02],
+    senescence=[0.95, 0.75, 0.5, 0.3, 0.16, 0.08, 0.03, 0.01],
  ),
  "maturity": dict(
-    crown_y=330, tillers=8, roots=44, root_steps=(26, 40), root_nsteps=9, root_r=1.55,
-    leaf_ranks=[(320, 11.5, 52, 118), (420, 13.5, 55, 112), (505, 15.5, 58, 104),
-                (555, 16.5, 60, 96), (375, 14.0, 74, 52)],
-    internode_fracs=(0.09, 0.14, 0.19, 0.26, 0.32), r0=5.4, r_step=0.62,
+    crown_y=330, tillers=8, late_tillers=2, roots=44, root_steps=(26, 40), root_nsteps=9, root_r=1.55,
+    leaf_ranks=[(200, 7.0, 48, 155), (290, 9.0, 50, 145), (380, 11.0, 53, 132),
+                (460, 13.0, 55, 118), (530, 15.0, 57, 104), (555, 16.5, 59, 92),
+                (480, 15.5, 64, 72), (375, 14.0, 74, 50)],
+    internode_fracs=(0.02, 0.03, 0.04, 0.06, 0.10, 0.17, 0.26, 0.32), r0=5.6, r_step=0.42,
     height_main=(1120, 1180), height_tiller=(960, 1120), sheath_extra=1.25,
-    blade_colors=['#84944a', '#6f9440', '#588c37', '#4c8533', '#457f2e'],
-    sheath_colors=['#99a04f', '#879a48', '#739343', '#659040', '#5c8c3d'],
-    internode_colors=['#b0a75c', '#a5a557', '#98a250', '#8fa04c', '#84994a'],
+    blade_colors=['#9a9a4e', '#8d974a', '#7f9545', '#6f9440', '#60903b', '#548b36', '#4b8532', '#457f2e'],
+    sheath_colors=['#a3a253', '#999f4e', '#8d9c4a', '#809846', '#729443', '#659040', '#5d8d3e', '#588b3c'],
+    internode_colors=['#b8ac60', '#b1aa5c', '#a9a858', '#a0a654', '#96a450', '#8ca14d', '#829e4a', '#789b48'],
     crown_color='#9aa455', root_color='#ab8a60',
     panicle=dict(theta_end=(142, 162), droop=(0.9, 1.4), blen=(70, 95), rachis=(200, 230),
                  grain_len=(8.6, 9.6), grain_w=(3.6, 4.1), grain_t=(2.4, 2.8), awn=(11, 22),
                  ripeness=(0.15, 1.0), axis_a='#9aa14f', axis_b='#a68c3c',
                  grain_a='#c2b158', grain_b='#d69c2c'),
     flag=True, cutaway=True, ligule_h=4.0,
-    senescence=[0.85, 0.55, 0.3, 0.12, 0.05], dead_leaves=True,
+    senescence=[1.0, 0.92, 0.78, 0.58, 0.38, 0.22, 0.1, 0.04], dead_leaves=True,
  ),
 }
 
@@ -348,25 +351,33 @@ def build_blade(cfg, base, frames_dir_az, rank, tiller_name, concept_extra, sway
     length *= random.uniform(0.92, 1.08)
     e0 = math.radians(e0d+random.uniform(-4, 4))
     droop = math.radians(droopd+droop_add+random.uniform(-8, 8))
-    n = 34
+    # senescence: how far browning has crept in from the tip of this leaf
+    sf = senescence if senescence is not None else cfg["senescence"][rank]
+    n = 42
     pts, p = [base], base
     rsway = random.Random(sway_seed)
-    drift = rsway.uniform(-0.25, 0.25)
+    drift = rsway.uniform(-0.4, 0.4)
+    p_arc = rsway.uniform(1.5, 2.2)                 # cantilever curvature varies leaf to leaf
+    wob_a = rsway.uniform(0.05, 0.16)               # bend irregularity along the blade
+    wob_f = rsway.uniform(3.0, 6.5)
+    wob_p = rsway.uniform(0, 6.28)
+    tip_hang = max(0.0, sf-0.2)*rsway.uniform(0.5, 1.1)  # old leaves let their tips hang
     for i in range(1, n):
         s = i/(n-1)
-        e = e0 - (e0 + droop)*(s**1.75)
-        az = frames_dir_az + drift*s + 0.10*math.sin(s*5.1 + sway_seed)
+        e = e0 - (e0 + droop)*(s**p_arc)
+        e -= tip_hang*1.7*max(0.0, (s-0.72)/0.28)**1.6
+        e += wob_a*math.sin(s*wob_f + wob_p)*(0.25+0.75*s)
+        az = frames_dir_az + drift*s + 0.16*math.sin(s*4.2 + sway_seed) + 0.07*math.sin(s*9.7 + wob_p)
         d = (math.cos(e)*math.cos(az), math.sin(e), math.cos(e)*math.sin(az))
         p = v_add(p, v_scale(d, length/(n-1)))
         pts.append(p)
     frames = transport_frames(pts)
-    twist_total = math.radians(random.uniform(25, 60)) * (1 if rank % 2 else -1)
-    # senescence: how far browning has crept in from the tip of this leaf
-    sf = senescence if senescence is not None else cfg["senescence"][rank]
+    twist_total = math.radians(random.uniform(30, 80)) * (1 if rank % 2 else -1)
     base_rgb = hex_to_rgb(cfg["blade_colors"][rank])
     brown = (0.45, 0.34, 0.16)
     brown_ratio = tuple(max(0.0, min(2.0, brown[c]/max(0.05, base_rgb[c]))) for c in range(3))
-    wsegs = 12
+    wsegs = 13
+    streaks = [1 + rsway.uniform(-0.055, 0.055) for _ in range(wsegs+1)]  # longitudinal vein streaks
     verts, faces, tints = [], [], []
     for i, c in enumerate(pts):
         s = i/(n-1)
@@ -375,20 +386,21 @@ def build_blade(cfg, base, frames_dir_az, rank, tiller_name, concept_extra, sway
         upl = v_norm(v_cross(t, side))
         w = wmax * (0.72 + 0.28*min(1, s/0.16)) * max(0.02, min(1, (1-s)/0.42))**0.62
         fold = 0.42 - 0.30*min(1, s/0.35) + 0.25*max(0, (s-0.75)/0.25)  # V base, flat mid, curl tip
-        tau = twist_total * s**1.35
+        tau = twist_total * (0.3*s + 0.7*s**3)          # twist concentrates toward the tip
         bright = min(1.18, 0.78 + 0.42*s)
-        brk = sf * max(0.0, min(1.0, (s-0.62)/0.38))**1.5
+        brk = sf * max(0.0, min(1.0, (s-0.55)/0.45))**1.4
         row_tint = tuple(bright*(1-brk) + brown_ratio[ch]*brk for ch in range(3))
         for j in range(wsegs+1):
             u = j/wsegs*2 - 1
             lat = u*w/2
-            # V fold + parallel-vein corrugation + a keeled midrib
+            # V fold + parallel-vein corrugation + keeled midrib + wavy margins
             vert = fold*w*0.42*(abs(u)**1.45)
             vert += 0.022*w*math.sin(u*math.pi*6.5)
             vert -= 0.055*w*math.exp(-(u/0.14)**2)
+            vert += 0.02*w*math.sin(s*52 + u*5.5 + wob_p)*(abs(u)**1.6)
             lat, vert = lat*math.cos(tau) - vert*math.sin(tau), lat*math.sin(tau) + vert*math.cos(tau)
             verts.append(v_add(c, v_add(v_scale(side, lat), v_scale(upl, vert))))
-            tints.append(row_tint)
+            tints.append(tuple(min(2.0, row_tint[ch]*streaks[j]) for ch in range(3)))
     for i in range(n-1):
         for j in range(wsegs):
             p1, p2 = i*(wsegs+1)+j, i*(wsegs+1)+j+1
@@ -415,10 +427,10 @@ def grains_along(pan, bpts, bframes, spiral, count, branch_meshes, grain_meshes,
         sg = s_from + (1-s_from)*g/(count-1)
         gi = min(top, int(sg*top))
         gt, gn, gb = bframes[gi]
-        ga = g*2.4 + spiral
+        ga = g*2.4 + spiral + random.uniform(-0.5, 0.5)
         side = v_add(v_scale(gn, math.cos(ga)), v_scale(gb, math.sin(ga)))
-        pd = v_norm(v_add(v_add(v_scale(gt, 0.9), v_scale(side, 0.55)), (0, -0.65, 0)))
-        ped_len = random.uniform(2.0, 4.0)
+        pd = v_norm(v_add(v_add(v_scale(gt, random.uniform(0.7, 1.1)), v_scale(side, random.uniform(0.4, 0.75))), (0, random.uniform(-0.85, -0.45), 0)))
+        ped_len = random.uniform(1.6, 4.2)
         ped_end = v_add(bpts[gi], v_scale(pd, ped_len))
         branch_meshes.append(tube([bpts[gi], ped_end], [0.4, 0.32], segments=4, cap_end=False))
         gaxis = v_norm(v_add(pd, (0, -0.6, 0)))
@@ -465,12 +477,15 @@ def build_panicle(cfg, tip, tip_dir, azimuth, tiller_name, concept_extra,
     pts, p = [tip], tip
     theta0 = math.acos(max(-1, min(1, tip_dir[1])))          # angle from vertical
     theta_end = math.radians(random.uniform(*pan["theta_end"]))
+    zig = random.uniform(0, 6.28)
     for i in range(1, n):
         s = i/(n-1)
         th = theta0 + (theta_end-theta0)*(s**1.25)
         d = (math.sin(th)*math.cos(azimuth), math.cos(th), math.sin(th)*math.sin(azimuth))
         p = v_add(p, v_scale(d, rachis_len/(n-1)))
-        pts.append(p)
+        # the rachis kinks slightly at each branch insertion rather than curving smoothly
+        j = 1.1*math.sin(i*1.9+zig)
+        pts.append((p[0]+j*math.cos(azimuth+1.57), p[1]+0.5*math.sin(i*2.7+zig), p[2]+j*math.sin(azimuth+1.57)))
     radii = [2.2*(1 - 0.6*i/(n-1)) for i in range(n)]
     ripeness = random.uniform(*pan["ripeness"])              # panicles ripen at different times
     axis_color = mix_hex(pan["axis_a"], pan["axis_b"], ripeness)
@@ -482,7 +497,7 @@ def build_panicle(cfg, tip, tip_dir, azimuth, tiller_name, concept_extra,
              growth=pan_growth, color0=mix_hex(axis_color, '#87a04a', 0.6), ctrans=(heading+12, 28))
     frames = transport_frames(pts)
     for j in range(num_branches):
-        s_b = 0.12 + 0.8*j/(num_branches-1)
+        s_b = 0.12 + 0.8*j/(num_branches-1) + random.uniform(-0.02, 0.02)
         bi = int(s_b*(n-1))
         bt, bn, bb = frames[bi]
         spiral = j*GOLDEN + random.uniform(-0.3, 0.3)
@@ -494,9 +509,9 @@ def build_panicle(cfg, tip, tip_dir, azimuth, tiller_name, concept_extra,
         bframes = transport_frames(bpts)
         branch_meshes = [tube(bpts, [0.9*(1-0.5*k/10) for k in range(11)], segments=6, cap_end=True)]
         grain_meshes = []
-        total = grains_along(pan, bpts, bframes, spiral, random.randint(14, 18),
-                             branch_meshes, grain_meshes, s_from=0.12, ripeness=ripeness)
-        if random.random() < 0.65:                           # a secondary branchlet near the base
+        total = grains_along(pan, bpts, bframes, spiral, random.randint(16, 21),
+                             branch_meshes, grain_meshes, s_from=0.1, ripeness=ripeness)
+        if random.random() < 0.8:                            # a secondary branchlet near the base
             si = random.randint(1, 3)
             st, sn, sb2 = bframes[si]
             sd = v_norm(v_add(v_add(v_scale(st, 0.8), v_scale(sn, math.cos(spiral+2.1)*0.6)),
@@ -504,8 +519,8 @@ def build_panicle(cfg, tip, tip_dir, azimuth, tiller_name, concept_extra,
             spts = droop_curve(bpts[si], sd, random.uniform(28, 44), droop*1.2, steps=6)
             sframes = transport_frames(spts)
             branch_meshes.append(tube(spts, [0.55*(1-0.5*k/6) for k in range(7)], segments=5, cap_end=True))
-            total += grains_along(pan, spts, sframes, spiral+2.1, random.randint(4, 6),
-                                  branch_meshes, grain_meshes, s_from=0.3, ripeness=ripeness)
+            total += grains_along(pan, spts, sframes, spiral+2.1, random.randint(5, 8),
+                                  branch_meshes, grain_meshes, s_from=0.25, ripeness=ripeness)
         add_part("PanicleBranch", f"{tiller_name} · Panicle branch {j+1}", "Panicles", "Panicle",
                  merge(branch_meshes), extra_concepts=concept_extra,
                  color=vary(axis_color, dl=0.03),
@@ -562,13 +577,16 @@ def build_stage(stage, cfg):
     random.seed(7)
 
     # ---- developmental calendar (days after sowing, ~120-day season) ----
-    LEAF_BIRTH = [6, 14, 24, 36, 52]      # main-culm leaf appearance (phyllochron rhythm)
-    STAGGER = [0, 7, 14, 22, 32]          # leaf stagger within a tiller
-    ELONG = [40, 46, 52, 57, 62]          # internode elongation windows
+    n_ranks = len(cfg["leaf_ranks"])
+    def rank_f(ni):
+        return ni/max(1, n_ranks-1)
     def tiller_birth(t):
-        return 0 if t == 0 else 18 + (t-1)*4.5
+        return 0 if t == 0 else 18 + (t-1)*4.0
     def leaf_birth(t, ni):
-        return LEAF_BIRTH[ni] if t == 0 else tiller_birth(t) + STAGGER[ni]*0.85
+        base = 6 + 46*rank_f(ni)**1.15    # phyllochron rhythm on the main culm
+        return base if t == 0 else tiller_birth(t) + 28*rank_f(ni)**1.1
+    def elong_day(ni):
+        return 40 + 22*rank_f(ni)**1.3    # only upper internodes elongate visibly
     def heading_day(t):
         return 63.0 if t == 0 else 64.5 + t*0.8
     growth_culms = []
@@ -640,18 +658,23 @@ def build_stage(stage, cfg):
                  color0=mix_hex(rcol, '#cabc98', 0.6), ctrans=(rbirth+8, 30))
 
     print(f"[{stage}] tillers, leaves{', panicles' if cfg['panicle'] else ''}...")
-    for t in range(cfg["tillers"]):
-        tiller_name = "Main culm" if t == 0 else f"Tiller {t+1}"
+    total_tillers = cfg["tillers"] + cfg.get("late_tillers", 0)
+    for t in range(total_tillers):
+        fertile = t < cfg["tillers"]
+        tiller_name = "Main culm" if t == 0 else (f"Tiller {t+1}" if fertile else f"Tiller {t+1} (late)")
         tiller_concept = f"TillerC{t+1}"
         concept_members[tiller_concept] = []
-        many = max(1, cfg["tillers"]-1)
-        az = 0 if t == 0 else (t-1)*2*math.pi/many + random.uniform(-0.18, 0.18)
+        many = max(1, total_tillers-1)
+        az = 0 if t == 0 else (t-1)*2*math.pi/many + random.uniform(-0.3, 0.3)
         base_r = 0 if t == 0 else random.uniform(crown_r*0.5, crown_r*0.9)
         base = (math.cos(az)*base_r, crown_y, math.sin(az)*base_r)
-        lean = 2.0 if t == 0 else random.uniform(6, 15)
+        lean = 2.0 if t == 0 else random.uniform(5, 20 if fertile else 26)
         height = random.uniform(*(cfg["height_main"] if t == 0 else cfg["height_tiller"]))
+        if not fertile:
+            height *= random.uniform(0.45, 0.6)      # late tillers stay short and vegetative
         bow = random.uniform(0.02, 0.05)
-        internode_lengths = [height*f for f in cfg["internode_fracs"]]
+        ranks_used = n_ranks if fertile else min(n_ranks, 5)
+        internode_lengths = [height*f for f in cfg["internode_fracs"][:ranks_used]]
         node_heights = []
         acc = 0.0
         for ilen in internode_lengths[:-1]:
@@ -683,7 +706,7 @@ def build_stage(stage, cfg):
                      extra_concepts=(tiller_concept,),
                      color=icol,
                      stats={"Length": f"{ilen:.0f} mm", "Diameter": f"{2*r0:.1f} mm"},
-                     growth={"birth": ELONG[ni]+(0 if t == 0 else min(4, (t-1)*0.6)), "dur": 9,
+                     growth={"birth": elong_day(ni)+(0 if t == 0 else min(4, (t-1)*0.6)), "dur": 9,
                              "anchor": list(pts[0]), "culm": t, "node": ni},
                      color0=mix_hex(icol, '#6f9a45', 0.55), ctrans=(65+ni*5, 30))
 
@@ -743,7 +766,7 @@ def build_stage(stage, cfg):
                         color0='#6b9440', ctrans=(52, 22))
 
         growth_culms.append(culm_vecs)
-        if cfg["panicle"]:
+        if cfg["panicle"] and fertile:
             tip = line(height)
             tip_dir = v_norm(v_sub(line(height), line(height-30)))
             panicle_az = az if t > 0 else random.uniform(0, 2*math.pi)
@@ -766,8 +789,9 @@ def build_stage(stage, cfg):
         "GrainCutaway": "Grain in cross-section",
         "Seed": "Spent seed (caryopsis)",
     }
-    for t in range(cfg["tillers"]):
-        concept_names[f"TillerC{t+1}"] = "Main culm" if t == 0 else f"Tiller {t+1}"
+    for t in range(cfg["tillers"] + cfg.get("late_tillers", 0)):
+        fertile = t < cfg["tillers"]
+        concept_names[f"TillerC{t+1}"] = "Main culm" if t == 0 else (f"Tiller {t+1}" if fertile else f"Tiller {t+1} (late)")
 
     concepts = [{"id": cid, "name": concept_names[cid], "elements": members}
                 for cid, members in concept_members.items() if members]
