@@ -8,7 +8,7 @@ export const SYSTEMS: {id:SystemId;name:string;color:string;description:string}[
  {id:'Root',name:'Root system',color:'#a8825b',description:'Rice grows a dense, fibrous mass of adventitious roots from the tillering crown. They anchor the plant in puddled soil and take up the water and nutrients that fill the grain.'}
 ];
 export interface OrganGrowth {birth:number;dur:number;anchor:[number,number,number];culm:number;node:number}
-export interface Part {id:string;name:string;conceptId:string;system:SystemId;color?:string;color0?:string;cbirth?:number;cdur?:number;growth?:OrganGrowth;stats?:Record<string,string>;chunk:number;positions:number;normals:number;indices:number;tints:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
+export interface Part {id:string;name:string;conceptId:string;system:SystemId;color?:string;color0?:string;cbirth?:number;cdur?:number;growth?:OrganGrowth;stats?:Record<string,string>;chunk:number;positions:number;normals:number;indices:number;tints:number;uvs:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
 export interface Concept {id:string;name:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number;growthCulms?:number[][][]}
 export type View = 'three-quarter'|'front'|'back'|'side';

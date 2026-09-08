@@ -137,6 +137,73 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,on
    for(const t of targets){const dx=Math.max(t.left-x,0,x-t.right),dy=Math.max(t.top-y,0,y-t.bottom),distance=Math.hypot(dx,dy);if(distance>radius)continue;const candidate=distance+Math.hypot(t.x-x,t.y-y)*.025;if(candidate<score){score=candidate;best=t.index;}}
    return best;
   };
+  // Procedural surface detail: albedo maps authored around 1.0 (they multiply the
+  // per-organ color and tint) plus normal maps derived from the same height fields.
+  const maxAniso=renderer.capabilities.getMaxAnisotropy();
+  const detailTextures:T.Texture[]=[];
+  const rand2=(x:number,y:number)=>{const s=Math.sin(x*127.1+y*311.7)*43758.5453;return s-Math.floor(s);};
+  const makeDetail=(w:number,h:number,fn:(u:number,v:number)=>[number,number,number,number])=>{
+   const albedo=new Uint8Array(w*h*4),heightField=new Float32Array(w*h);
+   for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    const [r,g,b,ht]=fn(x/w,y/h);const i=(y*w+x);
+    albedo[i*4]=Math.max(0,Math.min(255,Math.round(r*127.5)));
+    albedo[i*4+1]=Math.max(0,Math.min(255,Math.round(g*127.5)));
+    albedo[i*4+2]=Math.max(0,Math.min(255,Math.round(b*127.5)));
+    albedo[i*4+3]=255;heightField[i]=ht;
+   }
+   const normal=new Uint8Array(w*h*4);
+   for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+    const l=heightField[y*w+((x-1+w)%w)],r=heightField[y*w+((x+1)%w)];
+    const u=heightField[((y-1+h)%h)*w+x],d=heightField[((y+1)%h)*w+x];
+    let nx=(l-r)*w*.004,ny=(u-d)*h*.004,nz=1;
+    const len=Math.sqrt(nx*nx+ny*ny+nz*nz);nx/=len;ny/=len;nz/=len;
+    const i=(y*w+x)*4;normal[i]=Math.round((nx*.5+.5)*255);normal[i+1]=Math.round((ny*.5+.5)*255);normal[i+2]=Math.round((nz*.5+.5)*255);normal[i+3]=255;
+   }
+   const wrap=(t:T.DataTexture)=>{t.wrapS=t.wrapT=T.RepeatWrapping;t.anisotropy=maxAniso;t.generateMipmaps=true;t.minFilter=T.LinearMipmapLinearFilter;t.magFilter=T.LinearFilter;t.needsUpdate=true;detailTextures.push(t);return t;};
+   const map=wrap(new T.DataTexture(albedo,w,h,T.RGBAFormat));map.colorSpace=T.NoColorSpace;
+   const nmap=wrap(new T.DataTexture(normal,w,h,T.RGBAFormat));
+   return {map,nmap};
+  };
+  // leaf blade: dense parallel veins with a bright midrib and speckle (u across the blade)
+  const leafTex=makeDetail(256,256,(u,v)=>{
+   const vein=Math.sin(u*Math.PI*2*24)*.5+.5;
+   const major=Math.sin(u*Math.PI*2*6+1.3)*.5+.5;
+   const mid=Math.exp(-(((u-.5)/.045)**2));
+   const speck=(rand2(Math.floor(u*256),Math.floor(v*256))-.5)*.07;
+   const shade=.94+.10*vein+.04*major+speck;
+   return [shade*(1+.10*mid),shade*(1+.12*mid),shade*(.97+.06*mid),.5*vein+.25*major+1.4*mid];
+  });
+  // sheath / culm: fine longitudinal striation
+  const striaTex=makeDetail(128,128,(u,v)=>{
+   const s=Math.sin(u*Math.PI*2*18)*.5+.5;
+   const speck=(rand2(Math.floor(u*128),Math.floor(v*128))-.5)*.05;
+   const shade=.97+.05*s+speck;
+   return [shade,shade,shade*.99,.6*s];
+  });
+  // grain husk: papillae dimples over faint lengthwise ribs
+  const grainTex=makeDetail(128,128,(u,v)=>{
+   const cellX=Math.floor(u*24),cellY=Math.floor(v*24);
+   const jx=rand2(cellX,cellY)-.5,jy=rand2(cellX+7,cellY+3)-.5;
+   const du=u*24-cellX-.5-jx*.6,dv=v*24-cellY-.5-jy*.6;
+   const pap=Math.exp(-((du*du+dv*dv)/.09));
+   const rib=Math.sin(u*Math.PI*2*10)*.5+.5;
+   const shade=.96+.06*pap+.03*rib;
+   return [shade,shade,shade*.97,1.2*pap+.3*rib];
+  });
+  // roots: soft irregular blotch
+  const rootTex=makeDetail(128,128,(u,v)=>{
+   const n=(rand2(Math.floor(u*40),Math.floor(v*40))+rand2(Math.floor(u*11),Math.floor(v*11)))*.5;
+   const shade=.95+.10*n;
+   return [shade,shade*.99,shade*.96,.5*n];
+  });
+  const DETAIL:Record<string,{map:T.Texture;nmap:T.Texture;bump:number}>={
+   Leaves:{...leafTex,bump:.5},
+   Sheath:{...striaTex,bump:.3},
+   Stem:{...striaTex,bump:.25},
+   Panicle:{...striaTex,bump:.2},
+   Grain:{...grainTex,bump:.55},
+   Root:{...rootTex,bump:.3},
+  };
   // Shared time/sway uniforms drive a gentle wind in both the beauty and shadow passes.
   const timeU={value:0},swayU={value:0},reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const SWAY_VERTEX='float swayGate = smoothstep(0.25, 1.6, transformed.y); float swayPhase = time*1.35 + position.y*2.1 + position.x*1.6 + partIndex*0.13; transformed += vec3(sin(swayPhase), 0.0, 0.8*cos(swayPhase*0.77)) * (sway * 0.009 * swayGate);';
@@ -144,7 +211,8 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,on
   const FINISH:Record<string,{rough:number;env:number}>={Leaves:{rough:.48,env:.5},Sheath:{rough:.55,env:.4},Stem:{rough:.62,env:.35},Grain:{rough:.42,env:.6},Panicle:{rough:.6,env:.35},Root:{rough:.85,env:.15}};
   const materialFor=(system:string)=>{
    const finish=FINISH[system]??{rough:.62,env:.35};
-   const m=new T.MeshStandardMaterial({color:SYSTEMS.find(s=>s.id===system)?.color??'#aebbb8',metalness:.05,roughness:finish.rough,side:T.DoubleSide});m.envMapIntensity=finish.env;
+   const detail=DETAIL[system];
+   const m=new T.MeshStandardMaterial({color:0xffffff,metalness:.05,roughness:finish.rough,side:T.DoubleSide,map:detail?.map,normalMap:detail?.nmap,normalScale:detail?new T.Vector2(detail.bump,detail.bump):undefined});m.envMapIntensity=finish.env;
    m.onBeforeCompile=shader=>{
     shader.uniforms.partState={value:partTexture};shader.uniforms.selectionState={value:selectionTexture};shader.uniforms.colorState={value:colorTexture};shader.uniforms.growthState={value:growthTexture};shader.uniforms.rotState={value:rotTexture};shader.uniforms.stateWidth={value:width};shader.uniforms.time=timeU;shader.uniforms.sway=swayU;
     shader.vertexShader='attribute float partIndex; attribute vec3 tint; uniform sampler2D partState; uniform sampler2D selectionState; uniform sampler2D colorState; uniform sampler2D growthState; uniform sampler2D rotState; uniform float stateWidth; uniform float time; uniform float sway; varying float partVisible; varying float partSelected; varying vec3 partColor; varying vec3 vTint;\n'+shader.vertexShader;
@@ -154,7 +222,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,on
     // Thin organs are single-surface sheets; light whichever side faces the camera.
     if(system==='Leaves')shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nif (dot(normal, normalize(vViewPosition)) < 0.0) normal = -normal;');
     shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nif (partVisible < 0.5) discard;');
-    shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\ndiffuseColor.rgb = partColor * vTint;\ndiffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.42, 0.85, 0.78), partSelected * 0.5);');
+    shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\ndiffuseColor.rgb *= partColor * vTint * 2.0;\ndiffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.42, 0.85, 0.78), partSelected * 0.5);');
     // Cheap translucency: thin blades glow softly toward their silhouette, like backlit foliage.
     if(system==='Leaves')shader.fragmentShader=shader.fragmentShader.replace('#include <lights_fragment_end>','#include <lights_fragment_end>\nreflectedLight.indirectDiffuse += diffuseColor.rgb * vec3(0.9, 1.0, 0.55) * (pow(1.0 - abs(dot(normal, normalize(vViewPosition))), 2.0) * 0.35);');
    };materials.push(m);return m;
@@ -181,6 +249,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,on
     g.setAttribute('normal',new T.BufferAttribute(new Int16Array(buffer,p.normals,p.vertexCount*3),3,true));g.setIndex(new T.BufferAttribute(new Uint32Array(buffer,p.indices,p.indexCount),1));
     // Per-vertex tint multiplier ([0,2], byte-packed) for gradients, node rings, and browned tips.
     g.setAttribute('tint',new T.BufferAttribute(new Uint8Array(buffer,p.tints,p.vertexCount*3),3,true));
+    g.setAttribute('uv',new T.BufferAttribute(new Float32Array(buffer,p.uvs,p.vertexCount*2),2));
     g.boundingBox=bounds[i].clone();g.computeBoundingSphere();const pick=new T.Mesh(g);pick.matrixAutoUpdate=false;pickers[i]=pick;geometries.push(g);
     g.setAttribute('partIndex',new T.BufferAttribute(new Float32Array(p.vertexCount).fill(i),1));
     const list=groups.get(p.system)??[];list.push(g);groups.set(p.system,list);
@@ -222,7 +291,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,on
    env.topColor.set(0xf2f4f6);env.bottomColor.set(0xc9cdd1);env.update();
    snap.environment=env;snap.background=env;
    const snapMats=new Map<string,T.MeshStandardMaterial>();
-   SYSTEMS.forEach(sys=>{const f=FINISH[sys.id]??{rough:.62,env:.35};snapMats.set(sys.id,new T.MeshStandardMaterial({vertexColors:true,color:0xffffff,roughness:f.rough,metalness:.03,side:T.DoubleSide}));});
+   SYSTEMS.forEach(sys=>{const f=FINISH[sys.id]??{rough:.62,env:.35};const d=DETAIL[sys.id];const m=new T.MeshStandardMaterial({vertexColors:true,roughness:f.rough,metalness:.03,side:T.DoubleSide,map:d?.map,normalMap:d?.nmap,normalScale:d?new T.Vector2(d.bump,d.bump):undefined});m.color.setRGB(2,2,2);snapMats.set(sys.id,m);});
    const bySystem:Record<string,T.BufferGeometry[]>={};
    const q=new T.Quaternion(),v=new T.Vector3();
    atlas.parts.forEach((p,i)=>{
@@ -241,13 +310,14 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,on
     }
     g.setAttribute('position',new T.BufferAttribute(arr,3));
     g.setAttribute('color',new T.BufferAttribute(col,3));
+    g.setAttribute('uv',src.attributes.uv);
     g.setIndex(src.index);
     g.computeVertexNormals();
     (bySystem[p.system]??=[]).push(g);
    });
    Object.entries(bySystem).forEach(([sys,list])=>{const merged=mergeGeometries(list,false);list.forEach(g=>g.dispose());if(!merged)return;snap.add(new T.Mesh(merged,snapMats.get(sys)));});
    // every mesh must share the same attribute set for the tracer's internal merge
-   const prepFlat=(g:T.BufferGeometry,hex:number)=>{g.deleteAttribute('uv');const c=new T.Color(hex);const n=g.attributes.position.count;const col=new Float32Array(n*3);for(let k=0;k<n;k++){col[k*3]=c.r;col[k*3+1]=c.g;col[k*3+2]=c.b;}g.setAttribute('color',new T.BufferAttribute(col,3));return g;};
+   const prepFlat=(g:T.BufferGeometry,hex:number)=>{const c=new T.Color(hex);const n=g.attributes.position.count;const col=new Float32Array(n*3);for(let k=0;k<n;k++){col[k*3]=c.r;col[k*3+1]=c.g;col[k*3+2]=c.b;}g.setAttribute('color',new T.BufferAttribute(col,3));return g;};
    const snapGround=new T.Mesh(prepFlat(new T.CircleGeometry(30,64),0xd5d9dc),new T.MeshStandardMaterial({vertexColors:true,roughness:1}));snapGround.rotation.x=-Math.PI/2;snapGround.position.y=-.019;snap.add(snapGround);
    const snapPlatform=new T.Mesh(prepFlat(new T.CylinderGeometry(.68,.7,.028,64),0xeeeeec),new T.MeshStandardMaterial({vertexColors:true,roughness:.67}));snapPlatform.position.y=-.016;snap.add(snapPlatform);
    const sun=new T.DirectionalLight(0xfff6e8,2.4);sun.position.set(-2,4,3);snap.add(sun);
@@ -366,7 +436,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,on
 
   };animate();
   const contextLost=(e:Event)=>{e.preventDefault();onError('The 3D session was paused by your device. Reload to continue.');};renderer.domElement.addEventListener('webglcontextlost',contextLost);
-  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();window.removeEventListener('atlas-photo-save',requestSave);teardownPhoto();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();colorTexture.dispose();growthTexture.dispose();markerGeometry.dispose();markerMaterial.dispose();hover.remove();labelLayer.remove();renderer.dispose();renderer.domElement.remove();};
+  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();window.removeEventListener('atlas-photo-save',requestSave);teardownPhoto();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();colorTexture.dispose();growthTexture.dispose();rotTexture.dispose();detailTextures.forEach(t=>t.dispose());markerGeometry.dispose();markerMaterial.dispose();hover.remove();labelLayer.remove();renderer.dispose();renderer.domElement.remove();};
  },[atlas]);
  return <div className="scene" ref={host}/>;
 }

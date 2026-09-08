@@ -17,7 +17,7 @@ parts=[];chunks=[];blob=bytearray();chunk=0;total_triangles=0
 for element in metadata['elements']:
     mesh=source/(element['id']+'.obj')
     record=systemdata.get('parts',{}).get(element['id'],{})
-    vertices=[];normals=[];indices=[];tints=[];name=element['name']
+    vertices=[];normals=[];indices=[];tints=[];uvs=[];name=element['name']
     for line in mesh.read_text().splitlines():
         if line.startswith('# English name : '):name=line.split(' : ',1)[1].strip() or element['name']
         elif line.startswith('v '):
@@ -26,6 +26,8 @@ for element in metadata['elements']:
             # optional per-vertex tint multiplier in [0,2], packed as bytes
             if len(fields)>=6:tints.extend(min(255,max(0,round(float(c)*127.5))) for c in fields[3:6])
             else:tints.extend([128,128,128])
+        elif line.startswith('vt '):
+            u,vv=map(float,line.split()[1:3]);uvs.extend([u,vv])
         elif line.startswith('vn '):
             x,y,z=map(float,line.split()[1:4]);normals.extend([round(x*32767),round(y*32767),round(z*32767)])
         elif line.startswith('f '):
@@ -38,11 +40,12 @@ for element in metadata['elements']:
     def append(values,fmt):
         while len(blob)%4:blob.append(0)
         offset=len(blob);blob.extend(array(fmt,values).tobytes());return offset
-    po=append(vertices,'f');no=append(normals,'h');io=append(indices,'I');to=append(tints,'B')
+    if len(uvs)!=2*(len(vertices)//3):uvs=[0.0]*(2*(len(vertices)//3))
+    po=append(vertices,'f');no=append(normals,'h');io=append(indices,'I');to=append(tints,'B');uo=append(uvs,'f')
     bounds=[[min(vertices[i::3]) for i in range(3)],[max(vertices[i::3]) for i in range(3)]]
     system=systems.get(element['id'],'connective')
     if isinstance(system,dict):system=system.get('system',system.get('category','connective'))
-    part={'id':element['id'],'name':record.get('name',name),'conceptId':record.get('conceptId',element['conceptId']),'system':system,'chunk':chunk,'positions':po,'normals':no,'indices':io,'tints':to,'vertexCount':len(vertices)//3,'indexCount':len(indices),'bounds':bounds}
+    part={'id':element['id'],'name':record.get('name',name),'conceptId':record.get('conceptId',element['conceptId']),'system':system,'chunk':chunk,'positions':po,'normals':no,'indices':io,'tints':to,'uvs':uo,'vertexCount':len(vertices)//3,'indexCount':len(indices),'bounds':bounds}
     if element.get('color'):part['color']=element['color']
     if element.get('stats'):part['stats']=element['stats']
     if element.get('color0'):part['color0']=element['color0']

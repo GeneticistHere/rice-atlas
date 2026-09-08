@@ -93,40 +93,50 @@ def transport_frames(points):
     return frames
 
 # ------------------------------------------------------------- mesh building
-# Meshes are (vertices, faces, tints) triples. A tint is a per-vertex RGB
-# multiplier in [0, 2] applied on top of the organ color in the shader.
+# Meshes are (vertices, faces, tints, uvs) tuples. A tint is a per-vertex RGB
+# multiplier in [0, 2] applied on top of the organ color in the shader; uvs
+# map the detail textures (striations, veins, papillae).
 WHITE = (1.0, 1.0, 1.0)
 
-def tube(points, radii, segments=10, cap_start=False, cap_end=True, tint_fn=None):
-    """Sweep a circle of per-point radius along a polyline. Outward winding."""
+def tube(points, radii, segments=10, cap_start=False, cap_end=True, tint_fn=None, v_scale_mm=30.0):
+    """Sweep a circle of per-point radius along a polyline. Outward winding.
+
+    Rings carry segments+1 columns so the texture seam is clean; v advances
+    with real arc length so striations don't stretch.
+    """
     frames = transport_frames(points)
-    verts, faces, tints = [], [], []
+    verts, faces, tints, uvs = [], [], [], []
     n_rings = len(points)
+    cols = segments+1
+    arc = 0.0
     for i, p in enumerate(points):
         _, n, b = frames[i]
+        if i > 0:
+            arc += v_len(v_sub(points[i], points[i-1]))
         r = radii[i] if isinstance(radii, (list, tuple)) else radii
         t = tint_fn(i, n_rings) if tint_fn else WHITE
-        for s in range(segments):
+        vv = arc/v_scale_mm
+        for s in range(cols):
             a = 2*math.pi*s/segments
             verts.append(v_add(p, v_add(v_scale(n, r*math.cos(a)), v_scale(b, r*math.sin(a)))))
             tints.append(t)
+            uvs.append((s/segments, vv))
     for i in range(len(points)-1):
         for s in range(segments):
-            ns = (s+1) % segments
-            p1, p2 = i*segments+s, i*segments+ns
-            p3, p4 = (i+1)*segments+s, (i+1)*segments+ns
+            p1, p2 = i*cols+s, i*cols+s+1
+            p3, p4 = (i+1)*cols+s, (i+1)*cols+s+1
             faces.append((p1, p3, p2))
             faces.append((p2, p3, p4))
     if cap_start:
-        c = len(verts); verts.append(points[0]); tints.append(tint_fn(0, n_rings) if tint_fn else WHITE)
+        c = len(verts); verts.append(points[0]); tints.append(tint_fn(0, n_rings) if tint_fn else WHITE); uvs.append((0.5, 0.0))
         for s in range(segments):
-            faces.append((c, s, (s+1) % segments))
+            faces.append((c, s, s+1))
     if cap_end:
-        c = len(verts); verts.append(points[-1]); tints.append(tint_fn(n_rings-1, n_rings) if tint_fn else WHITE)
-        base = (len(points)-1)*segments
+        c = len(verts); verts.append(points[-1]); tints.append(tint_fn(n_rings-1, n_rings) if tint_fn else WHITE); uvs.append((0.5, arc/v_scale_mm))
+        base = (len(points)-1)*cols
         for s in range(segments):
-            faces.append((c, base+(s+1) % segments, base+s))
-    return verts, faces, tints
+            faces.append((c, base+s+1, base+s))
+    return verts, faces, tints, uvs
 
 def grain_frame(axis, side_hint):
     a = v_norm(axis)
@@ -157,7 +167,8 @@ def grain_mesh(center, axis, side_hint, length=8.4, width=3.6, thickness=2.5, la
             p3, p4 = (i+1)*lon+j, (i+1)*lon+nj
             faces.append((p1, p2, p3))
             faces.append((p2, p4, p3))
-    return verts, faces, [tint]*len(verts)
+    uvs = [(j/lon, i/lat) for i in range(lat+1) for j in range(lon)]
+    return verts, faces, [tint]*len(verts), uvs
 
 def half_grain_mesh(center, a, s1, s2, length, width, thickness, lat=10, lon=7, cap=False):
     """Half a grain ellipsoid, cut along the plane spanned by axis and s1.
@@ -191,25 +202,30 @@ def half_grain_mesh(center, a, s1, s2, length, width, thickness, lat=10, lon=7, 
             b1, b2 = i*cols+lon, (i+1)*cols+lon
             faces.append((a1, a2, b1))
             faces.append((a2, b2, b1))
-    return verts, faces, [WHITE]*len(verts)
+    uvs = [(j/lon, i/lat) for i in range(lat+1) for j in range(lon+1)]
+    return verts, faces, [WHITE]*len(verts), uvs
 
 def merge(meshes):
-    verts, faces, tints = [], [], []
-    for mv, mf, mt in meshes:
+    verts, faces, tints, uvs = [], [], [], []
+    for mv, mf, mt, mu in meshes:
         base = len(verts)
         verts.extend(mv)
         tints.extend(mt)
+        uvs.extend(mu)
         faces.extend(tuple(i+base for i in f) for f in mf)
-    return verts, faces, tints
+    return verts, faces, tints, uvs
 
 def polyline_length(points):
     return sum(v_len(v_sub(points[i+1], points[i])) for i in range(len(points)-1))
 
-def write_obj(filename, vertices, faces, tints=None):
+def write_obj(filename, vertices, faces, tints=None, uvs=None):
     with open(os.path.join(OUT_DIR, filename), "w") as f:
         for i, v in enumerate(vertices):
             t = tints[i] if tints else WHITE
             f.write(f"v {v[0]:.3f} {v[1]:.3f} {v[2]:.3f} {t[0]:.3f} {t[1]:.3f} {t[2]:.3f}\n")
+        for i in range(len(vertices)):
+            u, vv = uvs[i] if uvs else (0.0, 0.0)
+            f.write(f"vt {u:.4f} {vv:.4f}\n")
         normals = [(0.0, 0.0, 0.0)]*len(vertices)
         for face in faces:
             i1, i2, i3 = face
@@ -224,7 +240,7 @@ def write_obj(filename, vertices, faces, tints=None):
             else:
                 f.write(f"vn {n[0]/l:.4f} {n[1]/l:.4f} {n[2]/l:.4f}\n")
         for face in faces:
-            f.write("f " + " ".join(f"{i+1}//{i+1}" for i in face) + "\n")
+            f.write("f " + " ".join(f"{i+1}/{i+1}/{i+1}" for i in face) + "\n")
 
 # ------------------------------------------------------------- stage configs
 GOLDEN = math.radians(137.507764)
@@ -301,8 +317,8 @@ def add_part(prefix, name, concept_id, system, mesh, extra_concepts=(), color=No
              growth=None, color0=None, ctrans=None):
     counter[prefix] = counter.get(prefix, 0) + 1
     pid = f"{prefix}_{counter[prefix]:04d}"
-    verts, faces, tints = mesh
-    write_obj(f"{pid}.obj", verts, faces, tints)
+    verts, faces, tints, uvs = mesh
+    write_obj(f"{pid}.obj", verts, faces, tints, uvs)
     element = {"id": pid, "name": name, "conceptId": concept_id}
     if color:
         element["color"] = color
@@ -378,7 +394,7 @@ def build_blade(cfg, base, frames_dir_az, rank, tiller_name, concept_extra, sway
     brown_ratio = tuple(max(0.0, min(2.0, brown[c]/max(0.05, base_rgb[c]))) for c in range(3))
     wsegs = 13
     streaks = [1 + rsway.uniform(-0.055, 0.055) for _ in range(wsegs+1)]  # longitudinal vein streaks
-    verts, faces, tints = [], [], []
+    verts, faces, tints, uvs = [], [], [], []
     for i, c in enumerate(pts):
         s = i/(n-1)
         t, nrm, b = frames[i]
@@ -401,6 +417,7 @@ def build_blade(cfg, base, frames_dir_az, rank, tiller_name, concept_extra, sway
             lat, vert = lat*math.cos(tau) - vert*math.sin(tau), lat*math.sin(tau) + vert*math.cos(tau)
             verts.append(v_add(c, v_add(v_scale(side, lat), v_scale(upl, vert))))
             tints.append(tuple(min(2.0, row_tint[ch]*streaks[j]) for ch in range(3)))
+            uvs.append((j/wsegs, s*length/55.0))
     for i in range(n-1):
         for j in range(wsegs):
             p1, p2 = i*(wsegs+1)+j, i*(wsegs+1)+j+1
@@ -411,7 +428,7 @@ def build_blade(cfg, base, frames_dir_az, rank, tiller_name, concept_extra, sway
     name = name_override or (f"{tiller_name} · Flag leaf blade" if is_flag else f"{tiller_name} · Leaf blade {rank+1}")
     cid = "FlagLeaves" if is_flag else "Blades"
     final = color or vary(cfg["blade_colors"][rank], dl=0.035)
-    add_part("LeafBlade", name, cid, "Leaves", (verts, faces, tints),
+    add_part("LeafBlade", name, cid, "Leaves", (verts, faces, tints, uvs),
              extra_concepts=(("Blades",) if is_flag else ()) + concept_extra,
              color=final,
              stats={"Blade length": f"{length:.0f} mm", "Max width": f"{wmax:.0f} mm"},
