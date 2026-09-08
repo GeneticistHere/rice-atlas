@@ -107,6 +107,14 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .tour-actions .tour-exit{margin-left:2px;color:#8b95a0}
 @media(max-width:767px){.tour-card{bottom:calc(16px + env(safe-area-inset-bottom));padding:14px 16px 10px}.tour-card h2{font-size:17px}.tour-card p{font-size:12px;line-height:1.6}}
 
+/* Photo mode card. */
+.photo-card{position:absolute;bottom:46px;left:50%;transform:translateX(-50%);width:min(390px,calc(100vw - 24px));border-radius:16px;padding:16px 18px 10px;z-index:25}
+.photo-progress{display:flex;flex-direction:column;gap:7px;margin:12px 0 4px}
+.photo-progress .loading-track{margin:0;min-width:0;width:100%}
+.photo-progress span{font-size:11px;color:#75818d}
+.photo-hint{font-size:11px;color:#8b959f;margin:6px 0 8px}
+@media(max-width:767px){.photo-card{bottom:calc(16px + env(safe-area-inset-bottom))}}
+
 /* Morphometrics wrap inside the detail meta block. */
 .structure-meta{flex-wrap:wrap;gap:14px 26px}
 

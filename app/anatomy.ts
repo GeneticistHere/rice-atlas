@@ -13,7 +13,7 @@ export interface Concept {id:string;name:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number;growthCulms?:number[][][]}
 export type View = 'three-quarter'|'front'|'back'|'side';
 export interface Environment {n:number;w:number;t:number;heatwave?:boolean}
-export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number;labels:boolean;day:number;env:Environment}
+export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number;labels:boolean;day:number;env:Environment;photo:boolean}
 export const SEASON_END=120;
 export const DEFAULT_ENV:Environment={n:.85,w:1,t:28};
 // Development runs on thermal time: cool seasons stretch it, hot ones compress it.

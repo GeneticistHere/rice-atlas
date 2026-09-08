@@ -3,14 +3,21 @@ import * as T from 'three';
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 import {RoomEnvironment} from 'three/examples/jsm/environments/RoomEnvironment.js';
 import {mergeGeometries} from 'three/examples/jsm/utils/BufferGeometryUtils.js';
+import {WebGLPathTracer,GradientEquirectTexture} from 'three-gpu-pathtracer';
+// three r159 lacks the Scene rotation/intensity fields that three-gpu-pathtracer reads; shim them.
+{
+ const sp=T.Scene.prototype as unknown as Record<string,unknown>;
+ for(const k of ['environmentRotation','backgroundRotation'])if(!(k in sp))Object.defineProperty(T.Scene.prototype,k,{get(){const self=this as unknown as Record<string,T.Euler|undefined>;return self['_'+k]??(self['_'+k]=new T.Euler());}});
+ for(const k of ['environmentIntensity','backgroundIntensity'])if(!(k in sp))Object.defineProperty(T.Scene.prototype,k,{get(){return (this as unknown as Record<string,number|undefined>)['_'+k]??1;},set(v:number){(this as unknown as Record<string,number>)['_'+k]=v;}});
+}
 import {createExplosionLayout} from './explosion-layout';
 import {decodeModelResponse} from './model-download';
 import {PointerTap} from './pointer-tap';
 import {SYSTEMS,devRate,waveSterility,type Atlas,type SceneState} from './anatomy';
-interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void}
-export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:Props){
- const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect);
- latest.current=state;select.current=onSelect;
+interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void;onPhoto?:(p:number)=>void}
+export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,onPhoto}:Props){
+ const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect),photoCb=useRef(onPhoto);
+ latest.current=state;select.current=onSelect;photoCb.current=onPhoto;
  useEffect(()=>{
   const el=host.current!;let disposed=false,frame=0,dirty=true,ready=false,lastView='',lastReset=-1,lastIsolate='',layoutKey='',amount=0;
   let lastState:SceneState|null=null;
@@ -205,8 +212,71 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   };
   renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointermove',move);renderer.domElement.addEventListener('pointerup',up);renderer.domElement.addEventListener('pointercancel',cancel);
   const clock=new T.Clock();let lastExtent=-1,lastLabels=false,lastDayFitted=-1;
+  // Photo mode: bake the current per-organ state into static geometry and path-trace it.
+  let photoTracer:WebGLPathTracer|null=null,photoScene:T.Scene|null=null,photoSave=false;
+  const requestSave=()=>{photoSave=true;};
+  window.addEventListener('atlas-photo-save',requestSave);
+  const buildPhoto=()=>{
+   const snap=new T.Scene();
+   const env=new GradientEquirectTexture();
+   env.topColor.set(0xf2f4f6);env.bottomColor.set(0xc9cdd1);env.update();
+   snap.environment=env;snap.background=env;
+   const snapMats=new Map<string,T.MeshStandardMaterial>();
+   SYSTEMS.forEach(sys=>{const f=FINISH[sys.id]??{rough:.62,env:.35};snapMats.set(sys.id,new T.MeshStandardMaterial({vertexColors:true,color:0xffffff,roughness:f.rough,metalness:.03,side:T.DoubleSide}));});
+   const bySystem:Record<string,T.BufferGeometry[]>={};
+   const q=new T.Quaternion(),v=new T.Vector3();
+   atlas.parts.forEach((p,i)=>{
+    if(data[i*4+3]<.5)return;
+    const src=pickers[i]?.geometry;if(!src)return;
+    const pos=src.attributes.position,tint=src.attributes.tint;
+    const g=new T.BufferGeometry();
+    const arr=new Float32Array(pos.count*3),col=new Float32Array(pos.count*3);
+    const gs=growthData[i*4+3],off=new T.Vector3(data[i*4],data[i*4+1],data[i*4+2]);
+    q.set(rotData[i*4],rotData[i*4+1],rotData[i*4+2],rotData[i*4+3]);
+    const pr=colorData[i*4],pg=colorData[i*4+1],pb=colorData[i*4+2];
+    for(let k=0;k<pos.count;k++){
+     v.fromBufferAttribute(pos,k).sub(anchors[i]).multiplyScalar(gs).applyQuaternion(q).add(anchors[i]).add(off);
+     arr[k*3]=v.x;arr[k*3+1]=v.y;arr[k*3+2]=v.z;
+     col[k*3]=Math.min(1,pr*tint.getX(k)*2);col[k*3+1]=Math.min(1,pg*tint.getY(k)*2);col[k*3+2]=Math.min(1,pb*tint.getZ(k)*2);
+    }
+    g.setAttribute('position',new T.BufferAttribute(arr,3));
+    g.setAttribute('color',new T.BufferAttribute(col,3));
+    g.setIndex(src.index);
+    g.computeVertexNormals();
+    (bySystem[p.system]??=[]).push(g);
+   });
+   Object.entries(bySystem).forEach(([sys,list])=>{const merged=mergeGeometries(list,false);list.forEach(g=>g.dispose());if(!merged)return;snap.add(new T.Mesh(merged,snapMats.get(sys)));});
+   // every mesh must share the same attribute set for the tracer's internal merge
+   const prepFlat=(g:T.BufferGeometry,hex:number)=>{g.deleteAttribute('uv');const c=new T.Color(hex);const n=g.attributes.position.count;const col=new Float32Array(n*3);for(let k=0;k<n;k++){col[k*3]=c.r;col[k*3+1]=c.g;col[k*3+2]=c.b;}g.setAttribute('color',new T.BufferAttribute(col,3));return g;};
+   const snapGround=new T.Mesh(prepFlat(new T.CircleGeometry(30,64),0xd5d9dc),new T.MeshStandardMaterial({vertexColors:true,roughness:1}));snapGround.rotation.x=-Math.PI/2;snapGround.position.y=-.019;snap.add(snapGround);
+   const snapPlatform=new T.Mesh(prepFlat(new T.CylinderGeometry(.68,.7,.028,64),0xeeeeec),new T.MeshStandardMaterial({vertexColors:true,roughness:.67}));snapPlatform.position.y=-.016;snap.add(snapPlatform);
+   const sun=new T.DirectionalLight(0xfff6e8,2.4);sun.position.set(-2,4,3);snap.add(sun);
+   photoScene=snap;
+   photoTracer=new WebGLPathTracer(renderer);
+   photoTracer.filterGlossyFactor=.5;photoTracer.tiles.set(2,2);photoTracer.bounces=6;
+   try{photoTracer.setScene(snap,camera);}catch{sun.removeFromParent();photoTracer.setScene(snap,camera);}
+  };
+  const teardownPhoto=()=>{
+   try{
+    photoScene?.traverse(o=>{if(o instanceof T.Mesh){o.geometry.dispose();(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m?.dispose?.());}});
+    (photoScene?.environment as T.Texture|null)?.dispose?.();
+    photoTracer?.dispose?.();
+   }catch(e){console.warn('photo teardown:',e);}
+   photoTracer=null;photoScene=null;
+  };
   const animate=()=>{
    if(disposed)return;frame=requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.05),s=latest.current;
+   if(s.photo&&ready){
+    labelLayer.hidden=true;hover.hidden=true;controls.enabled=false;
+    if(!photoTracer){photoCb.current?.(0);try{buildPhoto();}catch(e){console.error('photo build failed:',(e as Error).stack??e);throw e;}}
+    else{
+     try{photoTracer.renderSample();}catch(e){console.error('photo sample failed:',(e as Error).stack??e);teardownPhoto();return;}
+     photoCb.current?.(Math.min(1,photoTracer.samples/300));
+     if(photoSave){photoSave=false;const a=document.createElement('a');a.href=renderer.domElement.toDataURL('image/png');a.download=`rice-atlas-day-${Math.round(s.day)}.png`;a.click();}
+    }
+    return;
+   }
+   if(photoTracer&&!s.photo){teardownPhoto();controls.enabled=true;lastState=null;dirty=true;}
    const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate||lastState?.day!==s.day||lastState?.env!==s.env;
    const moving=Math.abs(amount-s.explode)>.0001;
    if(moving){amount=T.MathUtils.damp(amount,s.explode,8,dt);dirty=true;}
@@ -296,7 +366,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
 
   };animate();
   const contextLost=(e:Event)=>{e.preventDefault();onError('The 3D session was paused by your device. Reload to continue.');};renderer.domElement.addEventListener('webglcontextlost',contextLost);
-  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();colorTexture.dispose();growthTexture.dispose();markerGeometry.dispose();markerMaterial.dispose();hover.remove();labelLayer.remove();renderer.dispose();renderer.domElement.remove();};
+  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();window.removeEventListener('atlas-photo-save',requestSave);teardownPhoto();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();colorTexture.dispose();growthTexture.dispose();markerGeometry.dispose();markerMaterial.dispose();hover.remove();labelLayer.remove();renderer.dispose();renderer.domElement.remove();};
  },[atlas]);
  return <div className="scene" ref={host}/>;
 }
