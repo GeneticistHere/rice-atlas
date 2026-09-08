@@ -44,14 +44,16 @@ Proportions and architecture follow the real plant, but this is a conceptual edu
 ## Rebuilding geometry
 
 ```sh
+python3.11 -m venv .venv-bpy && .venv-bpy/bin/pip install bpy   # once
 python3 generate_fspm_rice.py
 for s in seedling tillering heading maturity; do
-  python3 scripts/convert-anatomy.py rice_obj_$s concept_map_$s.json system_map_$s.json atlas-$s
+  .venv-bpy/bin/python scripts/blender_refine.py rice_obj_$s rice_obj_${s}_ref
+  python3 scripts/convert-anatomy.py rice_obj_${s}_ref concept_map_$s.json system_map_$s.json atlas-$s
 done
 node scripts/compress-models.mjs
 ```
 
-The generator writes one OBJ per organ into `rice_obj_<stage>/` plus per-stage concept and system maps; the converter packs each stage into binary chunks under `public/models/` as `atlas-<stage>.json` + `atlas-<stage>-N.bin`.
+The generator writes one OBJ per organ into `rice_obj_<stage>/` plus per-stage concept and system maps. A headless Blender (`bpy`) stage then gives leaf blades real thickness via a Solidify modifier (other organs pass through untouched); the converter accepts both the raw and the Blender-refined OBJ indexing and packs each stage into binary chunks under `public/models/` as `atlas-<stage>.json` + `atlas-<stage>-N.bin`.
 
 ## How it works
 

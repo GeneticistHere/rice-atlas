@@ -40,3 +40,5 @@ next-env.d.ts
 
 # regenerable FSPM intermediates
 /rice_obj*/
+
+/.venv-bpy/

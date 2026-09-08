@@ -17,22 +17,37 @@ parts=[];chunks=[];blob=bytearray();chunk=0;total_triangles=0
 for element in metadata['elements']:
     mesh=source/(element['id']+'.obj')
     record=systemdata.get('parts',{}).get(element['id'],{})
+    # General OBJ parsing: v lines may carry tint colors, and faces may index
+    # position/uv/normal streams independently (Blender-refined organs do).
+    positions=[];cols=[];vts=[];vns=[];corner_map={}
     vertices=[];normals=[];indices=[];tints=[];uvs=[];name=element['name']
     for line in mesh.read_text().splitlines():
         if line.startswith('# English name : '):name=line.split(' : ',1)[1].strip() or element['name']
         elif line.startswith('v '):
             fields=line.split()[1:]
-            x,y,z=map(float,fields[:3]);vertices.extend([x*.001,y*.001,z*.001])
-            # optional per-vertex tint multiplier in [0,2], packed as bytes
-            if len(fields)>=6:tints.extend(min(255,max(0,round(float(c)*127.5))) for c in fields[3:6])
-            else:tints.extend([128,128,128])
+            positions.append((float(fields[0]),float(fields[1]),float(fields[2])))
+            cols.append((float(fields[3]),float(fields[4]),float(fields[5])) if len(fields)>=6 else (1.0,1.0,1.0))
         elif line.startswith('vt '):
-            u,vv=map(float,line.split()[1:3]);uvs.extend([u,vv])
+            u,vv=map(float,line.split()[1:3]);vts.append((u,vv))
         elif line.startswith('vn '):
-            x,y,z=map(float,line.split()[1:4]);normals.extend([round(x*32767),round(y*32767),round(z*32767)])
+            x,y,z=map(float,line.split()[1:4]);vns.append((x,y,z))
         elif line.startswith('f '):
-            face=[int(s.split('/')[0])-1 for s in line.split()[1:]]
-            for j in range(1,len(face)-1):indices.extend([face[0],face[j],face[j+1]])
+            corner_idx=[]
+            for token in line.split()[1:]:
+                comp=token.split('/')
+                vi=int(comp[0])-1
+                ti=int(comp[1])-1 if len(comp)>1 and comp[1] else -1
+                ni=int(comp[2])-1 if len(comp)>2 and comp[2] else -1
+                key=(vi,ti,ni)
+                idx=corner_map.get(key)
+                if idx is None:
+                    idx=len(corner_map);corner_map[key]=idx
+                    x,y,z=positions[vi];vertices.extend([x*.001,y*.001,z*.001])
+                    tints.extend(min(255,max(0,round(c*127.5))) for c in cols[vi])
+                    u,vv=vts[ti] if ti>=0 else (0.0,0.0);uvs.extend([u,vv])
+                    nx,ny,nz=vns[ni] if ni>=0 else (0.0,1.0,0.0);normals.extend([round(nx*32767),round(ny*32767),round(nz*32767)])
+                corner_idx.append(idx)
+            for j in range(1,len(corner_idx)-1):indices.extend([corner_idx[0],corner_idx[j],corner_idx[j+1]])
     assert len(normals)==len(vertices),element['id']
     assert len(vertices) and max(indices)<len(vertices)//3
     if len(blob)>7_000_000:
@@ -40,7 +55,6 @@ for element in metadata['elements']:
     def append(values,fmt):
         while len(blob)%4:blob.append(0)
         offset=len(blob);blob.extend(array(fmt,values).tobytes());return offset
-    if len(uvs)!=2*(len(vertices)//3):uvs=[0.0]*(2*(len(vertices)//3))
     po=append(vertices,'f');no=append(normals,'h');io=append(indices,'I');to=append(tints,'B');uo=append(uvs,'f')
     bounds=[[min(vertices[i::3]) for i in range(3)],[max(vertices[i::3]) for i in range(3)]]
     system=systems.get(element['id'],'connective')
