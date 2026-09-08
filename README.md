@@ -54,6 +54,15 @@ done
 node scripts/compress-models.mjs
 ```
 
+Each stage is also available as a portable glTF binary in `exports/` (`rice-<stage>.glb`, Draco-compressed) — usable directly in Blender, Unity, Unreal, Godot, or any glTF viewer. Every organ is a named node carrying `organ_id`, `system`, and `concept` extras, grouped into per-system collections, with the base color, per-vertex tints, and baked ambient occlusion folded into real `COLOR_0` vertex colors and per-system PBR materials. Regenerate with:
+
+```sh
+for s in seedling tillering heading maturity; do
+  .venv-bpy/bin/python scripts/export_gltf.py $s
+  npx @gltf-transform/cli draco exports/rice-$s.glb exports/rice-$s.glb
+done
+```
+
 The generator writes one OBJ per organ into `rice_obj_<stage>/` plus per-stage concept and system maps. A headless Blender (`bpy`) stage then gives leaf blades real thickness via a Solidify modifier (other organs pass through untouched), and an ambient-occlusion bake raycasts the whole assembled plant with Blender's BVH to darken per-vertex tints where organs shade each other — sheath–culm contacts, the canopy interior, panicle cores, the root-mass center. The converter accepts both the raw and the Blender-refined OBJ indexing and packs each stage into binary chunks under `public/models/` as `atlas-<stage>.json` + `atlas-<stage>-N.bin`.
 
 ## How it works
