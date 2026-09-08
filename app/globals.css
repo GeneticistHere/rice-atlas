@@ -123,6 +123,12 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .grow-play{min-width:34px;width:34px;height:34px;border:1px solid var(--border);border-radius:9px;color:#263b48;background:#ffffffd9;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .grow-play:hover{background:#fff}
 .phenology-tag{font-size:10px;font-weight:500;letter-spacing:.05em;color:#5b7a52;background:#eef3ea;border:1px solid #4f86361a;border-radius:999px;padding:3px 9px;margin-left:auto;margin-right:9px;white-space:nowrap}
+.yield-line{display:flex;align-items:center;gap:5px;font-size:11px;color:#7c8793;margin-top:7px;white-space:nowrap;overflow:hidden}
+.yield-line>span{font-weight:600;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#8d7b43;background:#f6f1e2;border:1px solid #c78f2c22;border-radius:999px;padding:2px 8px;margin-right:5px}
+.yield-line strong{font-weight:600;color:#4a5764;font-variant-numeric:tabular-nums}
+.yield-line i{font-style:normal;color:#b3bac1;margin:0 2px}
+.yield-line em{font-style:italic;color:#8b959f}
+@media(max-width:380px){.yield-line{font-size:10px}}
 @media(max-width:767px){.bottom-dock{width:auto}.dock-controls{gap:10px}.grow-control{padding-bottom:9px}.phenology-tag{font-size:9px;padding:2px 7px}}
 
 /* Environment sliders in the systems panel. */

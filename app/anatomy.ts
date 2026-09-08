@@ -18,6 +18,35 @@ export const SEASON_END=120;
 export const DEFAULT_ENV:Environment={n:.85,w:1,t:28};
 // Development runs on thermal time: cool seasons stretch it, hot ones compress it.
 export const devRate=(t:number)=>Math.max(.5,Math.min(1.35,(t-8)/20));
+const sm01=(t:number)=>{const c=Math.max(0,Math.min(1,t));return c*c*(3-2*c);};
+// Shared simulation factors, mirrored by the 3D scene's per-organ rules.
+export function simFactors(day:number,env:Environment){
+ const D=Math.min(SEASON_END,day*devRate(env.t));
+ const drought=1-env.w;
+ const sterility=sm01((env.t-33)/6);
+ const nSat=Math.min(1,env.n/.85);
+ const tillersAlive=2+Math.round(6*nSat);
+ return {D,drought,sterility,nSat,tillersAlive};
+}
+export interface YieldEstimate {spikelets:number;filled:number;grams:number;tHa:number}
+// Yield: filled spikelets on surviving tillers × ~22 mg per grain, scaled to 20 plants/m².
+export function yieldEstimate(parts:Part[],day:number,env:Environment):YieldEstimate{
+ const {D,drought,sterility,tillersAlive}=simFactors(day,env);
+ let spikelets=0,filled=0;
+ for(const p of parts){
+  if(p.system!=='Grain'||!p.stats?.Grains||!p.growth)continue;
+  const culm=p.growth.culm;
+  if(culm>0&&culm>=tillersAlive)continue;
+  const n=parseInt(p.stats.Grains,10)||0;
+  const emerged=sm01((D-p.growth.birth)/Math.max(.1,p.growth.dur));
+  if(emerged<.05)continue;
+  spikelets+=n;
+  const fill=sm01((D-(p.growth.birth+6))/28);
+  filled+=n*fill*(1-sterility)*(1-.35*drought);
+ }
+ const grams=filled*.022;
+ return {spikelets,filled:Math.round(filled),grams,tHa:grams*.2};
+}
 export function phenology(day:number){
  if(day<6)return 'Germination';
  if(day<18)return 'Seedling';
