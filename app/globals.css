@@ -139,3 +139,7 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .env-row [data-slot=slider]{flex:1;padding:8px 0}
 .env-row span{font-size:10px;font-variant-numeric:tabular-nums;color:#7c8793;width:34px;text-align:right;flex-shrink:0}
 @media(max-width:767px){.env-row{min-height:40px}.env-row label{font-size:12px}}
+.env-toggle{justify-content:space-between;padding-top:2px}
+.env-toggle label{width:auto;line-height:1.35}
+.env-toggle label em{display:block;font-style:normal;font-size:9px;color:#93764a}
+.env-toggle [data-slot=switch]{transform:scale(.85);transform-origin:right center}

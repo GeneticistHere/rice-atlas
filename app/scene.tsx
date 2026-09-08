@@ -6,7 +6,7 @@ import {mergeGeometries} from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import {createExplosionLayout} from './explosion-layout';
 import {decodeModelResponse} from './model-download';
 import {PointerTap} from './pointer-tap';
-import {SYSTEMS,devRate,type Atlas,type SceneState} from './anatomy';
+import {SYSTEMS,devRate,waveSterility,type Atlas,type SceneState} from './anatomy';
 interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void}
 export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:Props){
  const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect);
@@ -228,11 +228,11 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
     const env=inspecting?{n:.85,w:1,t:28}:s.env;
     const eday=inspecting?120:Math.min(120,s.day*devRate(env.t));
     const drought=1-env.w;
-    const sterility=smooth01((env.t-33)/6);
+    const baseSterility=smooth01((env.t-33)/6);
     const nSat=Math.min(1,env.n/.85);
     const tillersAlive=2+Math.round(6*nSat);
     // lodging: only over-fertilized, heavy, well-watered canopies go down late in the season
-    const lodgeRisk=env.n>.9&&eday>95?smooth01((env.n-.9)/.1)*smooth01((eday-95)/15)*smooth01((env.w-.3)/.4)*(1-.7*sterility):0;
+    const lodgeRisk=env.n>.9&&eday>95?smooth01((env.n-.9)/.1)*smooth01((eday-95)/15)*smooth01((env.w-.3)/.4)*(1-.7*baseSterility):0;
     const prefixes=culmVecs.map((vecs,ci)=>{const arr=[new T.Vector3()];const acc=new T.Vector3();vecs.forEach((v,ni)=>{const pi=culmIndex[ci][ni];acc.addScaledVector(v,1-(pi>=0?(eday>=119.5?1:organGrow(atlas.parts[pi],eday)):1));arr.push(acc.clone());});return arr;});
     atlas.parts.forEach((p,i)=>{
      const c=centers[i],destination=offsets[i];let dx=0,dy=0,dz=0;
@@ -241,16 +241,18 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
      let g=eday>=119.5?1:organGrow(p,eday);
      const culm=p.growth?.culm??-1;
      if(eday<119.5&&p.growth&&culm>=0){const pre=prefixes[culm];if(pre){const d=pre[Math.min(Math.max(p.growth.node,0),pre.length-1)];dx-=d.x;dy-=d.y;dz-=d.z;}}
-     // source-sink responses: low N shrinks panicles, drought shrinks blades, heat sterilizes grains
+     // source-sink responses: low N shrinks panicles, drought shrinks blades, heat sterilizes grains.
+     // Sterility is per panicle: a heat wave only harms panicles that flowered during it.
+     const st=(p.system==='Panicle'||p.system==='Grain')&&p.growth?waveSterility(env,p.growth.birth):baseSterility;
      if(p.system==='Panicle'||p.system==='Grain')g*=(.78+.22*nSat)*(1-.12*drought);
-     if(p.system==='Grain')g*=1-.3*sterility;
+     if(p.system==='Grain')g*=1-.3*st;
      if(p.system==='Leaves')g*=1-.12*drought;
      // mechanics: panicles emerge erect and nod as they fill; overloaded culms lodge late season
      let qx=0,qy=0,qz=0,qw=1;
      const isPanicleOrgan=(p.system==='Panicle'||p.system==='Grain')&&p.growth&&p.growth.node>=culmVecs[culm]?.length;
      let rotated=false;
      if(!inspecting&&isPanicleOrgan&&culm>=0&&panicleAxis[culm]){
-      const fill=smooth01((eday-(p.growth!.birth+6))/28)*(1-.55*sterility)*(1-.35*drought);
+      const fill=smooth01((eday-(p.growth!.birth+6))/28)*(1-.55*st)*(1-.35*drought);
       const nod=T.MathUtils.degToRad(58)*(1-fill);
       if(nod>.01){nodQ.setFromAxisAngle(panicleAxis[culm]!,-nod);rotated=true;}else nodQ.identity();
      }else nodQ.identity();
@@ -269,7 +271,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
      const ct=cb<0?1:smooth01((eday-cb)/Math.max(.1,p.cdur??1));
      tmpColor.copy(youngColors[i]).lerp(ripeColors[i],ct);
      if(p.system==='Leaves'||p.system==='Sheath'){tmpColor.lerp(N_PALE,(1-nSat)*.5);tmpColor.lerp(DRY_DULL,drought*.32);}
-     if(p.system==='Grain')tmpColor.lerp(STERILE_PALE,sterility*.65);
+     if(p.system==='Grain')tmpColor.lerp(STERILE_PALE,st*.65);
      colorData.set([tmpColor.r,tmpColor.g,tmpColor.b,1],i*4);
      const suppressed=!inspecting&&culm>=tillersAlive&&culm>0;
      const selected=selection.has(p.id);data.set([dx,dy,dz,(s.isolate?selected:visible.has(p.system)||selected)&&g>.02&&!suppressed?1:0],i*4);selectedData[i*4]=selected&&!s.isolate?255:0;

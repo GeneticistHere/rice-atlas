@@ -12,7 +12,7 @@ export interface Part {id:string;name:string;conceptId:string;system:SystemId;co
 export interface Concept {id:string;name:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number;growthCulms?:number[][][]}
 export type View = 'three-quarter'|'front'|'back'|'side';
-export interface Environment {n:number;w:number;t:number}
+export interface Environment {n:number;w:number;t:number;heatwave?:boolean}
 export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number;labels:boolean;day:number;env:Environment}
 export const SEASON_END=120;
 export const DEFAULT_ENV:Environment={n:.85,w:1,t:28};
@@ -28,10 +28,22 @@ export function simFactors(day:number,env:Environment){
  const tillersAlive=2+Math.round(6*nSat);
  return {D,drought,sterility,nSat,tillersAlive};
 }
+// A short heat wave in calendar days. Each spikelet flowers for only an hour or two,
+// so sterility depends on whether a panicle's flowering days overlapped the hot spell.
+export const FLOWERING_WAVE={start:64,end:72,peak:38.5};
+export function waveSterility(env:Environment,headingBirth:number){
+ const base=sm01((env.t-33)/6);
+ if(!env.heatwave)return base;
+ const rate=devRate(env.t);
+ const f0=(headingBirth+2)/rate,f1=(headingBirth+8)/rate;   // this panicle's flowering window, calendar days
+ const overlap=Math.max(0,Math.min(f1,FLOWERING_WAVE.end)-Math.max(f0,FLOWERING_WAVE.start));
+ const wave=(overlap/Math.max(.1,f1-f0))*sm01((FLOWERING_WAVE.peak-33)/6);
+ return 1-(1-base)*(1-wave);
+}
 export interface YieldEstimate {spikelets:number;filled:number;grams:number;tHa:number}
 // Yield: filled spikelets on surviving tillers × ~22 mg per grain, scaled to 20 plants/m².
 export function yieldEstimate(parts:Part[],day:number,env:Environment):YieldEstimate{
- const {D,drought,sterility,tillersAlive}=simFactors(day,env);
+ const {D,drought,tillersAlive}=simFactors(day,env);
  let spikelets=0,filled=0;
  for(const p of parts){
   if(p.system!=='Grain'||!p.stats?.Grains||!p.growth)continue;
@@ -42,7 +54,7 @@ export function yieldEstimate(parts:Part[],day:number,env:Environment):YieldEsti
   if(emerged<.05)continue;
   spikelets+=n;
   const fill=sm01((D-(p.growth.birth+6))/28);
-  filled+=n*fill*(1-sterility)*(1-.35*drought);
+  filled+=n*fill*(1-waveSterility(env,p.growth.birth))*(1-.35*drought);
  }
  const grams=filled*.022;
  return {spikelets,filled:Math.round(filled),grams,tHa:grams*.2};
