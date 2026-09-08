@@ -37,3 +37,6 @@ next-env.d.ts
 /outputs/
 /work/
 *.tsbuildinfo
+
+# regenerable FSPM intermediates
+/rice_obj*/

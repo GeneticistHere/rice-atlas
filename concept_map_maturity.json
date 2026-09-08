@@ -1,0 +1,4801 @@
+{
+ "elements": [
+  {
+   "id": "Crown_0001",
+   "name": "Tillering crown",
+   "conceptId": "Culms",
+   "color": "#949c4e",
+   "stats": {
+    "Tillers": "8",
+    "Roots": "44"
+   }
+  },
+  {
+   "id": "Root_0001",
+   "name": "Adventitious root 1",
+   "conceptId": "Roots",
+   "color": "#a78158",
+   "stats": {
+    "Root length": "292 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0002",
+   "name": "Adventitious root 2",
+   "conceptId": "Roots",
+   "color": "#b18c5d",
+   "stats": {
+    "Root length": "322 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0003",
+   "name": "Adventitious root 3",
+   "conceptId": "Roots",
+   "color": "#b59472",
+   "stats": {
+    "Root length": "289 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0004",
+   "name": "Adventitious root 4",
+   "conceptId": "Roots",
+   "color": "#b28f63",
+   "stats": {
+    "Root length": "299 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0005",
+   "name": "Adventitious root 5",
+   "conceptId": "Roots",
+   "color": "#aa8d64",
+   "stats": {
+    "Root length": "313 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0006",
+   "name": "Adventitious root 6",
+   "conceptId": "Roots",
+   "color": "#a98651",
+   "stats": {
+    "Root length": "283 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0007",
+   "name": "Adventitious root 7",
+   "conceptId": "Roots",
+   "color": "#ad9371",
+   "stats": {
+    "Root length": "310 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0008",
+   "name": "Adventitious root 8",
+   "conceptId": "Roots",
+   "color": "#a6875e",
+   "stats": {
+    "Root length": "306 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0009",
+   "name": "Adventitious root 9",
+   "conceptId": "Roots",
+   "color": "#aa8b69",
+   "stats": {
+    "Root length": "308 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0010",
+   "name": "Adventitious root 10",
+   "conceptId": "Roots",
+   "color": "#ae9473",
+   "stats": {
+    "Root length": "275 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0011",
+   "name": "Adventitious root 11",
+   "conceptId": "Roots",
+   "color": "#b49470",
+   "stats": {
+    "Root length": "313 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0012",
+   "name": "Adventitious root 12",
+   "conceptId": "Roots",
+   "color": "#ac9168",
+   "stats": {
+    "Root length": "312 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0013",
+   "name": "Adventitious root 13",
+   "conceptId": "Roots",
+   "color": "#ae8457",
+   "stats": {
+    "Root length": "300 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0014",
+   "name": "Adventitious root 14",
+   "conceptId": "Roots",
+   "color": "#987a59",
+   "stats": {
+    "Root length": "277 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0015",
+   "name": "Adventitious root 15",
+   "conceptId": "Roots",
+   "color": "#a27b4d",
+   "stats": {
+    "Root length": "306 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0016",
+   "name": "Adventitious root 16",
+   "conceptId": "Roots",
+   "color": "#ae8860",
+   "stats": {
+    "Root length": "308 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0017",
+   "name": "Adventitious root 17",
+   "conceptId": "Roots",
+   "color": "#a58350",
+   "stats": {
+    "Root length": "301 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0018",
+   "name": "Adventitious root 18",
+   "conceptId": "Roots",
+   "color": "#b08a5d",
+   "stats": {
+    "Root length": "301 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0019",
+   "name": "Adventitious root 19",
+   "conceptId": "Roots",
+   "color": "#aa916e",
+   "stats": {
+    "Root length": "317 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0020",
+   "name": "Adventitious root 20",
+   "conceptId": "Roots",
+   "color": "#a18051",
+   "stats": {
+    "Root length": "304 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0021",
+   "name": "Adventitious root 21",
+   "conceptId": "Roots",
+   "color": "#a18256",
+   "stats": {
+    "Root length": "303 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0022",
+   "name": "Adventitious root 22",
+   "conceptId": "Roots",
+   "color": "#a68054",
+   "stats": {
+    "Root length": "298 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0023",
+   "name": "Adventitious root 23",
+   "conceptId": "Roots",
+   "color": "#957b58",
+   "stats": {
+    "Root length": "312 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0024",
+   "name": "Adventitious root 24",
+   "conceptId": "Roots",
+   "color": "#a68764",
+   "stats": {
+    "Root length": "299 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0025",
+   "name": "Adventitious root 25",
+   "conceptId": "Roots",
+   "color": "#ab875b",
+   "stats": {
+    "Root length": "312 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0026",
+   "name": "Adventitious root 26",
+   "conceptId": "Roots",
+   "color": "#a48151",
+   "stats": {
+    "Root length": "291 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0027",
+   "name": "Adventitious root 27",
+   "conceptId": "Roots",
+   "color": "#b49675",
+   "stats": {
+    "Root length": "326 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0028",
+   "name": "Adventitious root 28",
+   "conceptId": "Roots",
+   "color": "#b69970",
+   "stats": {
+    "Root length": "296 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0029",
+   "name": "Adventitious root 29",
+   "conceptId": "Roots",
+   "color": "#aa8965",
+   "stats": {
+    "Root length": "285 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0030",
+   "name": "Adventitious root 30",
+   "conceptId": "Roots",
+   "color": "#997b58",
+   "stats": {
+    "Root length": "288 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0031",
+   "name": "Adventitious root 31",
+   "conceptId": "Roots",
+   "color": "#a27d51",
+   "stats": {
+    "Root length": "304 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0032",
+   "name": "Adventitious root 32",
+   "conceptId": "Roots",
+   "color": "#a68557",
+   "stats": {
+    "Root length": "292 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0033",
+   "name": "Adventitious root 33",
+   "conceptId": "Roots",
+   "color": "#a78450",
+   "stats": {
+    "Root length": "285 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0034",
+   "name": "Adventitious root 34",
+   "conceptId": "Roots",
+   "color": "#b59267",
+   "stats": {
+    "Root length": "300 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0035",
+   "name": "Adventitious root 35",
+   "conceptId": "Roots",
+   "color": "#a07f53",
+   "stats": {
+    "Root length": "284 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0036",
+   "name": "Adventitious root 36",
+   "conceptId": "Roots",
+   "color": "#a9875f",
+   "stats": {
+    "Root length": "281 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0037",
+   "name": "Adventitious root 37",
+   "conceptId": "Roots",
+   "color": "#a88861",
+   "stats": {
+    "Root length": "292 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0038",
+   "name": "Adventitious root 38",
+   "conceptId": "Roots",
+   "color": "#9a7c57",
+   "stats": {
+    "Root length": "303 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0039",
+   "name": "Adventitious root 39",
+   "conceptId": "Roots",
+   "color": "#9a7c56",
+   "stats": {
+    "Root length": "280 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0040",
+   "name": "Adventitious root 40",
+   "conceptId": "Roots",
+   "color": "#ab8b60",
+   "stats": {
+    "Root length": "302 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0041",
+   "name": "Adventitious root 41",
+   "conceptId": "Roots",
+   "color": "#b08f5c",
+   "stats": {
+    "Root length": "294 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0042",
+   "name": "Adventitious root 42",
+   "conceptId": "Roots",
+   "color": "#aa8b62",
+   "stats": {
+    "Root length": "295 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0043",
+   "name": "Adventitious root 43",
+   "conceptId": "Roots",
+   "color": "#aa8359",
+   "stats": {
+    "Root length": "287 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0044",
+   "name": "Adventitious root 44",
+   "conceptId": "Roots",
+   "color": "#a38355",
+   "stats": {
+    "Root length": "296 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Internode_0001",
+   "name": "Main culm \u00b7 Internode 1",
+   "conceptId": "Culms",
+   "color": "#ada256",
+   "stats": {
+    "Length": "102 mm",
+    "Diameter": "10.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0001",
+   "name": "Main culm \u00b7 Leaf sheath 1",
+   "conceptId": "Sheaths",
+   "color": "#8b934e",
+   "stats": {
+    "Sheath length": "85 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0001",
+   "name": "Main culm \u00b7 Leaf blade 1",
+   "conceptId": "Blades",
+   "color": "#819645",
+   "stats": {
+    "Blade length": "329 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "Ligule_0001",
+   "name": "Main culm \u00b7 Ligule & auricles 1",
+   "conceptId": "Ligules",
+   "color": "#d7dcbc",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0002",
+   "name": "Main culm \u00b7 Internode 2",
+   "conceptId": "Culms",
+   "color": "#aba85c",
+   "stats": {
+    "Length": "159 mm",
+    "Diameter": "9.6 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0002",
+   "name": "Main culm \u00b7 Leaf sheath 2",
+   "conceptId": "Sheaths",
+   "color": "#879747",
+   "stats": {
+    "Sheath length": "116 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0002",
+   "name": "Main culm \u00b7 Leaf blade 2",
+   "conceptId": "Blades",
+   "color": "#67883b",
+   "stats": {
+    "Blade length": "412 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0002",
+   "name": "Main culm \u00b7 Ligule & auricles 2",
+   "conceptId": "Ligules",
+   "color": "#d5dabd",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0003",
+   "name": "Main culm \u00b7 Internode 3",
+   "conceptId": "Culms",
+   "color": "#919b51",
+   "stats": {
+    "Length": "216 mm",
+    "Diameter": "8.3 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0003",
+   "name": "Main culm \u00b7 Leaf sheath 3",
+   "conceptId": "Sheaths",
+   "color": "#769543",
+   "stats": {
+    "Sheath length": "170 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0003",
+   "name": "Main culm \u00b7 Leaf blade 3",
+   "conceptId": "Blades",
+   "color": "#599438",
+   "stats": {
+    "Blade length": "545 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0003",
+   "name": "Main culm \u00b7 Ligule & auricles 3",
+   "conceptId": "Ligules",
+   "color": "#dadfc2",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0004",
+   "name": "Main culm \u00b7 Internode 4",
+   "conceptId": "Culms",
+   "color": "#95ac4a",
+   "stats": {
+    "Length": "296 mm",
+    "Diameter": "7.1 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0004",
+   "name": "Main culm \u00b7 Leaf sheath 4",
+   "conceptId": "Sheaths",
+   "color": "#6a9840",
+   "stats": {
+    "Sheath length": "239 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0004",
+   "name": "Main culm \u00b7 Leaf blade 4",
+   "conceptId": "Blades",
+   "color": "#4d7f33",
+   "stats": {
+    "Blade length": "567 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0004",
+   "name": "Main culm \u00b7 Ligule & auricles 4",
+   "conceptId": "Ligules",
+   "color": "#dbe0c4",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0005",
+   "name": "Main culm \u00b7 Internode 5",
+   "conceptId": "Culms",
+   "color": "#819349",
+   "stats": {
+    "Length": "364 mm",
+    "Diameter": "5.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0005",
+   "name": "Main culm \u00b7 Leaf sheath 5",
+   "conceptId": "Sheaths",
+   "color": "#578535",
+   "stats": {
+    "Sheath length": "170 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0005",
+   "name": "Main culm \u00b7 Flag leaf blade",
+   "conceptId": "FlagLeaves",
+   "color": "#46782e",
+   "stats": {
+    "Blade length": "372 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0005",
+   "name": "Main culm \u00b7 Ligule & auricles 5",
+   "conceptId": "Ligules",
+   "color": "#dee3c3",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "PanicleAxis_0001",
+   "name": "Main culm \u00b7 Panicle rachis",
+   "conceptId": "Panicles",
+   "color": "#9b984a",
+   "stats": {
+    "Rachis length": "228 mm",
+    "Primary branches": "10"
+   }
+  },
+  {
+   "id": "PanicleBranch_0001",
+   "name": "Main culm \u00b7 Panicle branch 1",
+   "conceptId": "Panicles",
+   "color": "#a8a349",
+   "stats": {
+    "Branch length": "84 mm",
+    "Grains carried": "14"
+   }
+  },
+  {
+   "id": "Grain_0001",
+   "name": "Main culm \u00b7 Grains, branch 1",
+   "conceptId": "Grains",
+   "color": "#c3a546",
+   "stats": {
+    "Grains": "14",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0002",
+   "name": "Main culm \u00b7 Panicle branch 2",
+   "conceptId": "Panicles",
+   "color": "#a2a255",
+   "stats": {
+    "Branch length": "74 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0002",
+   "name": "Main culm \u00b7 Grains, branch 2",
+   "conceptId": "Grains",
+   "color": "#c1a347",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0003",
+   "name": "Main culm \u00b7 Panicle branch 3",
+   "conceptId": "Panicles",
+   "color": "#a0a34a",
+   "stats": {
+    "Branch length": "79 mm",
+    "Grains carried": "17"
+   }
+  },
+  {
+   "id": "Grain_0003",
+   "name": "Main culm \u00b7 Grains, branch 3",
+   "conceptId": "Grains",
+   "color": "#c2b14f",
+   "stats": {
+    "Grains": "17",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0004",
+   "name": "Main culm \u00b7 Panicle branch 4",
+   "conceptId": "Panicles",
+   "color": "#999a45",
+   "stats": {
+    "Branch length": "77 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0004",
+   "name": "Main culm \u00b7 Grains, branch 4",
+   "conceptId": "Grains",
+   "color": "#cdb358",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0005",
+   "name": "Main culm \u00b7 Panicle branch 5",
+   "conceptId": "Panicles",
+   "color": "#a2a245",
+   "stats": {
+    "Branch length": "73 mm",
+    "Grains carried": "24"
+   }
+  },
+  {
+   "id": "Grain_0005",
+   "name": "Main culm \u00b7 Grains, branch 5",
+   "conceptId": "Grains",
+   "color": "#c8b247",
+   "stats": {
+    "Grains": "24",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0006",
+   "name": "Main culm \u00b7 Panicle branch 6",
+   "conceptId": "Panicles",
+   "color": "#9f9c48",
+   "stats": {
+    "Branch length": "59 mm",
+    "Grains carried": "15"
+   }
+  },
+  {
+   "id": "Grain_0006",
+   "name": "Main culm \u00b7 Grains, branch 6",
+   "conceptId": "Grains",
+   "color": "#cbb45b",
+   "stats": {
+    "Grains": "15",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0007",
+   "name": "Main culm \u00b7 Panicle branch 7",
+   "conceptId": "Panicles",
+   "color": "#a09b4a",
+   "stats": {
+    "Branch length": "57 mm",
+    "Grains carried": "23"
+   }
+  },
+  {
+   "id": "Grain_0007",
+   "name": "Main culm \u00b7 Grains, branch 7",
+   "conceptId": "Grains",
+   "color": "#ccaf4f",
+   "stats": {
+    "Grains": "23",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0008",
+   "name": "Main culm \u00b7 Panicle branch 8",
+   "conceptId": "Panicles",
+   "color": "#9d9e4f",
+   "stats": {
+    "Branch length": "63 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0008",
+   "name": "Main culm \u00b7 Grains, branch 8",
+   "conceptId": "Grains",
+   "color": "#c3b063",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0009",
+   "name": "Main culm \u00b7 Panicle branch 9",
+   "conceptId": "Panicles",
+   "color": "#979447",
+   "stats": {
+    "Branch length": "64 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0009",
+   "name": "Main culm \u00b7 Grains, branch 9",
+   "conceptId": "Grains",
+   "color": "#cbb258",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0010",
+   "name": "Main culm \u00b7 Panicle branch 10",
+   "conceptId": "Panicles",
+   "color": "#93924e",
+   "stats": {
+    "Branch length": "68 mm",
+    "Grains carried": "17"
+   }
+  },
+  {
+   "id": "Grain_0010",
+   "name": "Main culm \u00b7 Grains, branch 10",
+   "conceptId": "Grains",
+   "color": "#c0a655",
+   "stats": {
+    "Grains": "17",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "Cutaway_0001",
+   "name": "Grain cutaway \u00b7 Lemma & palea (husk)",
+   "conceptId": "GrainCutaway",
+   "color": "#d0a035",
+   "stats": {
+    "Grain size": "10 \u00d7 4.2 mm"
+   }
+  },
+  {
+   "id": "Cutaway_0002",
+   "name": "Grain cutaway \u00b7 Endosperm",
+   "conceptId": "GrainCutaway",
+   "color": "#efe8d6",
+   "stats": {
+    "Share of grain": "\u2248 90 %"
+   }
+  },
+  {
+   "id": "Cutaway_0003",
+   "name": "Grain cutaway \u00b7 Embryo",
+   "conceptId": "GrainCutaway",
+   "color": "#bb8f3e",
+   "stats": {
+    "Share of grain": "\u2248 3 %"
+   }
+  },
+  {
+   "id": "Internode_0006",
+   "name": "Tiller 2 \u00b7 Internode 1",
+   "conceptId": "Culms",
+   "color": "#b2a960",
+   "stats": {
+    "Length": "93 mm",
+    "Diameter": "10.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0006",
+   "name": "Tiller 2 \u00b7 Leaf sheath 1",
+   "conceptId": "Sheaths",
+   "color": "#8f944e",
+   "stats": {
+    "Sheath length": "73 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0006",
+   "name": "Tiller 2 \u00b7 Leaf blade 1",
+   "conceptId": "Blades",
+   "color": "#839241",
+   "stats": {
+    "Blade length": "321 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "Ligule_0006",
+   "name": "Tiller 2 \u00b7 Ligule & auricles 1",
+   "conceptId": "Ligules",
+   "color": "#e0e4ce",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0007",
+   "name": "Tiller 2 \u00b7 Internode 2",
+   "conceptId": "Culms",
+   "color": "#a29f59",
+   "stats": {
+    "Length": "145 mm",
+    "Diameter": "9.6 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0007",
+   "name": "Tiller 2 \u00b7 Leaf sheath 2",
+   "conceptId": "Sheaths",
+   "color": "#8ba246",
+   "stats": {
+    "Sheath length": "118 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0007",
+   "name": "Tiller 2 \u00b7 Leaf blade 2",
+   "conceptId": "Blades",
+   "color": "#6d8d41",
+   "stats": {
+    "Blade length": "422 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0007",
+   "name": "Tiller 2 \u00b7 Ligule & auricles 2",
+   "conceptId": "Ligules",
+   "color": "#dfe1c8",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0008",
+   "name": "Tiller 2 \u00b7 Internode 3",
+   "conceptId": "Culms",
+   "color": "#9ca24b",
+   "stats": {
+    "Length": "197 mm",
+    "Diameter": "8.3 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0008",
+   "name": "Tiller 2 \u00b7 Leaf sheath 3",
+   "conceptId": "Sheaths",
+   "color": "#739745",
+   "stats": {
+    "Sheath length": "160 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0008",
+   "name": "Tiller 2 \u00b7 Leaf blade 3",
+   "conceptId": "Blades",
+   "color": "#61943a",
+   "stats": {
+    "Blade length": "471 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0008",
+   "name": "Tiller 2 \u00b7 Ligule & auricles 3",
+   "conceptId": "Ligules",
+   "color": "#e2e6c9",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0009",
+   "name": "Tiller 2 \u00b7 Internode 4",
+   "conceptId": "Culms",
+   "color": "#93a44d",
+   "stats": {
+    "Length": "269 mm",
+    "Diameter": "7.1 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0009",
+   "name": "Tiller 2 \u00b7 Leaf sheath 4",
+   "conceptId": "Sheaths",
+   "color": "#618843",
+   "stats": {
+    "Sheath length": "221 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0009",
+   "name": "Tiller 2 \u00b7 Leaf blade 4",
+   "conceptId": "Blades",
+   "color": "#4b8238",
+   "stats": {
+    "Blade length": "518 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0009",
+   "name": "Tiller 2 \u00b7 Ligule & auricles 4",
+   "conceptId": "Ligules",
+   "color": "#d8ddba",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0010",
+   "name": "Tiller 2 \u00b7 Internode 5",
+   "conceptId": "Culms",
+   "color": "#839a4d",
+   "stats": {
+    "Length": "331 mm",
+    "Diameter": "5.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0010",
+   "name": "Tiller 2 \u00b7 Leaf sheath 5",
+   "conceptId": "Sheaths",
+   "color": "#568638",
+   "stats": {
+    "Sheath length": "170 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0010",
+   "name": "Tiller 2 \u00b7 Flag leaf blade",
+   "conceptId": "FlagLeaves",
+   "color": "#488332",
+   "stats": {
+    "Blade length": "389 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0010",
+   "name": "Tiller 2 \u00b7 Ligule & auricles 5",
+   "conceptId": "Ligules",
+   "color": "#dde2c7",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "PanicleAxis_0002",
+   "name": "Tiller 2 \u00b7 Panicle rachis",
+   "conceptId": "Panicles",
+   "color": "#9c8740",
+   "stats": {
+    "Rachis length": "207 mm",
+    "Primary branches": "12"
+   }
+  },
+  {
+   "id": "PanicleBranch_0011",
+   "name": "Tiller 2 \u00b7 Panicle branch 1",
+   "conceptId": "Panicles",
+   "color": "#a3913d",
+   "stats": {
+    "Branch length": "70 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0011",
+   "name": "Tiller 2 \u00b7 Grains, branch 1",
+   "conceptId": "Grains",
+   "color": "#d19d34",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0012",
+   "name": "Tiller 2 \u00b7 Panicle branch 2",
+   "conceptId": "Panicles",
+   "color": "#9d853b",
+   "stats": {
+    "Branch length": "68 mm",
+    "Grains carried": "16"
+   }
+  },
+  {
+   "id": "Grain_0012",
+   "name": "Tiller 2 \u00b7 Grains, branch 2",
+   "conceptId": "Grains",
+   "color": "#d29b24",
+   "stats": {
+    "Grains": "16",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0013",
+   "name": "Tiller 2 \u00b7 Panicle branch 3",
+   "conceptId": "Panicles",
+   "color": "#9f8843",
+   "stats": {
+    "Branch length": "76 mm",
+    "Grains carried": "17"
+   }
+  },
+  {
+   "id": "Grain_0013",
+   "name": "Tiller 2 \u00b7 Grains, branch 3",
+   "conceptId": "Grains",
+   "color": "#ca9a29",
+   "stats": {
+    "Grains": "17",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0014",
+   "name": "Tiller 2 \u00b7 Panicle branch 4",
+   "conceptId": "Panicles",
+   "color": "#9b8b3c",
+   "stats": {
+    "Branch length": "79 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0014",
+   "name": "Tiller 2 \u00b7 Grains, branch 4",
+   "conceptId": "Grains",
+   "color": "#dba028",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0015",
+   "name": "Tiller 2 \u00b7 Panicle branch 5",
+   "conceptId": "Panicles",
+   "color": "#9c8d41",
+   "stats": {
+    "Branch length": "78 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0015",
+   "name": "Tiller 2 \u00b7 Grains, branch 5",
+   "conceptId": "Grains",
+   "color": "#d1a640",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0016",
+   "name": "Tiller 2 \u00b7 Panicle branch 6",
+   "conceptId": "Panicles",
+   "color": "#a28f40",
+   "stats": {
+    "Branch length": "74 mm",
+    "Grains carried": "14"
+   }
+  },
+  {
+   "id": "Grain_0016",
+   "name": "Tiller 2 \u00b7 Grains, branch 6",
+   "conceptId": "Grains",
+   "color": "#d5a732",
+   "stats": {
+    "Grains": "14",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0017",
+   "name": "Tiller 2 \u00b7 Panicle branch 7",
+   "conceptId": "Panicles",
+   "color": "#9e8739",
+   "stats": {
+    "Branch length": "74 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0017",
+   "name": "Tiller 2 \u00b7 Grains, branch 7",
+   "conceptId": "Grains",
+   "color": "#d29835",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0018",
+   "name": "Tiller 2 \u00b7 Panicle branch 8",
+   "conceptId": "Panicles",
+   "color": "#ab943d",
+   "stats": {
+    "Branch length": "67 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0018",
+   "name": "Tiller 2 \u00b7 Grains, branch 8",
+   "conceptId": "Grains",
+   "color": "#c8982e",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0019",
+   "name": "Tiller 2 \u00b7 Panicle branch 9",
+   "conceptId": "Panicles",
+   "color": "#9f8e38",
+   "stats": {
+    "Branch length": "64 mm",
+    "Grains carried": "16"
+   }
+  },
+  {
+   "id": "Grain_0019",
+   "name": "Tiller 2 \u00b7 Grains, branch 9",
+   "conceptId": "Grains",
+   "color": "#d4aa41",
+   "stats": {
+    "Grains": "16",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0020",
+   "name": "Tiller 2 \u00b7 Panicle branch 10",
+   "conceptId": "Panicles",
+   "color": "#a69647",
+   "stats": {
+    "Branch length": "69 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0020",
+   "name": "Tiller 2 \u00b7 Grains, branch 10",
+   "conceptId": "Grains",
+   "color": "#d9a630",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0021",
+   "name": "Tiller 2 \u00b7 Panicle branch 11",
+   "conceptId": "Panicles",
+   "color": "#aa9242",
+   "stats": {
+    "Branch length": "58 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0021",
+   "name": "Tiller 2 \u00b7 Grains, branch 11",
+   "conceptId": "Grains",
+   "color": "#d7a038",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0022",
+   "name": "Tiller 2 \u00b7 Panicle branch 12",
+   "conceptId": "Panicles",
+   "color": "#9c8639",
+   "stats": {
+    "Branch length": "58 mm",
+    "Grains carried": "15"
+   }
+  },
+  {
+   "id": "Grain_0022",
+   "name": "Tiller 2 \u00b7 Grains, branch 12",
+   "conceptId": "Grains",
+   "color": "#cb9f3c",
+   "stats": {
+    "Grains": "15",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "Internode_0011",
+   "name": "Tiller 3 \u00b7 Internode 1",
+   "conceptId": "Culms",
+   "color": "#aca155",
+   "stats": {
+    "Length": "93 mm",
+    "Diameter": "10.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0011",
+   "name": "Tiller 3 \u00b7 Leaf sheath 1",
+   "conceptId": "Sheaths",
+   "color": "#9ba058",
+   "stats": {
+    "Sheath length": "77 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0011",
+   "name": "Tiller 3 \u00b7 Leaf blade 1",
+   "conceptId": "Blades",
+   "color": "#859844",
+   "stats": {
+    "Blade length": "319 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "Ligule_0011",
+   "name": "Tiller 3 \u00b7 Ligule & auricles 1",
+   "conceptId": "Ligules",
+   "color": "#e0e3ca",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0012",
+   "name": "Tiller 3 \u00b7 Internode 2",
+   "conceptId": "Culms",
+   "color": "#a19e54",
+   "stats": {
+    "Length": "145 mm",
+    "Diameter": "9.6 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0012",
+   "name": "Tiller 3 \u00b7 Leaf sheath 2",
+   "conceptId": "Sheaths",
+   "color": "#7e8d48",
+   "stats": {
+    "Sheath length": "117 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0012",
+   "name": "Tiller 3 \u00b7 Leaf blade 2",
+   "conceptId": "Blades",
+   "color": "#6e933b",
+   "stats": {
+    "Blade length": "406 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0012",
+   "name": "Tiller 3 \u00b7 Ligule & auricles 2",
+   "conceptId": "Ligules",
+   "color": "#d7dcbf",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0013",
+   "name": "Tiller 3 \u00b7 Internode 3",
+   "conceptId": "Culms",
+   "color": "#99a04e",
+   "stats": {
+    "Length": "197 mm",
+    "Diameter": "8.3 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0013",
+   "name": "Tiller 3 \u00b7 Leaf sheath 3",
+   "conceptId": "Sheaths",
+   "color": "#6a8c3d",
+   "stats": {
+    "Sheath length": "147 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0013",
+   "name": "Tiller 3 \u00b7 Leaf blade 3",
+   "conceptId": "Blades",
+   "color": "#5f993a",
+   "stats": {
+    "Blade length": "533 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0013",
+   "name": "Tiller 3 \u00b7 Ligule & auricles 3",
+   "conceptId": "Ligules",
+   "color": "#e2e5cd",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0014",
+   "name": "Tiller 3 \u00b7 Internode 4",
+   "conceptId": "Culms",
+   "color": "#8d9e4f",
+   "stats": {
+    "Length": "270 mm",
+    "Diameter": "7.1 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0014",
+   "name": "Tiller 3 \u00b7 Leaf sheath 4",
+   "conceptId": "Sheaths",
+   "color": "#6d9546",
+   "stats": {
+    "Sheath length": "210 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0014",
+   "name": "Tiller 3 \u00b7 Leaf blade 4",
+   "conceptId": "Blades",
+   "color": "#538f38",
+   "stats": {
+    "Blade length": "567 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0014",
+   "name": "Tiller 3 \u00b7 Ligule & auricles 4",
+   "conceptId": "Ligules",
+   "color": "#dee3c2",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0015",
+   "name": "Tiller 3 \u00b7 Internode 5",
+   "conceptId": "Culms",
+   "color": "#879e47",
+   "stats": {
+    "Length": "332 mm",
+    "Diameter": "5.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0015",
+   "name": "Tiller 3 \u00b7 Leaf sheath 5",
+   "conceptId": "Sheaths",
+   "color": "#598640",
+   "stats": {
+    "Sheath length": "170 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0015",
+   "name": "Tiller 3 \u00b7 Flag leaf blade",
+   "conceptId": "FlagLeaves",
+   "color": "#4c8834",
+   "stats": {
+    "Blade length": "355 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0015",
+   "name": "Tiller 3 \u00b7 Ligule & auricles 5",
+   "conceptId": "Ligules",
+   "color": "#dcdfba",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0016",
+   "name": "Tiller 3 \u00b7 Senescent leaf",
+   "conceptId": "Blades",
+   "color": "#a68449",
+   "stats": {
+    "Blade length": "304 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "PanicleAxis_0003",
+   "name": "Tiller 3 \u00b7 Panicle rachis",
+   "conceptId": "Panicles",
+   "color": "#a3a04e",
+   "stats": {
+    "Rachis length": "207 mm",
+    "Primary branches": "10"
+   }
+  },
+  {
+   "id": "PanicleBranch_0023",
+   "name": "Tiller 3 \u00b7 Panicle branch 1",
+   "conceptId": "Panicles",
+   "color": "#9ca047",
+   "stats": {
+    "Branch length": "84 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0023",
+   "name": "Tiller 3 \u00b7 Grains, branch 1",
+   "conceptId": "Grains",
+   "color": "#c6b65a",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0024",
+   "name": "Tiller 3 \u00b7 Panicle branch 2",
+   "conceptId": "Panicles",
+   "color": "#a6a44f",
+   "stats": {
+    "Branch length": "84 mm",
+    "Grains carried": "14"
+   }
+  },
+  {
+   "id": "Grain_0024",
+   "name": "Tiller 3 \u00b7 Grains, branch 2",
+   "conceptId": "Grains",
+   "color": "#cbb254",
+   "stats": {
+    "Grains": "14",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0025",
+   "name": "Tiller 3 \u00b7 Panicle branch 3",
+   "conceptId": "Panicles",
+   "color": "#a09f4b",
+   "stats": {
+    "Branch length": "78 mm",
+    "Grains carried": "20"
+   }
+  },
+  {
+   "id": "Grain_0025",
+   "name": "Tiller 3 \u00b7 Grains, branch 3",
+   "conceptId": "Grains",
+   "color": "#ccad58",
+   "stats": {
+    "Grains": "20",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0026",
+   "name": "Tiller 3 \u00b7 Panicle branch 4",
+   "conceptId": "Panicles",
+   "color": "#9da047",
+   "stats": {
+    "Branch length": "63 mm",
+    "Grains carried": "17"
+   }
+  },
+  {
+   "id": "Grain_0026",
+   "name": "Tiller 3 \u00b7 Grains, branch 4",
+   "conceptId": "Grains",
+   "color": "#c0b050",
+   "stats": {
+    "Grains": "17",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0027",
+   "name": "Tiller 3 \u00b7 Panicle branch 5",
+   "conceptId": "Panicles",
+   "color": "#919544",
+   "stats": {
+    "Branch length": "71 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0027",
+   "name": "Tiller 3 \u00b7 Grains, branch 5",
+   "conceptId": "Grains",
+   "color": "#c4b25a",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0028",
+   "name": "Tiller 3 \u00b7 Panicle branch 6",
+   "conceptId": "Panicles",
+   "color": "#8c904d",
+   "stats": {
+    "Branch length": "78 mm",
+    "Grains carried": "16"
+   }
+  },
+  {
+   "id": "Grain_0028",
+   "name": "Tiller 3 \u00b7 Grains, branch 6",
+   "conceptId": "Grains",
+   "color": "#c0af51",
+   "stats": {
+    "Grains": "16",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0029",
+   "name": "Tiller 3 \u00b7 Panicle branch 7",
+   "conceptId": "Panicles",
+   "color": "#9f9d51",
+   "stats": {
+    "Branch length": "57 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0029",
+   "name": "Tiller 3 \u00b7 Grains, branch 7",
+   "conceptId": "Grains",
+   "color": "#d1b951",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0030",
+   "name": "Tiller 3 \u00b7 Panicle branch 8",
+   "conceptId": "Panicles",
+   "color": "#a3a452",
+   "stats": {
+    "Branch length": "60 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0030",
+   "name": "Tiller 3 \u00b7 Grains, branch 8",
+   "conceptId": "Grains",
+   "color": "#bfa64a",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0031",
+   "name": "Tiller 3 \u00b7 Panicle branch 9",
+   "conceptId": "Panicles",
+   "color": "#959549",
+   "stats": {
+    "Branch length": "68 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0031",
+   "name": "Tiller 3 \u00b7 Grains, branch 9",
+   "conceptId": "Grains",
+   "color": "#c9b35c",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0032",
+   "name": "Tiller 3 \u00b7 Panicle branch 10",
+   "conceptId": "Panicles",
+   "color": "#9b984c",
+   "stats": {
+    "Branch length": "52 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0032",
+   "name": "Tiller 3 \u00b7 Grains, branch 10",
+   "conceptId": "Grains",
+   "color": "#cfb455",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "Internode_0016",
+   "name": "Tiller 4 \u00b7 Internode 1",
+   "conceptId": "Culms",
+   "color": "#b1aa51",
+   "stats": {
+    "Length": "95 mm",
+    "Diameter": "10.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0016",
+   "name": "Tiller 4 \u00b7 Leaf sheath 1",
+   "conceptId": "Sheaths",
+   "color": "#959d4a",
+   "stats": {
+    "Sheath length": "74 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0017",
+   "name": "Tiller 4 \u00b7 Leaf blade 1",
+   "conceptId": "Blades",
+   "color": "#798a43",
+   "stats": {
+    "Blade length": "331 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "Ligule_0016",
+   "name": "Tiller 4 \u00b7 Ligule & auricles 1",
+   "conceptId": "Ligules",
+   "color": "#dfe3c9",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0017",
+   "name": "Tiller 4 \u00b7 Internode 2",
+   "conceptId": "Culms",
+   "color": "#a8a854",
+   "stats": {
+    "Length": "147 mm",
+    "Diameter": "9.6 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0017",
+   "name": "Tiller 4 \u00b7 Leaf sheath 2",
+   "conceptId": "Sheaths",
+   "color": "#839645",
+   "stats": {
+    "Sheath length": "107 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0018",
+   "name": "Tiller 4 \u00b7 Leaf blade 2",
+   "conceptId": "Blades",
+   "color": "#709745",
+   "stats": {
+    "Blade length": "400 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0017",
+   "name": "Tiller 4 \u00b7 Ligule & auricles 2",
+   "conceptId": "Ligules",
+   "color": "#d9deb8",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0018",
+   "name": "Tiller 4 \u00b7 Internode 3",
+   "conceptId": "Culms",
+   "color": "#919c4d",
+   "stats": {
+    "Length": "200 mm",
+    "Diameter": "8.3 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0018",
+   "name": "Tiller 4 \u00b7 Leaf sheath 3",
+   "conceptId": "Sheaths",
+   "color": "#6f933d",
+   "stats": {
+    "Sheath length": "157 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0019",
+   "name": "Tiller 4 \u00b7 Leaf blade 3",
+   "conceptId": "Blades",
+   "color": "#5b9937",
+   "stats": {
+    "Blade length": "470 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0018",
+   "name": "Tiller 4 \u00b7 Ligule & auricles 3",
+   "conceptId": "Ligules",
+   "color": "#e1e3cc",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0019",
+   "name": "Tiller 4 \u00b7 Internode 4",
+   "conceptId": "Culms",
+   "color": "#8fa34e",
+   "stats": {
+    "Length": "273 mm",
+    "Diameter": "7.1 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0019",
+   "name": "Tiller 4 \u00b7 Leaf sheath 4",
+   "conceptId": "Sheaths",
+   "color": "#69a040",
+   "stats": {
+    "Sheath length": "229 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0020",
+   "name": "Tiller 4 \u00b7 Leaf blade 4",
+   "conceptId": "Blades",
+   "color": "#497c32",
+   "stats": {
+    "Blade length": "576 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0019",
+   "name": "Tiller 4 \u00b7 Ligule & auricles 4",
+   "conceptId": "Ligules",
+   "color": "#e1e5ca",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0020",
+   "name": "Tiller 4 \u00b7 Internode 5",
+   "conceptId": "Culms",
+   "color": "#839a49",
+   "stats": {
+    "Length": "336 mm",
+    "Diameter": "5.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0020",
+   "name": "Tiller 4 \u00b7 Leaf sheath 5",
+   "conceptId": "Sheaths",
+   "color": "#548139",
+   "stats": {
+    "Sheath length": "170 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0021",
+   "name": "Tiller 4 \u00b7 Flag leaf blade",
+   "conceptId": "FlagLeaves",
+   "color": "#3b7527",
+   "stats": {
+    "Blade length": "357 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0020",
+   "name": "Tiller 4 \u00b7 Ligule & auricles 5",
+   "conceptId": "Ligules",
+   "color": "#e0e4cc",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "PanicleAxis_0004",
+   "name": "Tiller 4 \u00b7 Panicle rachis",
+   "conceptId": "Panicles",
+   "color": "#958b47",
+   "stats": {
+    "Rachis length": "228 mm",
+    "Primary branches": "12"
+   }
+  },
+  {
+   "id": "PanicleBranch_0033",
+   "name": "Tiller 4 \u00b7 Panicle branch 1",
+   "conceptId": "Panicles",
+   "color": "#a39d47",
+   "stats": {
+    "Branch length": "77 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0033",
+   "name": "Tiller 4 \u00b7 Grains, branch 1",
+   "conceptId": "Grains",
+   "color": "#caa238",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0034",
+   "name": "Tiller 4 \u00b7 Panicle branch 2",
+   "conceptId": "Panicles",
+   "color": "#9f9344",
+   "stats": {
+    "Branch length": "72 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0034",
+   "name": "Tiller 4 \u00b7 Grains, branch 2",
+   "conceptId": "Grains",
+   "color": "#c8a237",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0035",
+   "name": "Tiller 4 \u00b7 Panicle branch 3",
+   "conceptId": "Panicles",
+   "color": "#9a933c",
+   "stats": {
+    "Branch length": "74 mm",
+    "Grains carried": "20"
+   }
+  },
+  {
+   "id": "Grain_0035",
+   "name": "Tiller 4 \u00b7 Grains, branch 3",
+   "conceptId": "Grains",
+   "color": "#c1a243",
+   "stats": {
+    "Grains": "20",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0036",
+   "name": "Tiller 4 \u00b7 Panicle branch 4",
+   "conceptId": "Panicles",
+   "color": "#9d943f",
+   "stats": {
+    "Branch length": "69 mm",
+    "Grains carried": "24"
+   }
+  },
+  {
+   "id": "Grain_0036",
+   "name": "Tiller 4 \u00b7 Grains, branch 4",
+   "conceptId": "Grains",
+   "color": "#cca737",
+   "stats": {
+    "Grains": "24",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0037",
+   "name": "Tiller 4 \u00b7 Panicle branch 5",
+   "conceptId": "Panicles",
+   "color": "#958a47",
+   "stats": {
+    "Branch length": "72 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0037",
+   "name": "Tiller 4 \u00b7 Grains, branch 5",
+   "conceptId": "Grains",
+   "color": "#d1a033",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0038",
+   "name": "Tiller 4 \u00b7 Panicle branch 6",
+   "conceptId": "Panicles",
+   "color": "#a1943e",
+   "stats": {
+    "Branch length": "70 mm",
+    "Grains carried": "20"
+   }
+  },
+  {
+   "id": "Grain_0038",
+   "name": "Tiller 4 \u00b7 Grains, branch 6",
+   "conceptId": "Grains",
+   "color": "#c5a641",
+   "stats": {
+    "Grains": "20",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0039",
+   "name": "Tiller 4 \u00b7 Panicle branch 7",
+   "conceptId": "Panicles",
+   "color": "#9a9241",
+   "stats": {
+    "Branch length": "60 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0039",
+   "name": "Tiller 4 \u00b7 Grains, branch 7",
+   "conceptId": "Grains",
+   "color": "#ccaa38",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0040",
+   "name": "Tiller 4 \u00b7 Panicle branch 8",
+   "conceptId": "Panicles",
+   "color": "#a99e43",
+   "stats": {
+    "Branch length": "72 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0040",
+   "name": "Tiller 4 \u00b7 Grains, branch 8",
+   "conceptId": "Grains",
+   "color": "#d1ab47",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0041",
+   "name": "Tiller 4 \u00b7 Panicle branch 9",
+   "conceptId": "Panicles",
+   "color": "#a19a4d",
+   "stats": {
+    "Branch length": "64 mm",
+    "Grains carried": "14"
+   }
+  },
+  {
+   "id": "Grain_0041",
+   "name": "Tiller 4 \u00b7 Grains, branch 9",
+   "conceptId": "Grains",
+   "color": "#cfac42",
+   "stats": {
+    "Grains": "14",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0042",
+   "name": "Tiller 4 \u00b7 Panicle branch 10",
+   "conceptId": "Panicles",
+   "color": "#a3984c",
+   "stats": {
+    "Branch length": "70 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0042",
+   "name": "Tiller 4 \u00b7 Grains, branch 10",
+   "conceptId": "Grains",
+   "color": "#cfa233",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0043",
+   "name": "Tiller 4 \u00b7 Panicle branch 11",
+   "conceptId": "Panicles",
+   "color": "#a89c46",
+   "stats": {
+    "Branch length": "54 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0043",
+   "name": "Tiller 4 \u00b7 Grains, branch 11",
+   "conceptId": "Grains",
+   "color": "#cdaa3a",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0044",
+   "name": "Tiller 4 \u00b7 Panicle branch 12",
+   "conceptId": "Panicles",
+   "color": "#9f913f",
+   "stats": {
+    "Branch length": "57 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0044",
+   "name": "Tiller 4 \u00b7 Grains, branch 12",
+   "conceptId": "Grains",
+   "color": "#c39b3a",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "Internode_0021",
+   "name": "Tiller 5 \u00b7 Internode 1",
+   "conceptId": "Culms",
+   "color": "#b5ac56",
+   "stats": {
+    "Length": "94 mm",
+    "Diameter": "10.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0021",
+   "name": "Tiller 5 \u00b7 Leaf sheath 1",
+   "conceptId": "Sheaths",
+   "color": "#9ba351",
+   "stats": {
+    "Sheath length": "74 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0022",
+   "name": "Tiller 5 \u00b7 Leaf blade 1",
+   "conceptId": "Blades",
+   "color": "#90a34c",
+   "stats": {
+    "Blade length": "328 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "Ligule_0021",
+   "name": "Tiller 5 \u00b7 Ligule & auricles 1",
+   "conceptId": "Ligules",
+   "color": "#d9ddc2",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0022",
+   "name": "Tiller 5 \u00b7 Internode 2",
+   "conceptId": "Culms",
+   "color": "#a3a257",
+   "stats": {
+    "Length": "146 mm",
+    "Diameter": "9.6 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0022",
+   "name": "Tiller 5 \u00b7 Leaf sheath 2",
+   "conceptId": "Sheaths",
+   "color": "#86974d",
+   "stats": {
+    "Sheath length": "110 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0023",
+   "name": "Tiller 5 \u00b7 Leaf blade 2",
+   "conceptId": "Blades",
+   "color": "#729743",
+   "stats": {
+    "Blade length": "434 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0022",
+   "name": "Tiller 5 \u00b7 Ligule & auricles 2",
+   "conceptId": "Ligules",
+   "color": "#dde0c8",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0023",
+   "name": "Tiller 5 \u00b7 Internode 3",
+   "conceptId": "Culms",
+   "color": "#a0a74b",
+   "stats": {
+    "Length": "198 mm",
+    "Diameter": "8.3 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0023",
+   "name": "Tiller 5 \u00b7 Leaf sheath 3",
+   "conceptId": "Sheaths",
+   "color": "#6f8a45",
+   "stats": {
+    "Sheath length": "160 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0024",
+   "name": "Tiller 5 \u00b7 Leaf blade 3",
+   "conceptId": "Blades",
+   "color": "#5b923b",
+   "stats": {
+    "Blade length": "526 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0023",
+   "name": "Tiller 5 \u00b7 Ligule & auricles 3",
+   "conceptId": "Ligules",
+   "color": "#d9dec4",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0024",
+   "name": "Tiller 5 \u00b7 Internode 4",
+   "conceptId": "Culms",
+   "color": "#99a94d",
+   "stats": {
+    "Length": "271 mm",
+    "Diameter": "7.1 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0024",
+   "name": "Tiller 5 \u00b7 Leaf sheath 4",
+   "conceptId": "Sheaths",
+   "color": "#658e3f",
+   "stats": {
+    "Sheath length": "198 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0025",
+   "name": "Tiller 5 \u00b7 Leaf blade 4",
+   "conceptId": "Blades",
+   "color": "#519235",
+   "stats": {
+    "Blade length": "592 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0024",
+   "name": "Tiller 5 \u00b7 Ligule & auricles 4",
+   "conceptId": "Ligules",
+   "color": "#e1e5cb",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0025",
+   "name": "Tiller 5 \u00b7 Internode 5",
+   "conceptId": "Culms",
+   "color": "#859748",
+   "stats": {
+    "Length": "333 mm",
+    "Diameter": "5.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0025",
+   "name": "Tiller 5 \u00b7 Leaf sheath 5",
+   "conceptId": "Sheaths",
+   "color": "#59823f",
+   "stats": {
+    "Sheath length": "170 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0026",
+   "name": "Tiller 5 \u00b7 Flag leaf blade",
+   "conceptId": "FlagLeaves",
+   "color": "#4b8032",
+   "stats": {
+    "Blade length": "385 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0025",
+   "name": "Tiller 5 \u00b7 Ligule & auricles 5",
+   "conceptId": "Ligules",
+   "color": "#e1e6c8",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "PanicleAxis_0005",
+   "name": "Tiller 5 \u00b7 Panicle rachis",
+   "conceptId": "Panicles",
+   "color": "#a39f42",
+   "stats": {
+    "Rachis length": "211 mm",
+    "Primary branches": "11"
+   }
+  },
+  {
+   "id": "PanicleBranch_0045",
+   "name": "Tiller 5 \u00b7 Panicle branch 1",
+   "conceptId": "Panicles",
+   "color": "#958f49",
+   "stats": {
+    "Branch length": "81 mm",
+    "Grains carried": "23"
+   }
+  },
+  {
+   "id": "Grain_0045",
+   "name": "Tiller 5 \u00b7 Grains, branch 1",
+   "conceptId": "Grains",
+   "color": "#c8a245",
+   "stats": {
+    "Grains": "23",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0046",
+   "name": "Tiller 5 \u00b7 Panicle branch 2",
+   "conceptId": "Panicles",
+   "color": "#9f9545",
+   "stats": {
+    "Branch length": "78 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0046",
+   "name": "Tiller 5 \u00b7 Grains, branch 2",
+   "conceptId": "Grains",
+   "color": "#c79e3c",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0047",
+   "name": "Tiller 5 \u00b7 Panicle branch 3",
+   "conceptId": "Panicles",
+   "color": "#9a9142",
+   "stats": {
+    "Branch length": "76 mm",
+    "Grains carried": "15"
+   }
+  },
+  {
+   "id": "Grain_0047",
+   "name": "Tiller 5 \u00b7 Grains, branch 3",
+   "conceptId": "Grains",
+   "color": "#c5a746",
+   "stats": {
+    "Grains": "15",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0048",
+   "name": "Tiller 5 \u00b7 Panicle branch 4",
+   "conceptId": "Panicles",
+   "color": "#9d9449",
+   "stats": {
+    "Branch length": "77 mm",
+    "Grains carried": "14"
+   }
+  },
+  {
+   "id": "Grain_0048",
+   "name": "Tiller 5 \u00b7 Grains, branch 4",
+   "conceptId": "Grains",
+   "color": "#cfa842",
+   "stats": {
+    "Grains": "14",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0049",
+   "name": "Tiller 5 \u00b7 Panicle branch 5",
+   "conceptId": "Panicles",
+   "color": "#a19943",
+   "stats": {
+    "Branch length": "66 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0049",
+   "name": "Tiller 5 \u00b7 Grains, branch 5",
+   "conceptId": "Grains",
+   "color": "#c8a448",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0050",
+   "name": "Tiller 5 \u00b7 Panicle branch 6",
+   "conceptId": "Panicles",
+   "color": "#9a9645",
+   "stats": {
+    "Branch length": "75 mm",
+    "Grains carried": "16"
+   }
+  },
+  {
+   "id": "Grain_0050",
+   "name": "Tiller 5 \u00b7 Grains, branch 6",
+   "conceptId": "Grains",
+   "color": "#ca9c38",
+   "stats": {
+    "Grains": "16",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0051",
+   "name": "Tiller 5 \u00b7 Panicle branch 7",
+   "conceptId": "Panicles",
+   "color": "#9c9442",
+   "stats": {
+    "Branch length": "59 mm",
+    "Grains carried": "15"
+   }
+  },
+  {
+   "id": "Grain_0051",
+   "name": "Tiller 5 \u00b7 Grains, branch 7",
+   "conceptId": "Grains",
+   "color": "#ccad48",
+   "stats": {
+    "Grains": "15",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0052",
+   "name": "Tiller 5 \u00b7 Panicle branch 8",
+   "conceptId": "Panicles",
+   "color": "#9a9645",
+   "stats": {
+    "Branch length": "60 mm",
+    "Grains carried": "24"
+   }
+  },
+  {
+   "id": "Grain_0052",
+   "name": "Tiller 5 \u00b7 Grains, branch 8",
+   "conceptId": "Grains",
+   "color": "#c6ab3f",
+   "stats": {
+    "Grains": "24",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0053",
+   "name": "Tiller 5 \u00b7 Panicle branch 9",
+   "conceptId": "Panicles",
+   "color": "#969342",
+   "stats": {
+    "Branch length": "63 mm",
+    "Grains carried": "14"
+   }
+  },
+  {
+   "id": "Grain_0053",
+   "name": "Tiller 5 \u00b7 Grains, branch 9",
+   "conceptId": "Grains",
+   "color": "#cfac4a",
+   "stats": {
+    "Grains": "14",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0054",
+   "name": "Tiller 5 \u00b7 Panicle branch 10",
+   "conceptId": "Panicles",
+   "color": "#a6a34e",
+   "stats": {
+    "Branch length": "56 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0054",
+   "name": "Tiller 5 \u00b7 Grains, branch 10",
+   "conceptId": "Grains",
+   "color": "#d2a94e",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0055",
+   "name": "Tiller 5 \u00b7 Panicle branch 11",
+   "conceptId": "Panicles",
+   "color": "#a49d48",
+   "stats": {
+    "Branch length": "53 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0055",
+   "name": "Tiller 5 \u00b7 Grains, branch 11",
+   "conceptId": "Grains",
+   "color": "#c9a644",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "Internode_0026",
+   "name": "Tiller 6 \u00b7 Internode 1",
+   "conceptId": "Culms",
+   "color": "#aca765",
+   "stats": {
+    "Length": "93 mm",
+    "Diameter": "10.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0026",
+   "name": "Tiller 6 \u00b7 Leaf sheath 1",
+   "conceptId": "Sheaths",
+   "color": "#989d46",
+   "stats": {
+    "Sheath length": "69 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0027",
+   "name": "Tiller 6 \u00b7 Leaf blade 1",
+   "conceptId": "Blades",
+   "color": "#7f8b46",
+   "stats": {
+    "Blade length": "342 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "Ligule_0026",
+   "name": "Tiller 6 \u00b7 Ligule & auricles 1",
+   "conceptId": "Ligules",
+   "color": "#e3e5cf",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0027",
+   "name": "Tiller 6 \u00b7 Internode 2",
+   "conceptId": "Culms",
+   "color": "#a2a353",
+   "stats": {
+    "Length": "145 mm",
+    "Diameter": "9.6 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0027",
+   "name": "Tiller 6 \u00b7 Leaf sheath 2",
+   "conceptId": "Sheaths",
+   "color": "#849a43",
+   "stats": {
+    "Sheath length": "119 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0028",
+   "name": "Tiller 6 \u00b7 Leaf blade 2",
+   "conceptId": "Blades",
+   "color": "#699239",
+   "stats": {
+    "Blade length": "424 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0027",
+   "name": "Tiller 6 \u00b7 Ligule & auricles 2",
+   "conceptId": "Ligules",
+   "color": "#dee2bf",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0028",
+   "name": "Tiller 6 \u00b7 Internode 3",
+   "conceptId": "Culms",
+   "color": "#9ea74c",
+   "stats": {
+    "Length": "196 mm",
+    "Diameter": "8.3 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0028",
+   "name": "Tiller 6 \u00b7 Leaf sheath 3",
+   "conceptId": "Sheaths",
+   "color": "#7fa242",
+   "stats": {
+    "Sheath length": "155 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0029",
+   "name": "Tiller 6 \u00b7 Leaf blade 3",
+   "conceptId": "Blades",
+   "color": "#568b33",
+   "stats": {
+    "Blade length": "529 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0028",
+   "name": "Tiller 6 \u00b7 Ligule & auricles 3",
+   "conceptId": "Ligules",
+   "color": "#d8ddbb",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0029",
+   "name": "Tiller 6 \u00b7 Internode 4",
+   "conceptId": "Culms",
+   "color": "#8b9e4b",
+   "stats": {
+    "Length": "269 mm",
+    "Diameter": "7.1 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0029",
+   "name": "Tiller 6 \u00b7 Leaf sheath 4",
+   "conceptId": "Sheaths",
+   "color": "#6c9543",
+   "stats": {
+    "Sheath length": "211 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0030",
+   "name": "Tiller 6 \u00b7 Leaf blade 4",
+   "conceptId": "Blades",
+   "color": "#4c8a2f",
+   "stats": {
+    "Blade length": "561 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0029",
+   "name": "Tiller 6 \u00b7 Ligule & auricles 4",
+   "conceptId": "Ligules",
+   "color": "#dbdeb9",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0030",
+   "name": "Tiller 6 \u00b7 Internode 5",
+   "conceptId": "Culms",
+   "color": "#839a4f",
+   "stats": {
+    "Length": "331 mm",
+    "Diameter": "5.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0030",
+   "name": "Tiller 6 \u00b7 Leaf sheath 5",
+   "conceptId": "Sheaths",
+   "color": "#5c943c",
+   "stats": {
+    "Sheath length": "170 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0031",
+   "name": "Tiller 6 \u00b7 Flag leaf blade",
+   "conceptId": "FlagLeaves",
+   "color": "#427a27",
+   "stats": {
+    "Blade length": "354 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0030",
+   "name": "Tiller 6 \u00b7 Ligule & auricles 5",
+   "conceptId": "Ligules",
+   "color": "#e4e7cb",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0032",
+   "name": "Tiller 6 \u00b7 Senescent leaf",
+   "conceptId": "Blades",
+   "color": "#aa8b47",
+   "stats": {
+    "Blade length": "320 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "PanicleAxis_0006",
+   "name": "Tiller 6 \u00b7 Panicle rachis",
+   "conceptId": "Panicles",
+   "color": "#999045",
+   "stats": {
+    "Rachis length": "228 mm",
+    "Primary branches": "12"
+   }
+  },
+  {
+   "id": "PanicleBranch_0056",
+   "name": "Tiller 6 \u00b7 Panicle branch 1",
+   "conceptId": "Panicles",
+   "color": "#978c43",
+   "stats": {
+    "Branch length": "83 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0056",
+   "name": "Tiller 6 \u00b7 Grains, branch 1",
+   "conceptId": "Grains",
+   "color": "#d2a93f",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0057",
+   "name": "Tiller 6 \u00b7 Panicle branch 2",
+   "conceptId": "Panicles",
+   "color": "#afa643",
+   "stats": {
+    "Branch length": "84 mm",
+    "Grains carried": "16"
+   }
+  },
+  {
+   "id": "Grain_0057",
+   "name": "Tiller 6 \u00b7 Grains, branch 2",
+   "conceptId": "Grains",
+   "color": "#cfb04f",
+   "stats": {
+    "Grains": "16",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0058",
+   "name": "Tiller 6 \u00b7 Panicle branch 3",
+   "conceptId": "Panicles",
+   "color": "#a79f4a",
+   "stats": {
+    "Branch length": "73 mm",
+    "Grains carried": "19"
+   }
+  },
+  {
+   "id": "Grain_0058",
+   "name": "Tiller 6 \u00b7 Grains, branch 3",
+   "conceptId": "Grains",
+   "color": "#cea837",
+   "stats": {
+    "Grains": "19",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0059",
+   "name": "Tiller 6 \u00b7 Panicle branch 4",
+   "conceptId": "Panicles",
+   "color": "#a49546",
+   "stats": {
+    "Branch length": "80 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0059",
+   "name": "Tiller 6 \u00b7 Grains, branch 4",
+   "conceptId": "Grains",
+   "color": "#d49b33",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0060",
+   "name": "Tiller 6 \u00b7 Panicle branch 5",
+   "conceptId": "Panicles",
+   "color": "#a3933e",
+   "stats": {
+    "Branch length": "69 mm",
+    "Grains carried": "23"
+   }
+  },
+  {
+   "id": "Grain_0060",
+   "name": "Tiller 6 \u00b7 Grains, branch 5",
+   "conceptId": "Grains",
+   "color": "#c8a337",
+   "stats": {
+    "Grains": "23",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0061",
+   "name": "Tiller 6 \u00b7 Panicle branch 6",
+   "conceptId": "Panicles",
+   "color": "#998f45",
+   "stats": {
+    "Branch length": "74 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0061",
+   "name": "Tiller 6 \u00b7 Grains, branch 6",
+   "conceptId": "Grains",
+   "color": "#d5aa33",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0062",
+   "name": "Tiller 6 \u00b7 Panicle branch 7",
+   "conceptId": "Panicles",
+   "color": "#ac9b45",
+   "stats": {
+    "Branch length": "65 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0062",
+   "name": "Tiller 6 \u00b7 Grains, branch 7",
+   "conceptId": "Grains",
+   "color": "#ccad50",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0063",
+   "name": "Tiller 6 \u00b7 Panicle branch 8",
+   "conceptId": "Panicles",
+   "color": "#a49841",
+   "stats": {
+    "Branch length": "70 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0063",
+   "name": "Tiller 6 \u00b7 Grains, branch 8",
+   "conceptId": "Grains",
+   "color": "#d5a235",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0064",
+   "name": "Tiller 6 \u00b7 Panicle branch 9",
+   "conceptId": "Panicles",
+   "color": "#a1974a",
+   "stats": {
+    "Branch length": "68 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0064",
+   "name": "Tiller 6 \u00b7 Grains, branch 9",
+   "conceptId": "Grains",
+   "color": "#c6a03f",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0065",
+   "name": "Tiller 6 \u00b7 Panicle branch 10",
+   "conceptId": "Panicles",
+   "color": "#a89b41",
+   "stats": {
+    "Branch length": "63 mm",
+    "Grains carried": "17"
+   }
+  },
+  {
+   "id": "Grain_0065",
+   "name": "Tiller 6 \u00b7 Grains, branch 10",
+   "conceptId": "Grains",
+   "color": "#c8a74e",
+   "stats": {
+    "Grains": "17",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0066",
+   "name": "Tiller 6 \u00b7 Panicle branch 11",
+   "conceptId": "Panicles",
+   "color": "#a59b3f",
+   "stats": {
+    "Branch length": "62 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0066",
+   "name": "Tiller 6 \u00b7 Grains, branch 11",
+   "conceptId": "Grains",
+   "color": "#cfa138",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0067",
+   "name": "Tiller 6 \u00b7 Panicle branch 12",
+   "conceptId": "Panicles",
+   "color": "#a59c47",
+   "stats": {
+    "Branch length": "59 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0067",
+   "name": "Tiller 6 \u00b7 Grains, branch 12",
+   "conceptId": "Grains",
+   "color": "#cb9d36",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "Internode_0031",
+   "name": "Tiller 7 \u00b7 Internode 1",
+   "conceptId": "Culms",
+   "color": "#b1a862",
+   "stats": {
+    "Length": "94 mm",
+    "Diameter": "10.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0031",
+   "name": "Tiller 7 \u00b7 Leaf sheath 1",
+   "conceptId": "Sheaths",
+   "color": "#97a147",
+   "stats": {
+    "Sheath length": "79 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0033",
+   "name": "Tiller 7 \u00b7 Leaf blade 1",
+   "conceptId": "Blades",
+   "color": "#7d8946",
+   "stats": {
+    "Blade length": "341 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "Ligule_0031",
+   "name": "Tiller 7 \u00b7 Ligule & auricles 1",
+   "conceptId": "Ligules",
+   "color": "#dee2c5",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0032",
+   "name": "Tiller 7 \u00b7 Internode 2",
+   "conceptId": "Culms",
+   "color": "#a19f4f",
+   "stats": {
+    "Length": "146 mm",
+    "Diameter": "9.6 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0032",
+   "name": "Tiller 7 \u00b7 Leaf sheath 2",
+   "conceptId": "Sheaths",
+   "color": "#86934c",
+   "stats": {
+    "Sheath length": "122 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0034",
+   "name": "Tiller 7 \u00b7 Leaf blade 2",
+   "conceptId": "Blades",
+   "color": "#6f9940",
+   "stats": {
+    "Blade length": "434 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0032",
+   "name": "Tiller 7 \u00b7 Ligule & auricles 2",
+   "conceptId": "Ligules",
+   "color": "#dfe2c4",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0033",
+   "name": "Tiller 7 \u00b7 Internode 3",
+   "conceptId": "Culms",
+   "color": "#9aa652",
+   "stats": {
+    "Length": "199 mm",
+    "Diameter": "8.3 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0033",
+   "name": "Tiller 7 \u00b7 Leaf sheath 3",
+   "conceptId": "Sheaths",
+   "color": "#718c42",
+   "stats": {
+    "Sheath length": "146 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0035",
+   "name": "Tiller 7 \u00b7 Leaf blade 3",
+   "conceptId": "Blades",
+   "color": "#568936",
+   "stats": {
+    "Blade length": "545 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0033",
+   "name": "Tiller 7 \u00b7 Ligule & auricles 3",
+   "conceptId": "Ligules",
+   "color": "#e2e5c7",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0034",
+   "name": "Tiller 7 \u00b7 Internode 4",
+   "conceptId": "Culms",
+   "color": "#9dad49",
+   "stats": {
+    "Length": "272 mm",
+    "Diameter": "7.1 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0034",
+   "name": "Tiller 7 \u00b7 Leaf sheath 4",
+   "conceptId": "Sheaths",
+   "color": "#699548",
+   "stats": {
+    "Sheath length": "200 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0036",
+   "name": "Tiller 7 \u00b7 Leaf blade 4",
+   "conceptId": "Blades",
+   "color": "#4e8936",
+   "stats": {
+    "Blade length": "591 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0034",
+   "name": "Tiller 7 \u00b7 Ligule & auricles 4",
+   "conceptId": "Ligules",
+   "color": "#dce0c0",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0035",
+   "name": "Tiller 7 \u00b7 Internode 5",
+   "conceptId": "Culms",
+   "color": "#829c49",
+   "stats": {
+    "Length": "334 mm",
+    "Diameter": "5.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0035",
+   "name": "Tiller 7 \u00b7 Leaf sheath 5",
+   "conceptId": "Sheaths",
+   "color": "#5c853d",
+   "stats": {
+    "Sheath length": "170 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0037",
+   "name": "Tiller 7 \u00b7 Flag leaf blade",
+   "conceptId": "FlagLeaves",
+   "color": "#417c28",
+   "stats": {
+    "Blade length": "363 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0035",
+   "name": "Tiller 7 \u00b7 Ligule & auricles 5",
+   "conceptId": "Ligules",
+   "color": "#e0e3c8",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "PanicleAxis_0007",
+   "name": "Tiller 7 \u00b7 Panicle rachis",
+   "conceptId": "Panicles",
+   "color": "#979348",
+   "stats": {
+    "Rachis length": "215 mm",
+    "Primary branches": "11"
+   }
+  },
+  {
+   "id": "PanicleBranch_0068",
+   "name": "Tiller 7 \u00b7 Panicle branch 1",
+   "conceptId": "Panicles",
+   "color": "#9c9345",
+   "stats": {
+    "Branch length": "68 mm",
+    "Grains carried": "20"
+   }
+  },
+  {
+   "id": "Grain_0068",
+   "name": "Tiller 7 \u00b7 Grains, branch 1",
+   "conceptId": "Grains",
+   "color": "#d1ae44",
+   "stats": {
+    "Grains": "20",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0069",
+   "name": "Tiller 7 \u00b7 Panicle branch 2",
+   "conceptId": "Panicles",
+   "color": "#a8a346",
+   "stats": {
+    "Branch length": "89 mm",
+    "Grains carried": "23"
+   }
+  },
+  {
+   "id": "Grain_0069",
+   "name": "Tiller 7 \u00b7 Grains, branch 2",
+   "conceptId": "Grains",
+   "color": "#c9aa42",
+   "stats": {
+    "Grains": "23",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0070",
+   "name": "Tiller 7 \u00b7 Panicle branch 3",
+   "conceptId": "Panicles",
+   "color": "#98914a",
+   "stats": {
+    "Branch length": "67 mm",
+    "Grains carried": "20"
+   }
+  },
+  {
+   "id": "Grain_0070",
+   "name": "Tiller 7 \u00b7 Grains, branch 3",
+   "conceptId": "Grains",
+   "color": "#cba83a",
+   "stats": {
+    "Grains": "20",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0071",
+   "name": "Tiller 7 \u00b7 Panicle branch 4",
+   "conceptId": "Panicles",
+   "color": "#a19a44",
+   "stats": {
+    "Branch length": "66 mm",
+    "Grains carried": "14"
+   }
+  },
+  {
+   "id": "Grain_0071",
+   "name": "Tiller 7 \u00b7 Grains, branch 4",
+   "conceptId": "Grains",
+   "color": "#caa34e",
+   "stats": {
+    "Grains": "14",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0072",
+   "name": "Tiller 7 \u00b7 Panicle branch 5",
+   "conceptId": "Panicles",
+   "color": "#a19b49",
+   "stats": {
+    "Branch length": "82 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0072",
+   "name": "Tiller 7 \u00b7 Grains, branch 5",
+   "conceptId": "Grains",
+   "color": "#cfab45",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0073",
+   "name": "Tiller 7 \u00b7 Panicle branch 6",
+   "conceptId": "Panicles",
+   "color": "#9a903f",
+   "stats": {
+    "Branch length": "71 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0073",
+   "name": "Tiller 7 \u00b7 Grains, branch 6",
+   "conceptId": "Grains",
+   "color": "#c5993e",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0074",
+   "name": "Tiller 7 \u00b7 Panicle branch 7",
+   "conceptId": "Panicles",
+   "color": "#a99d45",
+   "stats": {
+    "Branch length": "78 mm",
+    "Grains carried": "24"
+   }
+  },
+  {
+   "id": "Grain_0074",
+   "name": "Tiller 7 \u00b7 Grains, branch 7",
+   "conceptId": "Grains",
+   "color": "#c9ae4b",
+   "stats": {
+    "Grains": "24",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0075",
+   "name": "Tiller 7 \u00b7 Panicle branch 8",
+   "conceptId": "Panicles",
+   "color": "#a39c4c",
+   "stats": {
+    "Branch length": "63 mm",
+    "Grains carried": "20"
+   }
+  },
+  {
+   "id": "Grain_0075",
+   "name": "Tiller 7 \u00b7 Grains, branch 8",
+   "conceptId": "Grains",
+   "color": "#d1b044",
+   "stats": {
+    "Grains": "20",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0076",
+   "name": "Tiller 7 \u00b7 Panicle branch 9",
+   "conceptId": "Panicles",
+   "color": "#99923f",
+   "stats": {
+    "Branch length": "65 mm",
+    "Grains carried": "23"
+   }
+  },
+  {
+   "id": "Grain_0076",
+   "name": "Tiller 7 \u00b7 Grains, branch 9",
+   "conceptId": "Grains",
+   "color": "#d2a93b",
+   "stats": {
+    "Grains": "23",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0077",
+   "name": "Tiller 7 \u00b7 Panicle branch 10",
+   "conceptId": "Panicles",
+   "color": "#9c9147",
+   "stats": {
+    "Branch length": "63 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0077",
+   "name": "Tiller 7 \u00b7 Grains, branch 10",
+   "conceptId": "Grains",
+   "color": "#d1ac40",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0078",
+   "name": "Tiller 7 \u00b7 Panicle branch 11",
+   "conceptId": "Panicles",
+   "color": "#a4a04c",
+   "stats": {
+    "Branch length": "65 mm",
+    "Grains carried": "20"
+   }
+  },
+  {
+   "id": "Grain_0078",
+   "name": "Tiller 7 \u00b7 Grains, branch 11",
+   "conceptId": "Grains",
+   "color": "#cc9e34",
+   "stats": {
+    "Grains": "20",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "Internode_0036",
+   "name": "Tiller 8 \u00b7 Internode 1",
+   "conceptId": "Culms",
+   "color": "#b7b15b",
+   "stats": {
+    "Length": "89 mm",
+    "Diameter": "10.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0036",
+   "name": "Tiller 8 \u00b7 Leaf sheath 1",
+   "conceptId": "Sheaths",
+   "color": "#979b47",
+   "stats": {
+    "Sheath length": "70 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0038",
+   "name": "Tiller 8 \u00b7 Leaf blade 1",
+   "conceptId": "Blades",
+   "color": "#899d4b",
+   "stats": {
+    "Blade length": "316 mm",
+    "Max width": "12 mm"
+   }
+  },
+  {
+   "id": "Ligule_0036",
+   "name": "Tiller 8 \u00b7 Ligule & auricles 1",
+   "conceptId": "Ligules",
+   "color": "#d8dcbc",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0037",
+   "name": "Tiller 8 \u00b7 Internode 2",
+   "conceptId": "Culms",
+   "color": "#a4a259",
+   "stats": {
+    "Length": "139 mm",
+    "Diameter": "9.6 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0037",
+   "name": "Tiller 8 \u00b7 Leaf sheath 2",
+   "conceptId": "Sheaths",
+   "color": "#809047",
+   "stats": {
+    "Sheath length": "107 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0039",
+   "name": "Tiller 8 \u00b7 Leaf blade 2",
+   "conceptId": "Blades",
+   "color": "#749c3d",
+   "stats": {
+    "Blade length": "405 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0037",
+   "name": "Tiller 8 \u00b7 Ligule & auricles 2",
+   "conceptId": "Ligules",
+   "color": "#d8ddc0",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0038",
+   "name": "Tiller 8 \u00b7 Internode 3",
+   "conceptId": "Culms",
+   "color": "#a0a757",
+   "stats": {
+    "Length": "189 mm",
+    "Diameter": "8.3 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0038",
+   "name": "Tiller 8 \u00b7 Leaf sheath 3",
+   "conceptId": "Sheaths",
+   "color": "#6e913f",
+   "stats": {
+    "Sheath length": "146 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0040",
+   "name": "Tiller 8 \u00b7 Leaf blade 3",
+   "conceptId": "Blades",
+   "color": "#5b8f3e",
+   "stats": {
+    "Blade length": "497 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0038",
+   "name": "Tiller 8 \u00b7 Ligule & auricles 3",
+   "conceptId": "Ligules",
+   "color": "#e1e5c9",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0039",
+   "name": "Tiller 8 \u00b7 Internode 4",
+   "conceptId": "Culms",
+   "color": "#88964d",
+   "stats": {
+    "Length": "258 mm",
+    "Diameter": "7.1 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0039",
+   "name": "Tiller 8 \u00b7 Leaf sheath 4",
+   "conceptId": "Sheaths",
+   "color": "#67973e",
+   "stats": {
+    "Sheath length": "198 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0041",
+   "name": "Tiller 8 \u00b7 Leaf blade 4",
+   "conceptId": "Blades",
+   "color": "#508534",
+   "stats": {
+    "Blade length": "560 mm",
+    "Max width": "16 mm"
+   }
+  },
+  {
+   "id": "Ligule_0039",
+   "name": "Tiller 8 \u00b7 Ligule & auricles 4",
+   "conceptId": "Ligules",
+   "color": "#d8ddbf",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "Internode_0040",
+   "name": "Tiller 8 \u00b7 Internode 5",
+   "conceptId": "Culms",
+   "color": "#8a9f48",
+   "stats": {
+    "Length": "318 mm",
+    "Diameter": "5.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0040",
+   "name": "Tiller 8 \u00b7 Leaf sheath 5",
+   "conceptId": "Sheaths",
+   "color": "#5d8b3a",
+   "stats": {
+    "Sheath length": "170 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0042",
+   "name": "Tiller 8 \u00b7 Flag leaf blade",
+   "conceptId": "FlagLeaves",
+   "color": "#3c7a28",
+   "stats": {
+    "Blade length": "391 mm",
+    "Max width": "14 mm"
+   }
+  },
+  {
+   "id": "Ligule_0040",
+   "name": "Tiller 8 \u00b7 Ligule & auricles 5",
+   "conceptId": "Ligules",
+   "color": "#dce1c8",
+   "stats": {
+    "Collar height": "4 mm"
+   }
+  },
+  {
+   "id": "PanicleAxis_0008",
+   "name": "Tiller 8 \u00b7 Panicle rachis",
+   "conceptId": "Panicles",
+   "color": "#ae913b",
+   "stats": {
+    "Rachis length": "210 mm",
+    "Primary branches": "10"
+   }
+  },
+  {
+   "id": "PanicleBranch_0079",
+   "name": "Tiller 8 \u00b7 Panicle branch 1",
+   "conceptId": "Panicles",
+   "color": "#ad923c",
+   "stats": {
+    "Branch length": "80 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0079",
+   "name": "Tiller 8 \u00b7 Grains, branch 1",
+   "conceptId": "Grains",
+   "color": "#d2a945",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0080",
+   "name": "Tiller 8 \u00b7 Panicle branch 2",
+   "conceptId": "Panicles",
+   "color": "#a68c3b",
+   "stats": {
+    "Branch length": "78 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0080",
+   "name": "Tiller 8 \u00b7 Grains, branch 2",
+   "conceptId": "Grains",
+   "color": "#d39628",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0081",
+   "name": "Tiller 8 \u00b7 Panicle branch 3",
+   "conceptId": "Panicles",
+   "color": "#a48e3b",
+   "stats": {
+    "Branch length": "73 mm",
+    "Grains carried": "14"
+   }
+  },
+  {
+   "id": "Grain_0081",
+   "name": "Tiller 8 \u00b7 Grains, branch 3",
+   "conceptId": "Grains",
+   "color": "#d2a244",
+   "stats": {
+    "Grains": "14",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0082",
+   "name": "Tiller 8 \u00b7 Panicle branch 4",
+   "conceptId": "Panicles",
+   "color": "#9e883a",
+   "stats": {
+    "Branch length": "69 mm",
+    "Grains carried": "23"
+   }
+  },
+  {
+   "id": "Grain_0082",
+   "name": "Tiller 8 \u00b7 Grains, branch 4",
+   "conceptId": "Grains",
+   "color": "#d7992f",
+   "stats": {
+    "Grains": "23",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0083",
+   "name": "Tiller 8 \u00b7 Panicle branch 5",
+   "conceptId": "Panicles",
+   "color": "#a38c38",
+   "stats": {
+    "Branch length": "78 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0083",
+   "name": "Tiller 8 \u00b7 Grains, branch 5",
+   "conceptId": "Grains",
+   "color": "#d4982c",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0084",
+   "name": "Tiller 8 \u00b7 Panicle branch 6",
+   "conceptId": "Panicles",
+   "color": "#a69440",
+   "stats": {
+    "Branch length": "59 mm",
+    "Grains carried": "22"
+   }
+  },
+  {
+   "id": "Grain_0084",
+   "name": "Tiller 8 \u00b7 Grains, branch 6",
+   "conceptId": "Grains",
+   "color": "#d9a738",
+   "stats": {
+    "Grains": "22",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0085",
+   "name": "Tiller 8 \u00b7 Panicle branch 7",
+   "conceptId": "Panicles",
+   "color": "#9b863f",
+   "stats": {
+    "Branch length": "71 mm",
+    "Grains carried": "14"
+   }
+  },
+  {
+   "id": "Grain_0085",
+   "name": "Tiller 8 \u00b7 Grains, branch 7",
+   "conceptId": "Grains",
+   "color": "#d0982f",
+   "stats": {
+    "Grains": "14",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0086",
+   "name": "Tiller 8 \u00b7 Panicle branch 8",
+   "conceptId": "Panicles",
+   "color": "#b1933b",
+   "stats": {
+    "Branch length": "65 mm",
+    "Grains carried": "16"
+   }
+  },
+  {
+   "id": "Grain_0086",
+   "name": "Tiller 8 \u00b7 Grains, branch 8",
+   "conceptId": "Grains",
+   "color": "#d69f3d",
+   "stats": {
+    "Grains": "16",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0087",
+   "name": "Tiller 8 \u00b7 Panicle branch 9",
+   "conceptId": "Panicles",
+   "color": "#ad983c",
+   "stats": {
+    "Branch length": "58 mm",
+    "Grains carried": "21"
+   }
+  },
+  {
+   "id": "Grain_0087",
+   "name": "Tiller 8 \u00b7 Grains, branch 9",
+   "conceptId": "Grains",
+   "color": "#c79e32",
+   "stats": {
+    "Grains": "21",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  },
+  {
+   "id": "PanicleBranch_0088",
+   "name": "Tiller 8 \u00b7 Panicle branch 10",
+   "conceptId": "Panicles",
+   "color": "#9c8a3b",
+   "stats": {
+    "Branch length": "52 mm",
+    "Grains carried": "18"
+   }
+  },
+  {
+   "id": "Grain_0088",
+   "name": "Tiller 8 \u00b7 Grains, branch 10",
+   "conceptId": "Grains",
+   "color": "#d7a22c",
+   "stats": {
+    "Grains": "18",
+    "Grain size": "\u2248 9 \u00d7 3.8 mm",
+    "Awn length": "11\u201322 mm"
+   }
+  }
+ ],
+ "concepts": [
+  {
+   "id": "Culms",
+   "name": "Culms (stems)",
+   "elements": [
+    "Crown_0001",
+    "Internode_0001",
+    "Internode_0002",
+    "Internode_0003",
+    "Internode_0004",
+    "Internode_0005",
+    "Internode_0006",
+    "Internode_0007",
+    "Internode_0008",
+    "Internode_0009",
+    "Internode_0010",
+    "Internode_0011",
+    "Internode_0012",
+    "Internode_0013",
+    "Internode_0014",
+    "Internode_0015",
+    "Internode_0016",
+    "Internode_0017",
+    "Internode_0018",
+    "Internode_0019",
+    "Internode_0020",
+    "Internode_0021",
+    "Internode_0022",
+    "Internode_0023",
+    "Internode_0024",
+    "Internode_0025",
+    "Internode_0026",
+    "Internode_0027",
+    "Internode_0028",
+    "Internode_0029",
+    "Internode_0030",
+    "Internode_0031",
+    "Internode_0032",
+    "Internode_0033",
+    "Internode_0034",
+    "Internode_0035",
+    "Internode_0036",
+    "Internode_0037",
+    "Internode_0038",
+    "Internode_0039",
+    "Internode_0040"
+   ]
+  },
+  {
+   "id": "Roots",
+   "name": "Fibrous root system",
+   "elements": [
+    "Root_0001",
+    "Root_0002",
+    "Root_0003",
+    "Root_0004",
+    "Root_0005",
+    "Root_0006",
+    "Root_0007",
+    "Root_0008",
+    "Root_0009",
+    "Root_0010",
+    "Root_0011",
+    "Root_0012",
+    "Root_0013",
+    "Root_0014",
+    "Root_0015",
+    "Root_0016",
+    "Root_0017",
+    "Root_0018",
+    "Root_0019",
+    "Root_0020",
+    "Root_0021",
+    "Root_0022",
+    "Root_0023",
+    "Root_0024",
+    "Root_0025",
+    "Root_0026",
+    "Root_0027",
+    "Root_0028",
+    "Root_0029",
+    "Root_0030",
+    "Root_0031",
+    "Root_0032",
+    "Root_0033",
+    "Root_0034",
+    "Root_0035",
+    "Root_0036",
+    "Root_0037",
+    "Root_0038",
+    "Root_0039",
+    "Root_0040",
+    "Root_0041",
+    "Root_0042",
+    "Root_0043",
+    "Root_0044"
+   ]
+  },
+  {
+   "id": "TillerC1",
+   "name": "Main culm",
+   "elements": [
+    "Internode_0001",
+    "LeafSheath_0001",
+    "LeafBlade_0001",
+    "Ligule_0001",
+    "Internode_0002",
+    "LeafSheath_0002",
+    "LeafBlade_0002",
+    "Ligule_0002",
+    "Internode_0003",
+    "LeafSheath_0003",
+    "LeafBlade_0003",
+    "Ligule_0003",
+    "Internode_0004",
+    "LeafSheath_0004",
+    "LeafBlade_0004",
+    "Ligule_0004",
+    "Internode_0005",
+    "LeafSheath_0005",
+    "LeafBlade_0005",
+    "Ligule_0005",
+    "PanicleAxis_0001",
+    "PanicleBranch_0001",
+    "Grain_0001",
+    "PanicleBranch_0002",
+    "Grain_0002",
+    "PanicleBranch_0003",
+    "Grain_0003",
+    "PanicleBranch_0004",
+    "Grain_0004",
+    "PanicleBranch_0005",
+    "Grain_0005",
+    "PanicleBranch_0006",
+    "Grain_0006",
+    "PanicleBranch_0007",
+    "Grain_0007",
+    "PanicleBranch_0008",
+    "Grain_0008",
+    "PanicleBranch_0009",
+    "Grain_0009",
+    "PanicleBranch_0010",
+    "Grain_0010"
+   ]
+  },
+  {
+   "id": "Sheaths",
+   "name": "Leaf sheaths",
+   "elements": [
+    "LeafSheath_0001",
+    "LeafSheath_0002",
+    "LeafSheath_0003",
+    "LeafSheath_0004",
+    "LeafSheath_0005",
+    "LeafSheath_0006",
+    "LeafSheath_0007",
+    "LeafSheath_0008",
+    "LeafSheath_0009",
+    "LeafSheath_0010",
+    "LeafSheath_0011",
+    "LeafSheath_0012",
+    "LeafSheath_0013",
+    "LeafSheath_0014",
+    "LeafSheath_0015",
+    "LeafSheath_0016",
+    "LeafSheath_0017",
+    "LeafSheath_0018",
+    "LeafSheath_0019",
+    "LeafSheath_0020",
+    "LeafSheath_0021",
+    "LeafSheath_0022",
+    "LeafSheath_0023",
+    "LeafSheath_0024",
+    "LeafSheath_0025",
+    "LeafSheath_0026",
+    "LeafSheath_0027",
+    "LeafSheath_0028",
+    "LeafSheath_0029",
+    "LeafSheath_0030",
+    "LeafSheath_0031",
+    "LeafSheath_0032",
+    "LeafSheath_0033",
+    "LeafSheath_0034",
+    "LeafSheath_0035",
+    "LeafSheath_0036",
+    "LeafSheath_0037",
+    "LeafSheath_0038",
+    "LeafSheath_0039",
+    "LeafSheath_0040"
+   ]
+  },
+  {
+   "id": "Blades",
+   "name": "Leaf blades",
+   "elements": [
+    "LeafBlade_0001",
+    "LeafBlade_0002",
+    "LeafBlade_0003",
+    "LeafBlade_0004",
+    "LeafBlade_0005",
+    "LeafBlade_0006",
+    "LeafBlade_0007",
+    "LeafBlade_0008",
+    "LeafBlade_0009",
+    "LeafBlade_0010",
+    "LeafBlade_0011",
+    "LeafBlade_0012",
+    "LeafBlade_0013",
+    "LeafBlade_0014",
+    "LeafBlade_0015",
+    "LeafBlade_0016",
+    "LeafBlade_0017",
+    "LeafBlade_0018",
+    "LeafBlade_0019",
+    "LeafBlade_0020",
+    "LeafBlade_0021",
+    "LeafBlade_0022",
+    "LeafBlade_0023",
+    "LeafBlade_0024",
+    "LeafBlade_0025",
+    "LeafBlade_0026",
+    "LeafBlade_0027",
+    "LeafBlade_0028",
+    "LeafBlade_0029",
+    "LeafBlade_0030",
+    "LeafBlade_0031",
+    "LeafBlade_0032",
+    "LeafBlade_0033",
+    "LeafBlade_0034",
+    "LeafBlade_0035",
+    "LeafBlade_0036",
+    "LeafBlade_0037",
+    "LeafBlade_0038",
+    "LeafBlade_0039",
+    "LeafBlade_0040",
+    "LeafBlade_0041",
+    "LeafBlade_0042"
+   ]
+  },
+  {
+   "id": "Ligules",
+   "name": "Ligules & auricles",
+   "elements": [
+    "Ligule_0001",
+    "Ligule_0002",
+    "Ligule_0003",
+    "Ligule_0004",
+    "Ligule_0005",
+    "Ligule_0006",
+    "Ligule_0007",
+    "Ligule_0008",
+    "Ligule_0009",
+    "Ligule_0010",
+    "Ligule_0011",
+    "Ligule_0012",
+    "Ligule_0013",
+    "Ligule_0014",
+    "Ligule_0015",
+    "Ligule_0016",
+    "Ligule_0017",
+    "Ligule_0018",
+    "Ligule_0019",
+    "Ligule_0020",
+    "Ligule_0021",
+    "Ligule_0022",
+    "Ligule_0023",
+    "Ligule_0024",
+    "Ligule_0025",
+    "Ligule_0026",
+    "Ligule_0027",
+    "Ligule_0028",
+    "Ligule_0029",
+    "Ligule_0030",
+    "Ligule_0031",
+    "Ligule_0032",
+    "Ligule_0033",
+    "Ligule_0034",
+    "Ligule_0035",
+    "Ligule_0036",
+    "Ligule_0037",
+    "Ligule_0038",
+    "Ligule_0039",
+    "Ligule_0040"
+   ]
+  },
+  {
+   "id": "FlagLeaves",
+   "name": "Flag leaves",
+   "elements": [
+    "LeafBlade_0005",
+    "LeafBlade_0010",
+    "LeafBlade_0015",
+    "LeafBlade_0021",
+    "LeafBlade_0026",
+    "LeafBlade_0031",
+    "LeafBlade_0037",
+    "LeafBlade_0042"
+   ]
+  },
+  {
+   "id": "Panicles",
+   "name": "Panicles (inflorescences)",
+   "elements": [
+    "PanicleAxis_0001",
+    "PanicleBranch_0001",
+    "PanicleBranch_0002",
+    "PanicleBranch_0003",
+    "PanicleBranch_0004",
+    "PanicleBranch_0005",
+    "PanicleBranch_0006",
+    "PanicleBranch_0007",
+    "PanicleBranch_0008",
+    "PanicleBranch_0009",
+    "PanicleBranch_0010",
+    "PanicleAxis_0002",
+    "PanicleBranch_0011",
+    "PanicleBranch_0012",
+    "PanicleBranch_0013",
+    "PanicleBranch_0014",
+    "PanicleBranch_0015",
+    "PanicleBranch_0016",
+    "PanicleBranch_0017",
+    "PanicleBranch_0018",
+    "PanicleBranch_0019",
+    "PanicleBranch_0020",
+    "PanicleBranch_0021",
+    "PanicleBranch_0022",
+    "PanicleAxis_0003",
+    "PanicleBranch_0023",
+    "PanicleBranch_0024",
+    "PanicleBranch_0025",
+    "PanicleBranch_0026",
+    "PanicleBranch_0027",
+    "PanicleBranch_0028",
+    "PanicleBranch_0029",
+    "PanicleBranch_0030",
+    "PanicleBranch_0031",
+    "PanicleBranch_0032",
+    "PanicleAxis_0004",
+    "PanicleBranch_0033",
+    "PanicleBranch_0034",
+    "PanicleBranch_0035",
+    "PanicleBranch_0036",
+    "PanicleBranch_0037",
+    "PanicleBranch_0038",
+    "PanicleBranch_0039",
+    "PanicleBranch_0040",
+    "PanicleBranch_0041",
+    "PanicleBranch_0042",
+    "PanicleBranch_0043",
+    "PanicleBranch_0044",
+    "PanicleAxis_0005",
+    "PanicleBranch_0045",
+    "PanicleBranch_0046",
+    "PanicleBranch_0047",
+    "PanicleBranch_0048",
+    "PanicleBranch_0049",
+    "PanicleBranch_0050",
+    "PanicleBranch_0051",
+    "PanicleBranch_0052",
+    "PanicleBranch_0053",
+    "PanicleBranch_0054",
+    "PanicleBranch_0055",
+    "PanicleAxis_0006",
+    "PanicleBranch_0056",
+    "PanicleBranch_0057",
+    "PanicleBranch_0058",
+    "PanicleBranch_0059",
+    "PanicleBranch_0060",
+    "PanicleBranch_0061",
+    "PanicleBranch_0062",
+    "PanicleBranch_0063",
+    "PanicleBranch_0064",
+    "PanicleBranch_0065",
+    "PanicleBranch_0066",
+    "PanicleBranch_0067",
+    "PanicleAxis_0007",
+    "PanicleBranch_0068",
+    "PanicleBranch_0069",
+    "PanicleBranch_0070",
+    "PanicleBranch_0071",
+    "PanicleBranch_0072",
+    "PanicleBranch_0073",
+    "PanicleBranch_0074",
+    "PanicleBranch_0075",
+    "PanicleBranch_0076",
+    "PanicleBranch_0077",
+    "PanicleBranch_0078",
+    "PanicleAxis_0008",
+    "PanicleBranch_0079",
+    "PanicleBranch_0080",
+    "PanicleBranch_0081",
+    "PanicleBranch_0082",
+    "PanicleBranch_0083",
+    "PanicleBranch_0084",
+    "PanicleBranch_0085",
+    "PanicleBranch_0086",
+    "PanicleBranch_0087",
+    "PanicleBranch_0088"
+   ]
+  },
+  {
+   "id": "Grains",
+   "name": "Grains (spikelets)",
+   "elements": [
+    "Grain_0001",
+    "Grain_0002",
+    "Grain_0003",
+    "Grain_0004",
+    "Grain_0005",
+    "Grain_0006",
+    "Grain_0007",
+    "Grain_0008",
+    "Grain_0009",
+    "Grain_0010",
+    "Grain_0011",
+    "Grain_0012",
+    "Grain_0013",
+    "Grain_0014",
+    "Grain_0015",
+    "Grain_0016",
+    "Grain_0017",
+    "Grain_0018",
+    "Grain_0019",
+    "Grain_0020",
+    "Grain_0021",
+    "Grain_0022",
+    "Grain_0023",
+    "Grain_0024",
+    "Grain_0025",
+    "Grain_0026",
+    "Grain_0027",
+    "Grain_0028",
+    "Grain_0029",
+    "Grain_0030",
+    "Grain_0031",
+    "Grain_0032",
+    "Grain_0033",
+    "Grain_0034",
+    "Grain_0035",
+    "Grain_0036",
+    "Grain_0037",
+    "Grain_0038",
+    "Grain_0039",
+    "Grain_0040",
+    "Grain_0041",
+    "Grain_0042",
+    "Grain_0043",
+    "Grain_0044",
+    "Grain_0045",
+    "Grain_0046",
+    "Grain_0047",
+    "Grain_0048",
+    "Grain_0049",
+    "Grain_0050",
+    "Grain_0051",
+    "Grain_0052",
+    "Grain_0053",
+    "Grain_0054",
+    "Grain_0055",
+    "Grain_0056",
+    "Grain_0057",
+    "Grain_0058",
+    "Grain_0059",
+    "Grain_0060",
+    "Grain_0061",
+    "Grain_0062",
+    "Grain_0063",
+    "Grain_0064",
+    "Grain_0065",
+    "Grain_0066",
+    "Grain_0067",
+    "Grain_0068",
+    "Grain_0069",
+    "Grain_0070",
+    "Grain_0071",
+    "Grain_0072",
+    "Grain_0073",
+    "Grain_0074",
+    "Grain_0075",
+    "Grain_0076",
+    "Grain_0077",
+    "Grain_0078",
+    "Grain_0079",
+    "Grain_0080",
+    "Grain_0081",
+    "Grain_0082",
+    "Grain_0083",
+    "Grain_0084",
+    "Grain_0085",
+    "Grain_0086",
+    "Grain_0087",
+    "Grain_0088"
+   ]
+  },
+  {
+   "id": "GrainCutaway",
+   "name": "Grain in cross-section",
+   "elements": [
+    "Cutaway_0001",
+    "Cutaway_0002",
+    "Cutaway_0003"
+   ]
+  },
+  {
+   "id": "TillerC2",
+   "name": "Tiller 2",
+   "elements": [
+    "Internode_0006",
+    "LeafSheath_0006",
+    "LeafBlade_0006",
+    "Ligule_0006",
+    "Internode_0007",
+    "LeafSheath_0007",
+    "LeafBlade_0007",
+    "Ligule_0007",
+    "Internode_0008",
+    "LeafSheath_0008",
+    "LeafBlade_0008",
+    "Ligule_0008",
+    "Internode_0009",
+    "LeafSheath_0009",
+    "LeafBlade_0009",
+    "Ligule_0009",
+    "Internode_0010",
+    "LeafSheath_0010",
+    "LeafBlade_0010",
+    "Ligule_0010",
+    "PanicleAxis_0002",
+    "PanicleBranch_0011",
+    "Grain_0011",
+    "PanicleBranch_0012",
+    "Grain_0012",
+    "PanicleBranch_0013",
+    "Grain_0013",
+    "PanicleBranch_0014",
+    "Grain_0014",
+    "PanicleBranch_0015",
+    "Grain_0015",
+    "PanicleBranch_0016",
+    "Grain_0016",
+    "PanicleBranch_0017",
+    "Grain_0017",
+    "PanicleBranch_0018",
+    "Grain_0018",
+    "PanicleBranch_0019",
+    "Grain_0019",
+    "PanicleBranch_0020",
+    "Grain_0020",
+    "PanicleBranch_0021",
+    "Grain_0021",
+    "PanicleBranch_0022",
+    "Grain_0022"
+   ]
+  },
+  {
+   "id": "TillerC3",
+   "name": "Tiller 3",
+   "elements": [
+    "Internode_0011",
+    "LeafSheath_0011",
+    "LeafBlade_0011",
+    "Ligule_0011",
+    "Internode_0012",
+    "LeafSheath_0012",
+    "LeafBlade_0012",
+    "Ligule_0012",
+    "Internode_0013",
+    "LeafSheath_0013",
+    "LeafBlade_0013",
+    "Ligule_0013",
+    "Internode_0014",
+    "LeafSheath_0014",
+    "LeafBlade_0014",
+    "Ligule_0014",
+    "Internode_0015",
+    "LeafSheath_0015",
+    "LeafBlade_0015",
+    "Ligule_0015",
+    "LeafBlade_0016",
+    "PanicleAxis_0003",
+    "PanicleBranch_0023",
+    "Grain_0023",
+    "PanicleBranch_0024",
+    "Grain_0024",
+    "PanicleBranch_0025",
+    "Grain_0025",
+    "PanicleBranch_0026",
+    "Grain_0026",
+    "PanicleBranch_0027",
+    "Grain_0027",
+    "PanicleBranch_0028",
+    "Grain_0028",
+    "PanicleBranch_0029",
+    "Grain_0029",
+    "PanicleBranch_0030",
+    "Grain_0030",
+    "PanicleBranch_0031",
+    "Grain_0031",
+    "PanicleBranch_0032",
+    "Grain_0032"
+   ]
+  },
+  {
+   "id": "TillerC4",
+   "name": "Tiller 4",
+   "elements": [
+    "Internode_0016",
+    "LeafSheath_0016",
+    "LeafBlade_0017",
+    "Ligule_0016",
+    "Internode_0017",
+    "LeafSheath_0017",
+    "LeafBlade_0018",
+    "Ligule_0017",
+    "Internode_0018",
+    "LeafSheath_0018",
+    "LeafBlade_0019",
+    "Ligule_0018",
+    "Internode_0019",
+    "LeafSheath_0019",
+    "LeafBlade_0020",
+    "Ligule_0019",
+    "Internode_0020",
+    "LeafSheath_0020",
+    "LeafBlade_0021",
+    "Ligule_0020",
+    "PanicleAxis_0004",
+    "PanicleBranch_0033",
+    "Grain_0033",
+    "PanicleBranch_0034",
+    "Grain_0034",
+    "PanicleBranch_0035",
+    "Grain_0035",
+    "PanicleBranch_0036",
+    "Grain_0036",
+    "PanicleBranch_0037",
+    "Grain_0037",
+    "PanicleBranch_0038",
+    "Grain_0038",
+    "PanicleBranch_0039",
+    "Grain_0039",
+    "PanicleBranch_0040",
+    "Grain_0040",
+    "PanicleBranch_0041",
+    "Grain_0041",
+    "PanicleBranch_0042",
+    "Grain_0042",
+    "PanicleBranch_0043",
+    "Grain_0043",
+    "PanicleBranch_0044",
+    "Grain_0044"
+   ]
+  },
+  {
+   "id": "TillerC5",
+   "name": "Tiller 5",
+   "elements": [
+    "Internode_0021",
+    "LeafSheath_0021",
+    "LeafBlade_0022",
+    "Ligule_0021",
+    "Internode_0022",
+    "LeafSheath_0022",
+    "LeafBlade_0023",
+    "Ligule_0022",
+    "Internode_0023",
+    "LeafSheath_0023",
+    "LeafBlade_0024",
+    "Ligule_0023",
+    "Internode_0024",
+    "LeafSheath_0024",
+    "LeafBlade_0025",
+    "Ligule_0024",
+    "Internode_0025",
+    "LeafSheath_0025",
+    "LeafBlade_0026",
+    "Ligule_0025",
+    "PanicleAxis_0005",
+    "PanicleBranch_0045",
+    "Grain_0045",
+    "PanicleBranch_0046",
+    "Grain_0046",
+    "PanicleBranch_0047",
+    "Grain_0047",
+    "PanicleBranch_0048",
+    "Grain_0048",
+    "PanicleBranch_0049",
+    "Grain_0049",
+    "PanicleBranch_0050",
+    "Grain_0050",
+    "PanicleBranch_0051",
+    "Grain_0051",
+    "PanicleBranch_0052",
+    "Grain_0052",
+    "PanicleBranch_0053",
+    "Grain_0053",
+    "PanicleBranch_0054",
+    "Grain_0054",
+    "PanicleBranch_0055",
+    "Grain_0055"
+   ]
+  },
+  {
+   "id": "TillerC6",
+   "name": "Tiller 6",
+   "elements": [
+    "Internode_0026",
+    "LeafSheath_0026",
+    "LeafBlade_0027",
+    "Ligule_0026",
+    "Internode_0027",
+    "LeafSheath_0027",
+    "LeafBlade_0028",
+    "Ligule_0027",
+    "Internode_0028",
+    "LeafSheath_0028",
+    "LeafBlade_0029",
+    "Ligule_0028",
+    "Internode_0029",
+    "LeafSheath_0029",
+    "LeafBlade_0030",
+    "Ligule_0029",
+    "Internode_0030",
+    "LeafSheath_0030",
+    "LeafBlade_0031",
+    "Ligule_0030",
+    "LeafBlade_0032",
+    "PanicleAxis_0006",
+    "PanicleBranch_0056",
+    "Grain_0056",
+    "PanicleBranch_0057",
+    "Grain_0057",
+    "PanicleBranch_0058",
+    "Grain_0058",
+    "PanicleBranch_0059",
+    "Grain_0059",
+    "PanicleBranch_0060",
+    "Grain_0060",
+    "PanicleBranch_0061",
+    "Grain_0061",
+    "PanicleBranch_0062",
+    "Grain_0062",
+    "PanicleBranch_0063",
+    "Grain_0063",
+    "PanicleBranch_0064",
+    "Grain_0064",
+    "PanicleBranch_0065",
+    "Grain_0065",
+    "PanicleBranch_0066",
+    "Grain_0066",
+    "PanicleBranch_0067",
+    "Grain_0067"
+   ]
+  },
+  {
+   "id": "TillerC7",
+   "name": "Tiller 7",
+   "elements": [
+    "Internode_0031",
+    "LeafSheath_0031",
+    "LeafBlade_0033",
+    "Ligule_0031",
+    "Internode_0032",
+    "LeafSheath_0032",
+    "LeafBlade_0034",
+    "Ligule_0032",
+    "Internode_0033",
+    "LeafSheath_0033",
+    "LeafBlade_0035",
+    "Ligule_0033",
+    "Internode_0034",
+    "LeafSheath_0034",
+    "LeafBlade_0036",
+    "Ligule_0034",
+    "Internode_0035",
+    "LeafSheath_0035",
+    "LeafBlade_0037",
+    "Ligule_0035",
+    "PanicleAxis_0007",
+    "PanicleBranch_0068",
+    "Grain_0068",
+    "PanicleBranch_0069",
+    "Grain_0069",
+    "PanicleBranch_0070",
+    "Grain_0070",
+    "PanicleBranch_0071",
+    "Grain_0071",
+    "PanicleBranch_0072",
+    "Grain_0072",
+    "PanicleBranch_0073",
+    "Grain_0073",
+    "PanicleBranch_0074",
+    "Grain_0074",
+    "PanicleBranch_0075",
+    "Grain_0075",
+    "PanicleBranch_0076",
+    "Grain_0076",
+    "PanicleBranch_0077",
+    "Grain_0077",
+    "PanicleBranch_0078",
+    "Grain_0078"
+   ]
+  },
+  {
+   "id": "TillerC8",
+   "name": "Tiller 8",
+   "elements": [
+    "Internode_0036",
+    "LeafSheath_0036",
+    "LeafBlade_0038",
+    "Ligule_0036",
+    "Internode_0037",
+    "LeafSheath_0037",
+    "LeafBlade_0039",
+    "Ligule_0037",
+    "Internode_0038",
+    "LeafSheath_0038",
+    "LeafBlade_0040",
+    "Ligule_0038",
+    "Internode_0039",
+    "LeafSheath_0039",
+    "LeafBlade_0041",
+    "Ligule_0039",
+    "Internode_0040",
+    "LeafSheath_0040",
+    "LeafBlade_0042",
+    "Ligule_0040",
+    "PanicleAxis_0008",
+    "PanicleBranch_0079",
+    "Grain_0079",
+    "PanicleBranch_0080",
+    "Grain_0080",
+    "PanicleBranch_0081",
+    "Grain_0081",
+    "PanicleBranch_0082",
+    "Grain_0082",
+    "PanicleBranch_0083",
+    "Grain_0083",
+    "PanicleBranch_0084",
+    "Grain_0084",
+    "PanicleBranch_0085",
+    "Grain_0085",
+    "PanicleBranch_0086",
+    "Grain_0086",
+    "PanicleBranch_0087",
+    "Grain_0087",
+    "PanicleBranch_0088",
+    "Grain_0088"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,407 @@
+{
+ "elements": [
+  {
+   "id": "Crown_0001",
+   "name": "Tillering crown",
+   "conceptId": "Culms",
+   "color": "#7e984a",
+   "stats": {
+    "Tillers": "1",
+    "Roots": "14"
+   }
+  },
+  {
+   "id": "Seed_0001",
+   "name": "Spent seed (caryopsis)",
+   "conceptId": "Seed",
+   "color": "#ab9668",
+   "stats": {
+    "Grain size": "\u2248 8 \u00d7 3.3 mm"
+   }
+  },
+  {
+   "id": "Root_0001",
+   "name": "Adventitious root 1",
+   "conceptId": "Roots",
+   "color": "#b99b78",
+   "stats": {
+    "Root length": "91 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0002",
+   "name": "Adventitious root 2",
+   "conceptId": "Roots",
+   "color": "#b79e81",
+   "stats": {
+    "Root length": "90 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0003",
+   "name": "Adventitious root 3",
+   "conceptId": "Roots",
+   "color": "#b29d79",
+   "stats": {
+    "Root length": "96 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0004",
+   "name": "Adventitious root 4",
+   "conceptId": "Roots",
+   "color": "#b79e7e",
+   "stats": {
+    "Root length": "94 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0005",
+   "name": "Adventitious root 5",
+   "conceptId": "Roots",
+   "color": "#b0956a",
+   "stats": {
+    "Root length": "105 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0006",
+   "name": "Adventitious root 6",
+   "conceptId": "Roots",
+   "color": "#b79a71",
+   "stats": {
+    "Root length": "100 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0007",
+   "name": "Adventitious root 7",
+   "conceptId": "Roots",
+   "color": "#ab8c63",
+   "stats": {
+    "Root length": "98 mm",
+    "Laterals": "0"
+   }
+  },
+  {
+   "id": "Root_0008",
+   "name": "Adventitious root 8",
+   "conceptId": "Roots",
+   "color": "#b0936a",
+   "stats": {
+    "Root length": "94 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0009",
+   "name": "Adventitious root 9",
+   "conceptId": "Roots",
+   "color": "#b79e73",
+   "stats": {
+    "Root length": "90 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0010",
+   "name": "Adventitious root 10",
+   "conceptId": "Roots",
+   "color": "#ab8f60",
+   "stats": {
+    "Root length": "94 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Root_0011",
+   "name": "Adventitious root 11",
+   "conceptId": "Roots",
+   "color": "#b1936a",
+   "stats": {
+    "Root length": "90 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0012",
+   "name": "Adventitious root 12",
+   "conceptId": "Roots",
+   "color": "#b2996c",
+   "stats": {
+    "Root length": "94 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0013",
+   "name": "Adventitious root 13",
+   "conceptId": "Roots",
+   "color": "#b2986b",
+   "stats": {
+    "Root length": "92 mm",
+    "Laterals": "1"
+   }
+  },
+  {
+   "id": "Root_0014",
+   "name": "Adventitious root 14",
+   "conceptId": "Roots",
+   "color": "#bc9f7a",
+   "stats": {
+    "Root length": "93 mm",
+    "Laterals": "2"
+   }
+  },
+  {
+   "id": "Internode_0001",
+   "name": "Main culm \u00b7 Internode 1",
+   "conceptId": "Culms",
+   "color": "#87ab57",
+   "stats": {
+    "Length": "14 mm",
+    "Diameter": "4.4 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0001",
+   "name": "Main culm \u00b7 Leaf sheath 1",
+   "conceptId": "Sheaths",
+   "color": "#6a9b43",
+   "stats": {
+    "Sheath length": "10 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0001",
+   "name": "Main culm \u00b7 Leaf blade 1",
+   "conceptId": "Blades",
+   "color": "#5a8540",
+   "stats": {
+    "Blade length": "90 mm",
+    "Max width": "4 mm"
+   }
+  },
+  {
+   "id": "Ligule_0001",
+   "name": "Main culm \u00b7 Ligule & auricles 1",
+   "conceptId": "Ligules",
+   "color": "#e3e7cb",
+   "stats": {
+    "Collar height": "2 mm"
+   }
+  },
+  {
+   "id": "Internode_0002",
+   "name": "Main culm \u00b7 Internode 2",
+   "conceptId": "Culms",
+   "color": "#7caf4d",
+   "stats": {
+    "Length": "16 mm",
+    "Diameter": "3.8 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0002",
+   "name": "Main culm \u00b7 Leaf sheath 2",
+   "conceptId": "Sheaths",
+   "color": "#69a443",
+   "stats": {
+    "Sheath length": "12 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0002",
+   "name": "Main culm \u00b7 Leaf blade 2",
+   "conceptId": "Blades",
+   "color": "#518237",
+   "stats": {
+    "Blade length": "144 mm",
+    "Max width": "6 mm"
+   }
+  },
+  {
+   "id": "Ligule_0002",
+   "name": "Main culm \u00b7 Ligule & auricles 2",
+   "conceptId": "Ligules",
+   "color": "#e2e4cf",
+   "stats": {
+    "Collar height": "2 mm"
+   }
+  },
+  {
+   "id": "Internode_0003",
+   "name": "Main culm \u00b7 Internode 3",
+   "conceptId": "Culms",
+   "color": "#6a9749",
+   "stats": {
+    "Length": "16 mm",
+    "Diameter": "3.3 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0003",
+   "name": "Main culm \u00b7 Leaf sheath 3",
+   "conceptId": "Sheaths",
+   "color": "#588e43",
+   "stats": {
+    "Sheath length": "13 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0003",
+   "name": "Main culm \u00b7 Leaf blade 3",
+   "conceptId": "Blades",
+   "color": "#458031",
+   "stats": {
+    "Blade length": "181 mm",
+    "Max width": "6 mm"
+   }
+  },
+  {
+   "id": "Ligule_0003",
+   "name": "Main culm \u00b7 Ligule & auricles 3",
+   "conceptId": "Ligules",
+   "color": "#dee2cb",
+   "stats": {
+    "Collar height": "2 mm"
+   }
+  },
+  {
+   "id": "Internode_0004",
+   "name": "Main culm \u00b7 Internode 4",
+   "conceptId": "Culms",
+   "color": "#69983f",
+   "stats": {
+    "Length": "17 mm",
+    "Diameter": "2.7 mm"
+   }
+  },
+  {
+   "id": "LeafSheath_0004",
+   "name": "Main culm \u00b7 Leaf sheath 4",
+   "conceptId": "Sheaths",
+   "color": "#559b3a",
+   "stats": {
+    "Sheath length": "10 mm"
+   }
+  },
+  {
+   "id": "LeafBlade_0004",
+   "name": "Main culm \u00b7 Leaf blade 4",
+   "conceptId": "Blades",
+   "color": "#458331",
+   "stats": {
+    "Blade length": "207 mm",
+    "Max width": "7 mm"
+   }
+  },
+  {
+   "id": "Ligule_0004",
+   "name": "Main culm \u00b7 Ligule & auricles 4",
+   "conceptId": "Ligules",
+   "color": "#e3e5c7",
+   "stats": {
+    "Collar height": "2 mm"
+   }
+  }
+ ],
+ "concepts": [
+  {
+   "id": "Culms",
+   "name": "Culms (stems)",
+   "elements": [
+    "Crown_0001",
+    "Internode_0001",
+    "Internode_0002",
+    "Internode_0003",
+    "Internode_0004"
+   ]
+  },
+  {
+   "id": "Seed",
+   "name": "Spent seed (caryopsis)",
+   "elements": [
+    "Seed_0001"
+   ]
+  },
+  {
+   "id": "Roots",
+   "name": "Fibrous root system",
+   "elements": [
+    "Root_0001",
+    "Root_0002",
+    "Root_0003",
+    "Root_0004",
+    "Root_0005",
+    "Root_0006",
+    "Root_0007",
+    "Root_0008",
+    "Root_0009",
+    "Root_0010",
+    "Root_0011",
+    "Root_0012",
+    "Root_0013",
+    "Root_0014"
+   ]
+  },
+  {
+   "id": "TillerC1",
+   "name": "Main culm",
+   "elements": [
+    "Internode_0001",
+    "LeafSheath_0001",
+    "LeafBlade_0001",
+    "Ligule_0001",
+    "Internode_0002",
+    "LeafSheath_0002",
+    "LeafBlade_0002",
+    "Ligule_0002",
+    "Internode_0003",
+    "LeafSheath_0003",
+    "LeafBlade_0003",
+    "Ligule_0003",
+    "Internode_0004",
+    "LeafSheath_0004",
+    "LeafBlade_0004",
+    "Ligule_0004"
+   ]
+  },
+  {
+   "id": "Sheaths",
+   "name": "Leaf sheaths",
+   "elements": [
+    "LeafSheath_0001",
+    "LeafSheath_0002",
+    "LeafSheath_0003",
+    "LeafSheath_0004"
+   ]
+  },
+  {
+   "id": "Blades",
+   "name": "Leaf blades",
+   "elements": [
+    "LeafBlade_0001",
+    "LeafBlade_0002",
+    "LeafBlade_0003",
+    "LeafBlade_0004"
+   ]
+  },
+  {
+   "id": "Ligules",
+   "name": "Ligules & auricles",
+   "elements": [
+    "Ligule_0001",
+    "Ligule_0002",
+    "Ligule_0003",
+    "Ligule_0004"
+   ]
+  }
+ ]
+}

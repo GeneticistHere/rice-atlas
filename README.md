@@ -1,17 +1,17 @@
-# Human Atlas
+# Rice Plant Atlas
 
-An interactive 3D anatomy explorer built with React, Three.js, and shadcn/ui. Take the BodyParts3D adult male reference apart into **2,234 individually selectable meshes**, explore **15 anatomical systems**, and search **3,432 named concepts**.
-
-**[Explore the live demo](https://human-atlas-seven.vercel.app)**
+An interactive 3D atlas of a rice plant (*Oryza sativa*) built with React, Three.js, and shadcn/ui. Explore a procedurally generated plant across **four growth stages** — seedling, tillering, heading, and maturity — with up to **394 individually selectable organs** in **6 botanical systems**, from single awned grains on a panicle branch down to individual adventitious roots.
 
 ## Explore
 
-- Orbit, zoom, and select structures directly on the body.
-- Toggle individual systems or use skeleton and organ presets.
-- Move from assembled anatomy to a spaced inventory of every visible piece.
-- Search anatomical names and source identifiers.
-- Isolate a selected structure and read its details.
-- Use compact controls and detail panels on mobile.
+- Orbit, zoom, and tap any organ on the plant to inspect it — with real morphometrics (blade length and width, internode diameter, grains per branch) in the detail panel.
+- Switch growth stages: a four-leaf seedling, a vivid green tillering plant, green semi-erect panicles at heading, and the golden nodding plant at maturity.
+- Toggle **figure labels**: textbook-style callouts naming the canonical organs, clickable and drawn with leader lines.
+- Take the **guided tour** — "follow the grain" from the roots up through culms, sheaths, blades, the flag leaf, and the panicle, ending inside a grain.
+- Toggle botanical systems (grains, panicle branches, leaf blades, sheaths, culms, roots) or use the Shoot / Panicle / Roots presets.
+- Slide from the assembled plant to a spaced inventory of every organ.
+- Search named structures — flag leaves, panicle rachises, ligules, the grain in cross-section.
+- Isolate a selected organ and read a short botanical explanation.
 
 ## Run locally
 
@@ -24,34 +24,38 @@ npm run dev
 
 Open http://localhost:3016. To build the static site, run `npm run build`; the output is in `dist/`.
 
-## Validate
+## The plant model
 
-```sh
-npm run check
-node scripts/validate-atlas.mjs
-node scripts/validate-interactions.mjs
-npm run build
-```
+The geometry is a functional-structural plant model generated entirely in code by `generate_fspm_rice.py`:
 
-Validation covers mesh buffers, names and concept membership, nonoverlapping exploded layouts at desktop and mobile aspect ratios, search and inspection contracts, and tap-versus-drag handling. Browser interaction checks have exercised selection, system controls, search, isolation, rotation, and 390×844, 320×568, and 844×390 layouts. Phone controls stay clear of the exploded inventory, and isolated structures fit the space above or beside the detail panel. Physical-device performance and real multitouch hardware have not been tested.
+- A **tillering crown** with a main culm and seven tillers, each with tapered internodes, node bulges, and a slight outward lean.
+- **Leaf sheaths** that wrap the culm and flare at the ligule, and **leaf blades** with a V-fold cross-section, longitudinal twist, and gracefully drooping tips — including short, erect flag leaves.
+- **Nodding panicles**: an arching rachis with spirally arranged primary branches, secondary branchlets, and over a thousand individually placed awned grains on pedicels.
+- A **fibrous root system** of 44 adventitious roots with fine laterals.
+- **Per-organ color**: every organ carries its own tint — lower leaves and internodes age toward straw yellow, upper blades stay deep green, and each panicle ripens on its own schedule — rendered through a per-part color texture in the shader.
+- **Finer organs**: a ligule-and-auricle collar at every sheath–blade junction, and a grain sliced in cross-section on the main culm's panicle, with the husk, endosperm, and embryo as separate selectable parts.
+- **Four stages** from one parameterized generator: each stage has its own architecture, organ counts, palettes, and panicle state.
+- **Per-vertex shading**: every vertex carries a tint multiplier — base-to-tip blade gradients with senescent browned tips, dark node rings and waxy bloom on the internodes, roots darkening toward the crown, and grains ripening basally-first along each branch.
+- **Surface detail**: parallel-vein corrugation and a keeled midrib on every blade, five lemma ridges on every grain, culms that kink slightly at each node, a spent seed on the seedling's crown, and senesced brown leaves hanging at maturity.
+- **Studio realism**: soft shadow mapping (with a custom depth pass so hidden organs cast no shadows), per-system material finish, backlit-leaf translucency, and a gentle idle wind that stills when you isolate an organ (and honors reduced-motion preferences).
 
-## Anatomy data
-
-The current viewer uses **BodyParts3D 4.0**, an adult male reference anatomy, licensed **CC BY 4.0**. It does not represent every human structure or variation. Individual source meshes are distinct from named concepts, which may group multiple meshes. Descriptions distinguish general system context from individual organ explanations.
-
-Geometry is simplified for browser performance while retaining every source mesh. The packaged model contains 2,288,268 triangles and downloads approximately 33 MB of compressed geometry. Full credits, source links, and adaptation details are in [ATTRIBUTION.md](public/ATTRIBUTION.md).
-
-This is an educational explorer, not a diagnostic or surgical tool.
-
-## How it works
-
-Geometry is merged into batches. Per-structure GPU textures control translation, visibility, and selection, while component geometry supports accurate picking. Exploded layouts pack only the visible pieces. Rendering updates when the scene changes; orbit controls remain responsive without thousands of separate draw calls.
-
-The optional WebMCP tools expose anatomy search and inspection in compatible browsers. The visible interface works without them.
+Proportions and architecture follow the real plant, but this is a conceptual educational model, not a scan of a specimen.
 
 ## Rebuilding geometry
 
-The repository includes browser-ready geometry. Rebuilding it is optional: obtain the official BodyParts3D OBJ archive and English metadata tables, prepare the joined concepts and display-system mappings, run `scripts/convert-anatomy.py`, then `node scripts/optimize-anatomy.mjs` and `node scripts/compress-models.mjs`. Simplification uses a 0.2% relative error limit per structure.
+```sh
+python3 generate_fspm_rice.py
+for s in seedling tillering heading maturity; do
+  python3 scripts/convert-anatomy.py rice_obj_$s concept_map_$s.json system_map_$s.json atlas-$s
+done
+node scripts/compress-models.mjs
+```
+
+The generator writes one OBJ per organ into `rice_obj_<stage>/` plus per-stage concept and system maps; the converter packs each stage into binary chunks under `public/models/` as `atlas-<stage>.json` + `atlas-<stage>-N.bin`.
+
+## How it works
+
+Geometry is merged into batches per system. Per-organ GPU textures control translation, visibility, and selection, while component geometry supports accurate picking. Exploded layouts pack only the visible organs, and rendering updates only when the scene changes.
 
 ## Deploy
 
@@ -59,6 +63,4 @@ Import this repository into Vercel as a Vite project. The included `vercel.json`
 
 ## License
 
-Original application code is released under the [MIT License](LICENSE). **The anatomy data has its own CC BY 4.0 license**; preserve the attribution when redistributing it. Third-party dependencies retain their respective licenses.
-
-Issues and pull requests are welcome. Please include reproduction steps and browser/device details for interaction problems.
+Released under the [MIT License](LICENSE). The viewer is adapted from the open-source Human Atlas; the plant geometry is original procedural output of this repository.
