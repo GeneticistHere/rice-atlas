@@ -38,6 +38,19 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   // Per-organ tint (linear RGB), falling back to the system color.
   const colorData=new Float32Array(width*4),colorTexture=new T.DataTexture(colorData,width,1,T.RGBAFormat,T.FloatType);
   atlas.parts.forEach((p,i)=>{const c=new T.Color(p.color??SYSTEMS.find(s=>s.id===p.system)?.color??'#aebbb8');colorData.set([c.r,c.g,c.b,1],i*4);});colorTexture.needsUpdate=true;
+  // Growth simulation: per-organ anchor + growth factor texture, young→ripe color pairs,
+  // and per-culm internode vectors so organs ride downward while internodes are unelongated.
+  const growthData=new Float32Array(width*4),growthTexture=new T.DataTexture(growthData,width,1,T.RGBAFormat,T.FloatType);
+  const anchors=atlas.parts.map((p,i)=>p.growth?new T.Vector3().fromArray(p.growth.anchor):centers[i].clone());
+  atlas.parts.forEach((p,i)=>growthData.set([anchors[i].x,anchors[i].y,anchors[i].z,1],i*4));growthTexture.needsUpdate=true;
+  const ripeColors=atlas.parts.map(p=>new T.Color(p.color??SYSTEMS.find(s=>s.id===p.system)?.color??'#aebbb8'));
+  const youngColors=atlas.parts.map((p,i)=>p.color0?new T.Color(p.color0):ripeColors[i].clone());
+  const culmVecs=(atlas.growthCulms??[]).map(c=>c.map(v=>new T.Vector3().fromArray(v)));
+  const culmIndex:number[][]=culmVecs.map(c=>c.map(()=>-1));
+  atlas.parts.forEach((p,i)=>{const g=p.growth;if(g&&p.system==='Stem'&&g.culm>=0&&g.node>=0&&g.node<(culmIndex[g.culm]?.length??0))culmIndex[g.culm][g.node]=i;});
+  const smooth01=(t:number)=>{const c=Math.max(0,Math.min(1,t));return c*c*(3-2*c);};
+  const organGrow=(p:(typeof atlas.parts)[number],day:number)=>p.growth?smooth01((day-p.growth.birth)/Math.max(.1,p.growth.dur)):1;
+  const tmpColor=new T.Color();
   const materials:T.Material[]=[],geometries:T.BufferGeometry[]=[],pickers:(T.Mesh|undefined)[]=[],centers=atlas.parts.map(p=>new T.Vector3().fromArray(p.bounds[0]).add(new T.Vector3().fromArray(p.bounds[1])).multiplyScalar(.5));
   // Frame the camera on this stage's actual plant height rather than a fixed adult size.
   const plantHeight=atlas.parts.reduce((m,p)=>Math.max(m,p.bounds[1][1]),.3),midY=Math.min(.9,Math.max(.16,plantHeight*.5)),hscale=Math.min(1.1,Math.max(.22,plantHeight/1.7));
@@ -77,7 +90,11 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
    labelItems.forEach(i=>{i.button.hidden=true;i.line.setAttribute('visibility','hidden');});
    const columns:{item:typeof labelItems[number];ax:number;ay:number}[][]=[[],[]];
    labelItems.forEach(item=>{
-    projected.copy(centers[item.index]).project(camera);
+    const i=item.index,g=growthData[i*4+3];
+    if(g<.05||data[i*4+3]<.5)return;
+    projected.copy(centers[i]).sub(anchors[i]).multiplyScalar(g).add(anchors[i]);
+    projected.x+=data[i*4];projected.y+=data[i*4+1];projected.z+=data[i*4+2];
+    projected.project(camera);
     if(projected.z>1||projected.z<-1)return;
     columns[item.side>0?1:0].push({item,ax:(projected.x+1)*w/2,ay:(1-projected.y)*h/2});
    });
@@ -105,15 +122,16 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   };
   // Shared time/sway uniforms drive a gentle wind in both the beauty and shadow passes.
   const timeU={value:0},swayU={value:0},reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const SWAY_VERTEX='float swayGate = smoothstep(0.25, 1.6, position.y); float swayPhase = time*1.35 + position.y*2.1 + position.x*1.6 + partIndex*0.13; transformed += vec3(sin(swayPhase), 0.0, 0.8*cos(swayPhase*0.77)) * (sway * 0.009 * swayGate);';
+  const SWAY_VERTEX='float swayGate = smoothstep(0.25, 1.6, transformed.y); float swayPhase = time*1.35 + position.y*2.1 + position.x*1.6 + partIndex*0.13; transformed += vec3(sin(swayPhase), 0.0, 0.8*cos(swayPhase*0.77)) * (sway * 0.009 * swayGate);';
+  const GROW_VERTEX='vec4 grow = texture2D(growthState, stateUv); transformed = grow.xyz + (transformed - grow.xyz) * grow.w;';
   const FINISH:Record<string,{rough:number;env:number}>={Leaves:{rough:.48,env:.5},Sheath:{rough:.55,env:.4},Stem:{rough:.62,env:.35},Grain:{rough:.42,env:.6},Panicle:{rough:.6,env:.35},Root:{rough:.85,env:.15}};
   const materialFor=(system:string)=>{
    const finish=FINISH[system]??{rough:.62,env:.35};
    const m=new T.MeshStandardMaterial({color:SYSTEMS.find(s=>s.id===system)?.color??'#aebbb8',metalness:.05,roughness:finish.rough,side:T.DoubleSide});m.envMapIntensity=finish.env;
    m.onBeforeCompile=shader=>{
-    shader.uniforms.partState={value:partTexture};shader.uniforms.selectionState={value:selectionTexture};shader.uniforms.colorState={value:colorTexture};shader.uniforms.stateWidth={value:width};shader.uniforms.time=timeU;shader.uniforms.sway=swayU;
-    shader.vertexShader='attribute float partIndex; attribute vec3 tint; uniform sampler2D partState; uniform sampler2D selectionState; uniform sampler2D colorState; uniform float stateWidth; uniform float time; uniform float sway; varying float partVisible; varying float partSelected; varying vec3 partColor; varying vec3 vTint;\n'+shader.vertexShader;
-    shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\n'+SWAY_VERTEX+'\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); vec4 state = texture2D(partState, stateUv); transformed += state.xyz; partVisible = state.w; partSelected = texture2D(selectionState, stateUv).r; partColor = texture2D(colorState, stateUv).rgb; vTint = tint * 2.0;');
+    shader.uniforms.partState={value:partTexture};shader.uniforms.selectionState={value:selectionTexture};shader.uniforms.colorState={value:colorTexture};shader.uniforms.growthState={value:growthTexture};shader.uniforms.stateWidth={value:width};shader.uniforms.time=timeU;shader.uniforms.sway=swayU;
+    shader.vertexShader='attribute float partIndex; attribute vec3 tint; uniform sampler2D partState; uniform sampler2D selectionState; uniform sampler2D colorState; uniform sampler2D growthState; uniform float stateWidth; uniform float time; uniform float sway; varying float partVisible; varying float partSelected; varying vec3 partColor; varying vec3 vTint;\n'+shader.vertexShader;
+    shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); '+GROW_VERTEX+' '+SWAY_VERTEX+'\nvec4 state = texture2D(partState, stateUv); transformed += state.xyz; partVisible = state.w; partSelected = texture2D(selectionState, stateUv).r; partColor = texture2D(colorState, stateUv).rgb; vTint = tint * 2.0;');
     shader.fragmentShader='varying float partVisible; varying float partSelected; varying vec3 partColor; varying vec3 vTint;\n'+shader.fragmentShader;
     // Thin organs are single-surface sheets; light whichever side faces the camera.
     if(system==='Leaves')shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nif (dot(normal, normalize(vViewPosition)) < 0.0) normal = -normal;');
@@ -127,9 +145,9 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   // Shadow pass: replicate the wind and per-part offsets, and skip hidden organs.
   const depthMaterial=new T.MeshDepthMaterial({depthPacking:T.RGBADepthPacking});
   depthMaterial.onBeforeCompile=shader=>{
-   shader.uniforms.partState={value:partTexture};shader.uniforms.stateWidth={value:width};shader.uniforms.time=timeU;shader.uniforms.sway=swayU;
-   shader.vertexShader='attribute float partIndex; uniform sampler2D partState; uniform float stateWidth; uniform float time; uniform float sway; varying float partVisible;\n'+shader.vertexShader;
-   shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\n'+SWAY_VERTEX+'\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); vec4 state = texture2D(partState, stateUv); transformed += state.xyz; partVisible = state.w;');
+   shader.uniforms.partState={value:partTexture};shader.uniforms.growthState={value:growthTexture};shader.uniforms.stateWidth={value:width};shader.uniforms.time=timeU;shader.uniforms.sway=swayU;
+   shader.vertexShader='attribute float partIndex; uniform sampler2D partState; uniform sampler2D growthState; uniform float stateWidth; uniform float time; uniform float sway; varying float partVisible;\n'+shader.vertexShader;
+   shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); '+GROW_VERTEX+' '+SWAY_VERTEX+'\nvec4 state = texture2D(partState, stateUv); transformed += state.xyz; partVisible = state.w;');
    shader.fragmentShader='varying float partVisible;\n'+shader.fragmentShader;
    shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nif (partVisible < 0.5) discard;');
   };
@@ -154,11 +172,14 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   };
   (async()=>{try{let cursor=0;await Promise.all(Array.from({length:3},async()=>{while(cursor<atlas.chunks.length){const i=cursor++;await loadChunk(i);}}));if(!disposed){ready=true;dirty=true;}}catch(e){if(!disposed)onError(e instanceof Error?e.message:'Could not load the anatomy.');}})();
   const fit=(view:string,extent=0)=>{
-   const aspect=camera.aspect,mobile=el.clientWidth<768,normalDistance=(mobile?Math.max(4.5,1.8*el.clientHeight/Math.max(160,el.clientHeight-350)/(2*Math.tan(T.MathUtils.degToRad(camera.fov/2)))):4)*hscale;
+   // Frame tighter and lower while the plant is young, pulling back as it grows.
+   const dayT=T.MathUtils.smoothstep(latest.current.day??120,5,70);
+   const dayScale=T.MathUtils.lerp(.42,1,dayT);
+   const aspect=camera.aspect,mobile=el.clientWidth<768,normalDistance=(mobile?Math.max(4.5,1.8*el.clientHeight/Math.max(160,el.clientHeight-350)/(2*Math.tan(T.MathUtils.degToRad(camera.fov/2)))):4)*hscale*(extent>.1?1:dayScale);
    const reservedHeight=mobile?350:270;const availableAspect=Math.max(.35,(el.clientWidth-(mobile?40:340))/Math.max(160,el.clientHeight-reservedHeight));const atlasDistance=Math.max(packingHeight,packingWidth/availableAspect)/(2*Math.tan(T.MathUtils.degToRad(camera.fov/2)))*(el.clientHeight/Math.max(160,el.clientHeight-reservedHeight))*1.08;
    const distance=T.MathUtils.lerp(normalDistance,Math.max(.2,atlasDistance),extent);if(extent>.8)view='front';
    const direction=view==='front'?new T.Vector3(0,.02,1):view==='back'?new T.Vector3(0,.02,-1):view==='side'?new T.Vector3(1,.02,0):new T.Vector3(.35,.06,1).normalize();
-   controls.target.set(extent>.1&&el.clientWidth>767?-packingWidth*.12:0,extent>.1?.85:mobile?midY*1.05:midY*.82,0);camera.position.copy(controls.target).addScaledVector(direction,distance);controls.update();dirty=true;
+   controls.target.set(extent>.1&&el.clientWidth>767?-packingWidth*.12:0,extent>.1?.85:(mobile?midY*1.05:midY*.82)*T.MathUtils.lerp(.62,1,dayT),0);camera.position.copy(controls.target).addScaledVector(direction,distance);controls.update();dirty=true;
   };
   const resize=()=>{layoutKey='';lastState=null;renderer.setPixelRatio(Math.min(devicePixelRatio,el.clientWidth<768||el.clientHeight<600?1.5:2));camera.aspect=el.clientWidth/el.clientHeight;camera.updateProjectionMatrix();renderer.setSize(el.clientWidth,el.clientHeight);fit(latest.current.view,amount);};const observer=new ResizeObserver(resize);observer.observe(el);
   const raycaster=new T.Raycaster(),pointer=new T.Vector2(),tap=new PointerTap(),worldBox=new T.Box3(),hitPoint=new T.Vector3();
@@ -172,10 +193,10 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
    if(found<0&&amount>.45)found=findTarget(e.clientX-rect.left,e.clientY-rect.top,e.pointerType==='touch'?24:16);if(found>=0){hover.hidden=true;select.current(atlas.parts[found].id);}
   };
   renderer.domElement.addEventListener('pointerdown',down);renderer.domElement.addEventListener('pointermove',move);renderer.domElement.addEventListener('pointerup',up);renderer.domElement.addEventListener('pointercancel',cancel);
-  const clock=new T.Clock();let lastExtent=-1,lastLabels=false;
+  const clock=new T.Clock();let lastExtent=-1,lastLabels=false,lastDayFitted=-1;
   const animate=()=>{
    if(disposed)return;frame=requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.05),s=latest.current;
-   const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate;
+   const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate||lastState?.day!==s.day;
    const moving=Math.abs(amount-s.explode)>.0001;
    if(moving){amount=T.MathUtils.damp(amount,s.explode,8,dt);dirty=true;}
    if(s.labels!==lastLabels){lastLabels=s.labels;dirty=true;}
@@ -190,15 +211,25 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
     const nextLayoutKey=visibleParts.map(p=>p.id).join(',')+':'+camera.aspect.toFixed(3);
     if(nextLayoutKey!==layoutKey){const layout=createExplosionLayout(visibleParts,camera.aspect);packingWidth=layout.width;packingHeight=layout.height;atlas.parts.forEach((p,i)=>{const cell=layout.cells.get(p.id);offsets[i]=cell?new T.Vector3(cell.x,cell.y+.85,0):centers[i].clone();});layoutKey=nextLayoutKey;if(amount>.05&&!s.isolate)fit(s.view,Math.max(0,(amount-.3)/.7));}
 
+    // In explode or isolate views the plant is shown fully grown; the timeline drives the assembled view.
+    const eday=amount>.05?120:s.day;
+    const prefixes=culmVecs.map((vecs,ci)=>{const arr=[new T.Vector3()];const acc=new T.Vector3();vecs.forEach((v,ni)=>{const pi=culmIndex[ci][ni];acc.addScaledVector(v,1-(pi>=0?(eday>=119.5?1:organGrow(atlas.parts[pi],eday)):1));arr.push(acc.clone());});return arr;});
     atlas.parts.forEach((p,i)=>{
      const c=centers[i],destination=offsets[i];let dx=0,dy=0,dz=0;
      if(amount<=.45){const t=amount/.45;const group=SYSTEMS.findIndex(sys=>sys.id===p.system);const angle=group/SYSTEMS.length*Math.PI*2;dx=Math.sin(angle)*t*.48*hscale;dy=(c.y-midY)*t*.28;dz=Math.cos(angle)*t*.48*hscale;}
      else {const t=(amount-.45)/.55,group=SYSTEMS.findIndex(sys=>sys.id===p.system),angle=group/SYSTEMS.length*Math.PI*2;dx=T.MathUtils.lerp(Math.sin(angle)*.48*hscale,destination.x-c.x,t);dy=T.MathUtils.lerp((c.y-midY)*.28,destination.y-c.y,t);dz=T.MathUtils.lerp(Math.cos(angle)*.48*hscale,-c.z,t);}
-     const selected=selection.has(p.id);data.set([dx,dy,dz,(s.isolate?selected:visible.has(p.system)||selected)?1:0],i*4);selectedData[i*4]=selected&&!s.isolate?255:0;
+     const g=eday>=119.5?1:organGrow(p,eday);
+     if(eday<119.5&&p.growth&&p.growth.culm>=0){const pre=prefixes[p.growth.culm];if(pre){const d=pre[Math.min(Math.max(p.growth.node,0),pre.length-1)];dx-=d.x;dy-=d.y;dz-=d.z;}}
+     growthData.set([anchors[i].x,anchors[i].y,anchors[i].z,g],i*4);
+     const cb=p.cbirth??-1;
+     const ct=cb<0?1:smooth01((eday-cb)/Math.max(.1,p.cdur??1));
+     tmpColor.copy(youngColors[i]).lerp(ripeColors[i],ct);colorData.set([tmpColor.r,tmpColor.g,tmpColor.b,1],i*4);
+     const selected=selection.has(p.id);data.set([dx,dy,dz,(s.isolate?selected:visible.has(p.system)||selected)&&g>.02?1:0],i*4);selectedData[i*4]=selected&&!s.isolate?255:0;
      markerPositions.set(data[i*4+3]>.5?[c.x+dx,c.y+dy,c.z+dz]:[10000,10000,10000],i*3);const mesh=pickers[i];if(mesh){mesh.position.set(dx,dy,dz);mesh.updateMatrix();mesh.updateMatrixWorld(true);}
-    });partTexture.needsUpdate=true;selectionTexture.needsUpdate=true;markerGeometry.attributes.position.needsUpdate=true;lastState=s;lastExtent=amount;dirty=true;
+    });partTexture.needsUpdate=true;selectionTexture.needsUpdate=true;growthTexture.needsUpdate=true;colorTexture.needsUpdate=true;markerGeometry.attributes.position.needsUpdate=true;lastState=s;lastExtent=amount;dirty=true;
    }
-   if(s.view!==lastView||s.reset!==lastReset){fit(s.view,amount);lastView=s.view;lastReset=s.reset;}
+   if(s.view!==lastView||s.reset!==lastReset){fit(s.view,amount);lastView=s.view;lastReset=s.reset;lastDayFitted=s.day;}
+   if(Math.abs(lastDayFitted-s.day)>.4&&amount<.1&&!s.isolate){fit(s.view,amount);lastDayFitted=s.day;}
    if(moving&&!s.isolate)fit(amount>.5?'front':s.view,Math.max(0,(amount-.3)/.7));
    const isolateKey=s.isolate?s.selected.join(',')+':'+s.reset+':'+s.inspectorOpen+':'+camera.aspect:'';
    if(isolateKey!==lastIsolate||(s.isolate&&moving)){
@@ -215,7 +246,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
 
   };animate();
   const contextLost=(e:Event)=>{e.preventDefault();onError('The 3D session was paused by your device. Reload to continue.');};renderer.domElement.addEventListener('webglcontextlost',contextLost);
-  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();colorTexture.dispose();markerGeometry.dispose();markerMaterial.dispose();hover.remove();labelLayer.remove();renderer.dispose();renderer.domElement.remove();};
+  return()=>{disposed=true;abort.abort();cancelAnimationFrame(frame);observer.disconnect();controls.dispose();geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());scene.traverse(o=>{if(o instanceof T.Mesh&&!geometries.includes(o.geometry)){o.geometry.dispose();const ms=Array.isArray(o.material)?o.material:[o.material];ms.forEach(m=>m.dispose());}});env.dispose();partTexture.dispose();selectionTexture.dispose();colorTexture.dispose();growthTexture.dispose();markerGeometry.dispose();markerMaterial.dispose();hover.remove();labelLayer.remove();renderer.dispose();renderer.domElement.remove();};
  },[atlas]);
  return <div className="scene" ref={host}/>;
 }

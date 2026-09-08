@@ -8,6 +8,17 @@
    "stats": {
     "Tillers": "8",
     "Roots": "44"
+   },
+   "growth": {
+    "birth": 0,
+    "dur": 12,
+    "anchor": [
+     0,
+     302.78,
+     0
+    ],
+    "culm": -1,
+    "node": -1
    }
   },
   {
@@ -18,7 +29,21 @@
    "stats": {
     "Root length": "292 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 4.0,
+    "dur": 22,
+    "anchor": [
+     5.2,
+     318.61,
+     1.06
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bca47e",
+   "cbirth": 12.0,
+   "cdur": 30
   },
   {
    "id": "Root_0002",
@@ -28,7 +53,21 @@
    "stats": {
     "Root length": "322 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 4.4,
+    "dur": 22,
+    "anchor": [
+     -2.87,
+     315.03,
+     2.1
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0a980",
+   "cbirth": 12.4,
+   "cdur": 30
   },
   {
    "id": "Root_0003",
@@ -38,7 +77,21 @@
    "stats": {
     "Root length": "289 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 5.0,
+    "dur": 22,
+    "anchor": [
+     3.42,
+     319.9,
+     -4.48
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c2ac89",
+   "cbirth": 13.0,
+   "cdur": 30
   },
   {
    "id": "Root_0004",
@@ -48,7 +101,21 @@
    "stats": {
     "Root length": "299 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 5.7,
+    "dur": 22,
+    "anchor": [
+     3.53,
+     323.6,
+     4.57
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0aa83",
+   "cbirth": 13.7,
+   "cdur": 30
   },
   {
    "id": "Root_0005",
@@ -58,7 +125,21 @@
    "stats": {
     "Root length": "313 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 6.5,
+    "dur": 22,
+    "anchor": [
+     5.75,
+     310.59,
+     3.83
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bda983",
+   "cbirth": 14.5,
+   "cdur": 30
   },
   {
    "id": "Root_0006",
@@ -68,7 +149,21 @@
    "stats": {
     "Root length": "283 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 7.3,
+    "dur": 22,
+    "anchor": [
+     -5.89,
+     312.44,
+     -0.32
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bda67c",
+   "cbirth": 15.3,
+   "cdur": 30
   },
   {
    "id": "Root_0007",
@@ -78,7 +173,21 @@
    "stats": {
     "Root length": "310 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 8.2,
+    "dur": 22,
+    "anchor": [
+     -4.37,
+     309.41,
+     4.71
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#beac88",
+   "cbirth": 16.2,
+   "cdur": 30
   },
   {
    "id": "Root_0008",
@@ -88,7 +197,21 @@
    "stats": {
     "Root length": "306 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 9.1,
+    "dur": 22,
+    "anchor": [
+     1.53,
+     311.29,
+     -4.09
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bca781",
+   "cbirth": 17.1,
+   "cdur": 30
   },
   {
    "id": "Root_0009",
@@ -98,7 +221,21 @@
    "stats": {
     "Root length": "308 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 10.1,
+    "dur": 22,
+    "anchor": [
+     -1.78,
+     309.89,
+     -5.85
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bda885",
+   "cbirth": 18.1,
+   "cdur": 30
   },
   {
    "id": "Root_0010",
@@ -108,7 +245,21 @@
    "stats": {
     "Root length": "275 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 11.1,
+    "dur": 22,
+    "anchor": [
+     -3.52,
+     314.4,
+     -4.05
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bfac89",
+   "cbirth": 19.1,
+   "cdur": 30
   },
   {
    "id": "Root_0011",
@@ -118,7 +269,21 @@
    "stats": {
     "Root length": "313 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 12.2,
+    "dur": 22,
+    "anchor": [
+     6.55,
+     311.41,
+     -1.8
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c1ac88",
+   "cbirth": 20.2,
+   "cdur": 30
   },
   {
    "id": "Root_0012",
@@ -128,7 +293,21 @@
    "stats": {
     "Root length": "312 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 13.2,
+    "dur": 22,
+    "anchor": [
+     1.57,
+     309.32,
+     5.09
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#beab85",
+   "cbirth": 21.2,
+   "cdur": 30
   },
   {
    "id": "Root_0013",
@@ -138,7 +317,21 @@
    "stats": {
     "Root length": "300 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 14.3,
+    "dur": 22,
+    "anchor": [
+     2.62,
+     314.62,
+     5.0
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bfa67e",
+   "cbirth": 22.3,
+   "cdur": 30
   },
   {
    "id": "Root_0014",
@@ -148,7 +341,21 @@
    "stats": {
     "Root length": "277 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 15.5,
+    "dur": 22,
+    "anchor": [
+     5.34,
+     309.3,
+     -5.74
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#b6a27f",
+   "cbirth": 23.5,
+   "cdur": 30
   },
   {
    "id": "Root_0015",
@@ -158,7 +365,21 @@
    "stats": {
     "Root length": "306 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 16.6,
+    "dur": 22,
+    "anchor": [
+     -4.07,
+     309.55,
+     -2.68
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#baa27a",
+   "cbirth": 24.6,
+   "cdur": 30
   },
   {
    "id": "Root_0016",
@@ -168,7 +389,21 @@
    "stats": {
     "Root length": "308 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 17.8,
+    "dur": 22,
+    "anchor": [
+     6.97,
+     310.53,
+     1.85
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bfa782",
+   "cbirth": 25.8,
+   "cdur": 30
   },
   {
    "id": "Root_0017",
@@ -178,7 +413,21 @@
    "stats": {
     "Root length": "301 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 19.0,
+    "dur": 22,
+    "anchor": [
+     2.22,
+     314.83,
+     -2.48
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bba57b",
+   "cbirth": 27.0,
+   "cdur": 30
   },
   {
    "id": "Root_0018",
@@ -188,7 +437,21 @@
    "stats": {
     "Root length": "301 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 20.3,
+    "dur": 22,
+    "anchor": [
+     7.18,
+     311.99,
+     -0.08
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0a880",
+   "cbirth": 28.3,
+   "cdur": 30
   },
   {
    "id": "Root_0019",
@@ -198,7 +461,21 @@
    "stats": {
     "Root length": "317 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 21.5,
+    "dur": 22,
+    "anchor": [
+     -0.35,
+     318.46,
+     -4.6
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bdab87",
+   "cbirth": 29.5,
+   "cdur": 30
   },
   {
    "id": "Root_0020",
@@ -208,7 +485,21 @@
    "stats": {
     "Root length": "304 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 22.8,
+    "dur": 22,
+    "anchor": [
+     4.06,
+     317.14,
+     -6.01
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#baa47c",
+   "cbirth": 30.8,
+   "cdur": 30
   },
   {
    "id": "Root_0021",
@@ -218,7 +509,21 @@
    "stats": {
     "Root length": "303 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 24.1,
+    "dur": 22,
+    "anchor": [
+     -3.62,
+     322.05,
+     -5.61
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#baa57e",
+   "cbirth": 32.1,
+   "cdur": 30
   },
   {
    "id": "Root_0022",
@@ -228,7 +533,21 @@
    "stats": {
     "Root length": "298 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 25.4,
+    "dur": 22,
+    "anchor": [
+     0.89,
+     322.14,
+     -5.21
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bca47d",
+   "cbirth": 33.4,
+   "cdur": 30
   },
   {
    "id": "Root_0023",
@@ -238,7 +557,21 @@
    "stats": {
     "Root length": "312 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 26.7,
+    "dur": 22,
+    "anchor": [
+     3.25,
+     318.87,
+     -2.41
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#b5a27e",
+   "cbirth": 34.7,
+   "cdur": 30
   },
   {
    "id": "Root_0024",
@@ -248,7 +581,21 @@
    "stats": {
     "Root length": "299 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 28.1,
+    "dur": 22,
+    "anchor": [
+     6.34,
+     320.32,
+     -0.81
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bca783",
+   "cbirth": 36.1,
+   "cdur": 30
   },
   {
    "id": "Root_0025",
@@ -258,7 +605,21 @@
    "stats": {
     "Root length": "312 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 29.5,
+    "dur": 22,
+    "anchor": [
+     2.5,
+     322.12,
+     8.3
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bea780",
+   "cbirth": 37.5,
+   "cdur": 30
   },
   {
    "id": "Root_0026",
@@ -268,7 +629,21 @@
    "stats": {
     "Root length": "291 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 30.9,
+    "dur": 22,
+    "anchor": [
+     2.18,
+     315.64,
+     -0.92
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bba47c",
+   "cbirth": 38.9,
+   "cdur": 30
   },
   {
    "id": "Root_0027",
@@ -278,7 +653,21 @@
    "stats": {
     "Root length": "326 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 32.3,
+    "dur": 22,
+    "anchor": [
+     -4.28,
+     314.72,
+     3.75
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c1ad8a",
+   "cbirth": 40.3,
+   "cdur": 30
   },
   {
    "id": "Root_0028",
@@ -288,7 +677,21 @@
    "stats": {
     "Root length": "296 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 33.7,
+    "dur": 22,
+    "anchor": [
+     5.09,
+     312.4,
+     1.92
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c2ae88",
+   "cbirth": 41.7,
+   "cdur": 30
   },
   {
    "id": "Root_0029",
@@ -298,7 +701,21 @@
    "stats": {
     "Root length": "285 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 35.1,
+    "dur": 22,
+    "anchor": [
+     -1.87,
+     312.83,
+     2.62
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bda884",
+   "cbirth": 43.1,
+   "cdur": 30
   },
   {
    "id": "Root_0030",
@@ -308,7 +725,21 @@
    "stats": {
     "Root length": "288 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 36.6,
+    "dur": 22,
+    "anchor": [
+     1.28,
+     322.39,
+     -4.93
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#b6a27e",
+   "cbirth": 44.6,
+   "cdur": 30
   },
   {
    "id": "Root_0031",
@@ -318,7 +749,21 @@
    "stats": {
     "Root length": "304 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 38.0,
+    "dur": 22,
+    "anchor": [
+     -4.27,
+     319.96,
+     -2.18
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#baa37c",
+   "cbirth": 46.0,
+   "cdur": 30
   },
   {
    "id": "Root_0032",
@@ -328,7 +773,21 @@
    "stats": {
     "Root length": "292 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 39.5,
+    "dur": 22,
+    "anchor": [
+     -2.06,
+     312.14,
+     0.97
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bca67e",
+   "cbirth": 47.5,
+   "cdur": 30
   },
   {
    "id": "Root_0033",
@@ -338,7 +797,21 @@
    "stats": {
     "Root length": "285 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 41.0,
+    "dur": 22,
+    "anchor": [
+     5.69,
+     320.31,
+     -2.6
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bca67b",
+   "cbirth": 49.0,
+   "cdur": 30
   },
   {
    "id": "Root_0034",
@@ -348,7 +821,21 @@
    "stats": {
     "Root length": "300 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 42.5,
+    "dur": 22,
+    "anchor": [
+     -1.93,
+     320.02,
+     7.34
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c2ab84",
+   "cbirth": 50.5,
+   "cdur": 30
   },
   {
    "id": "Root_0035",
@@ -358,7 +845,21 @@
    "stats": {
     "Root length": "284 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 44.1,
+    "dur": 22,
+    "anchor": [
+     -3.66,
+     317.34,
+     -3.27
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#b9a47c",
+   "cbirth": 52.1,
+   "cdur": 30
   },
   {
    "id": "Root_0036",
@@ -368,7 +869,21 @@
    "stats": {
     "Root length": "281 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 45.6,
+    "dur": 22,
+    "anchor": [
+     -4.83,
+     313.81,
+     -1.52
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bda781",
+   "cbirth": 53.6,
+   "cdur": 30
   },
   {
    "id": "Root_0037",
@@ -378,7 +893,21 @@
    "stats": {
     "Root length": "292 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 47.1,
+    "dur": 22,
+    "anchor": [
+     7.81,
+     315.41,
+     2.96
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bca782",
+   "cbirth": 55.1,
+   "cdur": 30
   },
   {
    "id": "Root_0038",
@@ -388,7 +917,21 @@
    "stats": {
     "Root length": "303 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 48.7,
+    "dur": 22,
+    "anchor": [
+     -3.65,
+     323.63,
+     3.03
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#b7a27e",
+   "cbirth": 56.7,
+   "cdur": 30
   },
   {
    "id": "Root_0039",
@@ -398,7 +941,21 @@
    "stats": {
     "Root length": "280 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 50.3,
+    "dur": 22,
+    "anchor": [
+     2.53,
+     314.23,
+     -2.23
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#b7a27e",
+   "cbirth": 58.3,
+   "cdur": 30
   },
   {
    "id": "Root_0040",
@@ -408,7 +965,21 @@
    "stats": {
     "Root length": "302 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 51.9,
+    "dur": 22,
+    "anchor": [
+     5.82,
+     320.9,
+     5.45
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bea882",
+   "cbirth": 59.9,
+   "cdur": 30
   },
   {
    "id": "Root_0041",
@@ -418,7 +989,21 @@
    "stats": {
     "Root length": "294 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 53.5,
+    "dur": 22,
+    "anchor": [
+     -0.56,
+     313.81,
+     -2.83
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0aa80",
+   "cbirth": 61.5,
+   "cdur": 30
   },
   {
    "id": "Root_0042",
@@ -428,7 +1013,21 @@
    "stats": {
     "Root length": "295 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 55.1,
+    "dur": 22,
+    "anchor": [
+     -1.13,
+     313.41,
+     -3.82
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bda882",
+   "cbirth": 63.1,
+   "cdur": 30
   },
   {
    "id": "Root_0043",
@@ -438,7 +1037,21 @@
    "stats": {
     "Root length": "287 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 56.7,
+    "dur": 22,
+    "anchor": [
+     -2.7,
+     314.18,
+     6.66
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bda57f",
+   "cbirth": 64.7,
+   "cdur": 30
   },
   {
    "id": "Root_0044",
@@ -448,7 +1061,21 @@
    "stats": {
     "Root length": "296 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 58.4,
+    "dur": 22,
+    "anchor": [
+     -1.93,
+     323.38,
+     3.94
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#baa57d",
+   "cbirth": 66.4,
+   "cdur": 30
   },
   {
    "id": "Internode_0001",
@@ -458,7 +1085,21 @@
    "stats": {
     "Length": "97 mm",
     "Diameter": "10.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 40,
+    "dur": 9,
+    "anchor": [
+     0.0,
+     330.0,
+     0.0
+    ],
+    "culm": 0,
+    "node": 0
+   },
+   "color0": "#819d4b",
+   "cbirth": 65,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0001",
@@ -467,7 +1108,21 @@
    "color": "#6e8c49",
    "stats": {
     "Sheath length": "81 mm"
-   }
+   },
+   "growth": {
+    "birth": 4,
+    "dur": 12,
+    "anchor": [
+     0.0,
+     330.0,
+     0.0
+    ],
+    "culm": 0,
+    "node": 0
+   },
+   "color0": "#689044",
+   "cbirth": 55,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0001",
@@ -477,7 +1132,21 @@
    "stats": {
     "Blade length": "329 mm",
     "Max width": "12 mm"
-   }
+   },
+   "growth": {
+    "birth": 6,
+    "dur": 14,
+    "anchor": [
+     3.07,
+     410.82,
+     0.0
+    ],
+    "culm": 0,
+    "node": 0
+   },
+   "color0": "#629e3f",
+   "cbirth": 40,
+   "cdur": 30
   },
   {
    "id": "Ligule_0001",
@@ -486,6 +1155,17 @@
    "color": "#d7dcbc",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 12,
+    "dur": 4,
+    "anchor": [
+     3.07,
+     410.82,
+     0.0
+    ],
+    "culm": 0,
+    "node": 0
    }
   },
   {
@@ -496,7 +1176,21 @@
    "stats": {
     "Length": "151 mm",
     "Diameter": "9.6 mm"
-   }
+   },
+   "growth": {
+    "birth": 46,
+    "dur": 9,
+    "anchor": [
+     3.74,
+     426.97,
+     0.0
+    ],
+    "culm": 0,
+    "node": 1
+   },
+   "color0": "#81a24c",
+   "cbirth": 70,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0002",
@@ -505,7 +1199,21 @@
    "color": "#6d9545",
    "stats": {
     "Sheath length": "109 mm"
-   }
+   },
+   "growth": {
+    "birth": 12,
+    "dur": 12,
+    "anchor": [
+     3.74,
+     426.97,
+     0.0
+    ],
+    "culm": 0,
+    "node": 1
+   },
+   "color0": "#679442",
+   "cbirth": 63,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0002",
@@ -515,7 +1223,21 @@
    "stats": {
     "Blade length": "412 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 14,
+    "dur": 14,
+    "anchor": [
+     8.2,
+     536.42,
+     -1.85
+    ],
+    "culm": 0,
+    "node": 1
+   },
+   "color0": "#5a933a",
+   "cbirth": 52,
+   "cdur": 30
   },
   {
    "id": "Ligule_0002",
@@ -524,6 +1246,17 @@
    "color": "#d5dabd",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 20,
+    "dur": 4,
+    "anchor": [
+     8.2,
+     536.42,
+     -1.85
+    ],
+    "culm": 0,
+    "node": 1
    }
   },
   {
@@ -534,7 +1267,21 @@
    "stats": {
     "Length": "205 mm",
     "Diameter": "8.3 mm"
-   }
+   },
+   "growth": {
+    "birth": 52,
+    "dur": 9,
+    "anchor": [
+     10.35,
+     577.8,
+     -1.85
+    ],
+    "culm": 0,
+    "node": 2
+   },
+   "color0": "#769a4a",
+   "cbirth": 75,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0003",
@@ -543,7 +1290,21 @@
    "color": "#649543",
    "stats": {
     "Sheath length": "161 mm"
-   }
+   },
+   "growth": {
+    "birth": 22,
+    "dur": 12,
+    "anchor": [
+     10.35,
+     577.8,
+     -1.85
+    ],
+    "culm": 0,
+    "node": 2
+   },
+   "color0": "#629441",
+   "cbirth": 71,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0003",
@@ -553,7 +1314,21 @@
    "stats": {
     "Blade length": "545 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 24,
+    "dur": 14,
+    "anchor": [
+     21.89,
+     738.5,
+     -1.65
+    ],
+    "culm": 0,
+    "node": 2
+   },
+   "color0": "#569a3a",
+   "cbirth": 64,
+   "cdur": 30
   },
   {
    "id": "Ligule_0003",
@@ -562,6 +1337,17 @@
    "color": "#dadfc2",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 30,
+    "dur": 4,
+    "anchor": [
+     21.89,
+     738.5,
+     -1.65
+    ],
+    "culm": 0,
+    "node": 2
    }
   },
   {
@@ -572,7 +1358,21 @@
    "stats": {
     "Length": "280 mm",
     "Diameter": "7.1 mm"
-   }
+   },
+   "growth": {
+    "birth": 57,
+    "dur": 9,
+    "anchor": [
+     24.85,
+     782.51,
+     -1.65
+    ],
+    "culm": 0,
+    "node": 3
+   },
+   "color0": "#75a146",
+   "cbirth": 80,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0004",
@@ -581,7 +1381,21 @@
    "color": "#5b9841",
    "stats": {
     "Sheath length": "227 mm"
-   }
+   },
+   "growth": {
+    "birth": 34,
+    "dur": 12,
+    "anchor": [
+     24.85,
+     782.51,
+     -1.65
+    ],
+    "culm": 0,
+    "node": 3
+   },
+   "color0": "#5e9540",
+   "cbirth": 79,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0004",
@@ -591,7 +1405,21 @@
    "stats": {
     "Blade length": "567 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 36,
+    "dur": 14,
+    "anchor": [
+     43.41,
+     1009.01,
+     -0.05
+    ],
+    "culm": 0,
+    "node": 3
+   },
+   "color0": "#529138",
+   "cbirth": 76,
+   "cdur": 30
   },
   {
    "id": "Ligule_0004",
@@ -600,6 +1428,17 @@
    "color": "#dbe0c4",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 42,
+    "dur": 4,
+    "anchor": [
+     43.41,
+     1009.01,
+     -0.05
+    ],
+    "culm": 0,
+    "node": 3
    }
   },
   {
@@ -610,7 +1449,21 @@
    "stats": {
     "Length": "345 mm",
     "Diameter": "5.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 62,
+    "dur": 9,
+    "anchor": [
+     48.14,
+     1062.63,
+     -0.05
+    ],
+    "culm": 0,
+    "node": 4
+   },
+   "color0": "#6f9746",
+   "cbirth": 85,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0005",
@@ -619,7 +1472,21 @@
    "color": "#4a8536",
    "stats": {
     "Sheath length": "170 mm"
-   }
+   },
+   "growth": {
+    "birth": 50,
+    "dur": 12,
+    "anchor": [
+     48.14,
+     1062.63,
+     -0.05
+    ],
+    "culm": 0,
+    "node": 4
+   },
+   "color0": "#568c3b",
+   "cbirth": 87,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0005",
@@ -629,7 +1496,21 @@
    "stats": {
     "Blade length": "372 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 52,
+    "dur": 14,
+    "anchor": [
+     66.89,
+     1232.63,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 4
+   },
+   "color0": "#4f8e35",
+   "cbirth": 88,
+   "cdur": 30
   },
   {
    "id": "Ligule_0005",
@@ -638,6 +1519,17 @@
    "color": "#dee3c3",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 58,
+    "dur": 4,
+    "anchor": [
+     66.89,
+     1232.63,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 4
    }
   },
   {
@@ -648,7 +1540,21 @@
    "stats": {
     "Rachis length": "213 mm",
     "Primary branches": "10"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "PanicleBranch_0001",
@@ -658,7 +1564,21 @@
    "stats": {
     "Branch length": "78 mm",
     "Grains carried": "14"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0001",
@@ -669,7 +1589,21 @@
     "Grains": "14",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#93ae55",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0002",
@@ -679,7 +1613,21 @@
    "stats": {
     "Branch length": "69 mm",
     "Grains carried": "19"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0002",
@@ -690,7 +1638,21 @@
     "Grains": "19",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#92ad56",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0003",
@@ -700,7 +1662,21 @@
    "stats": {
     "Branch length": "73 mm",
     "Grains carried": "17"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0003",
@@ -711,7 +1687,21 @@
     "Grains": "17",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#91af56",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0004",
@@ -721,7 +1711,21 @@
    "stats": {
     "Branch length": "71 mm",
     "Grains carried": "19"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0004",
@@ -732,7 +1736,21 @@
     "Grains": "19",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#96b358",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0005",
@@ -742,7 +1760,21 @@
    "stats": {
     "Branch length": "68 mm",
     "Grains carried": "24"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0005",
@@ -753,7 +1785,21 @@
     "Grains": "24",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#92b055",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0006",
@@ -763,7 +1809,21 @@
    "stats": {
     "Branch length": "55 mm",
     "Grains carried": "15"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0006",
@@ -774,7 +1834,21 @@
     "Grains": "15",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#95b15a",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0007",
@@ -784,7 +1858,21 @@
    "stats": {
     "Branch length": "53 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0007",
@@ -795,7 +1883,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#95b057",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0008",
@@ -805,7 +1907,21 @@
    "stats": {
     "Branch length": "59 mm",
     "Grains carried": "18"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0008",
@@ -816,7 +1932,21 @@
     "Grains": "18",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#95b05b",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0009",
@@ -826,7 +1956,21 @@
    "stats": {
     "Branch length": "59 mm",
     "Grains carried": "19"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0009",
@@ -837,7 +1981,21 @@
     "Grains": "19",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#95b15a",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0010",
@@ -847,7 +2005,21 @@
    "stats": {
     "Branch length": "63 mm",
     "Grains carried": "17"
-   }
+   },
+   "growth": {
+    "birth": 63.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 75.0,
+   "cdur": 28
   },
   {
    "id": "Grain_0010",
@@ -858,7 +2030,21 @@
     "Grains": "17",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 8,
+    "anchor": [
+     86.03,
+     1407.4,
+     -2.58
+    ],
+    "culm": 0,
+    "node": 5
+   },
+   "color0": "#93ae59",
+   "cbirth": 72.0,
+   "cdur": 26
   },
   {
    "id": "Internode_0006",
@@ -868,7 +2054,21 @@
    "stats": {
     "Length": "88 mm",
     "Diameter": "10.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 40.0,
+    "dur": 9,
+    "anchor": [
+     10.51,
+     330.0,
+     -1.32
+    ],
+    "culm": 1,
+    "node": 0
+   },
+   "color0": "#84a14e",
+   "cbirth": 65,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0006",
@@ -877,7 +2077,21 @@
    "color": "#718d48",
    "stats": {
     "Sheath length": "69 mm"
-   }
+   },
+   "growth": {
+    "birth": 16.0,
+    "dur": 12,
+    "anchor": [
+     10.51,
+     330.0,
+     -1.32
+    ],
+    "culm": 1,
+    "node": 0
+   },
+   "color0": "#699044",
+   "cbirth": 55,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0006",
@@ -887,7 +2101,21 @@
    "stats": {
     "Blade length": "321 mm",
     "Max width": "12 mm"
-   }
+   },
+   "growth": {
+    "birth": 18.0,
+    "dur": 14,
+    "anchor": [
+     22.91,
+     399.13,
+     -2.88
+    ],
+    "culm": 1,
+    "node": 0
+   },
+   "color0": "#649c3c",
+   "cbirth": 40,
+   "cdur": 30
   },
   {
    "id": "Ligule_0006",
@@ -896,6 +2124,17 @@
    "color": "#e0e4ce",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 24.0,
+    "dur": 4,
+    "anchor": [
+     22.91,
+     399.13,
+     -2.88
+    ],
+    "culm": 1,
+    "node": 0
    }
   },
   {
@@ -906,7 +2145,21 @@
    "stats": {
     "Length": "136 mm",
     "Diameter": "9.6 mm"
-   }
+   },
+   "growth": {
+    "birth": 46.0,
+    "dur": 9,
+    "anchor": [
+     26.32,
+     417.75,
+     -3.31
+    ],
+    "culm": 1,
+    "node": 1
+   },
+   "color0": "#7e9d4c",
+   "cbirth": 70,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0007",
@@ -915,7 +2168,21 @@
    "color": "#6ea044",
    "stats": {
     "Sheath length": "111 mm"
-   }
+   },
+   "growth": {
+    "birth": 21.9,
+    "dur": 12,
+    "anchor": [
+     26.32,
+     417.75,
+     -3.31
+    ],
+    "culm": 1,
+    "node": 1
+   },
+   "color0": "#689a42",
+   "cbirth": 63,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0007",
@@ -925,7 +2192,21 @@
    "stats": {
     "Blade length": "422 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 23.9,
+    "dur": 14,
+    "anchor": [
+     47.91,
+     528.51,
+     -4.26
+    ],
+    "culm": 1,
+    "node": 1
+   },
+   "color0": "#5c963c",
+   "cbirth": 52,
+   "cdur": 30
   },
   {
    "id": "Ligule_0007",
@@ -934,6 +2215,17 @@
    "color": "#dfe1c8",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 29.9,
+    "dur": 4,
+    "anchor": [
+     47.91,
+     528.51,
+     -4.26
+    ],
+    "culm": 1,
+    "node": 1
    }
   },
   {
@@ -944,7 +2236,21 @@
    "stats": {
     "Length": "185 mm",
     "Diameter": "8.3 mm"
-   }
+   },
+   "growth": {
+    "birth": 52.0,
+    "dur": 9,
+    "anchor": [
+     52.93,
+     554.24,
+     -4.89
+    ],
+    "culm": 1,
+    "node": 2
+   },
+   "color0": "#799d47",
+   "cbirth": 75,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0008",
@@ -953,7 +2259,21 @@
    "color": "#619745",
    "stats": {
     "Sheath length": "151 mm"
-   }
+   },
+   "growth": {
+    "birth": 27.9,
+    "dur": 12,
+    "anchor": [
+     52.93,
+     554.24,
+     -4.89
+    ],
+    "culm": 1,
+    "node": 2
+   },
+   "color0": "#619542",
+   "cbirth": 71,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0008",
@@ -963,7 +2283,21 @@
    "stats": {
     "Blade length": "471 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 29.9,
+    "dur": 14,
+    "anchor": [
+     83.41,
+     704.91,
+     -9.08
+    ],
+    "culm": 1,
+    "node": 2
+   },
+   "color0": "#5a9a3b",
+   "cbirth": 64,
+   "cdur": 30
   },
   {
    "id": "Ligule_0008",
@@ -972,6 +2306,17 @@
    "color": "#e2e6c9",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 35.9,
+    "dur": 4,
+    "anchor": [
+     83.41,
+     704.91,
+     -9.08
+    ],
+    "culm": 1,
+    "node": 2
    }
   },
   {
@@ -982,7 +2327,21 @@
    "stats": {
     "Length": "253 mm",
     "Diameter": "7.1 mm"
-   }
+   },
+   "growth": {
+    "birth": 57.0,
+    "dur": 9,
+    "anchor": [
+     90.73,
+     739.48,
+     -10.0
+    ],
+    "culm": 1,
+    "node": 3
+   },
+   "color0": "#759d48",
+   "cbirth": 80,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0009",
@@ -991,7 +2350,21 @@
    "color": "#558844",
    "stats": {
     "Sheath length": "208 mm"
-   }
+   },
+   "growth": {
+    "birth": 34.7,
+    "dur": 12,
+    "anchor": [
+     90.73,
+     739.48,
+     -10.0
+    ],
+    "culm": 1,
+    "node": 3
+   },
+   "color0": "#5b8e42",
+   "cbirth": 79,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0009",
@@ -1001,7 +2374,21 @@
    "stats": {
     "Blade length": "518 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 36.7,
+    "dur": 14,
+    "anchor": [
+     134.55,
+     947.69,
+     -13.58
+    ],
+    "culm": 1,
+    "node": 3
+   },
+   "color0": "#52923a",
+   "cbirth": 76,
+   "cdur": 30
   },
   {
    "id": "Ligule_0009",
@@ -1010,6 +2397,17 @@
    "color": "#d8ddba",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 42.7,
+    "dur": 4,
+    "anchor": [
+     134.55,
+     947.69,
+     -13.58
+    ],
+    "culm": 1,
+    "node": 3
    }
   },
   {
@@ -1020,7 +2418,21 @@
    "stats": {
     "Length": "312 mm",
     "Diameter": "5.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 62.0,
+    "dur": 9,
+    "anchor": [
+     145.16,
+     992.97,
+     -14.92
+    ],
+    "culm": 1,
+    "node": 4
+   },
+   "color0": "#6f9a47",
+   "cbirth": 85,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0010",
@@ -1029,7 +2441,21 @@
    "color": "#4a8639",
    "stats": {
     "Sheath length": "170 mm"
-   }
+   },
+   "growth": {
+    "birth": 43.2,
+    "dur": 12,
+    "anchor": [
+     145.16,
+     992.97,
+     -14.92
+    ],
+    "culm": 1,
+    "node": 4
+   },
+   "color0": "#568c3c",
+   "cbirth": 87,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0010",
@@ -1039,7 +2465,21 @@
    "stats": {
     "Blade length": "389 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 45.2,
+    "dur": 14,
+    "anchor": [
+     185.13,
+     1162.97,
+     -18.37
+    ],
+    "culm": 1,
+    "node": 4
+   },
+   "color0": "#509437",
+   "cbirth": 88,
+   "cdur": 30
   },
   {
    "id": "Ligule_0010",
@@ -1048,6 +2488,17 @@
    "color": "#dde2c7",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 51.2,
+    "dur": 4,
+    "anchor": [
+     185.13,
+     1162.97,
+     -18.37
+    ],
+    "culm": 1,
+    "node": 4
    }
   },
   {
@@ -1058,7 +2509,21 @@
    "stats": {
     "Rachis length": "192 mm",
     "Primary branches": "12"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "PanicleBranch_0011",
@@ -1068,7 +2533,21 @@
    "stats": {
     "Branch length": "65 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0011",
@@ -1079,7 +2558,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#95ae55",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0012",
@@ -1089,7 +2582,21 @@
    "stats": {
     "Branch length": "63 mm",
     "Grains carried": "16"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0012",
@@ -1100,7 +2607,21 @@
     "Grains": "16",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#95ad52",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0013",
@@ -1110,7 +2631,21 @@
    "stats": {
     "Branch length": "70 mm",
     "Grains carried": "17"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0013",
@@ -1121,7 +2656,21 @@
     "Grains": "17",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#92ab53",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0014",
@@ -1131,7 +2680,21 @@
    "stats": {
     "Branch length": "73 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0014",
@@ -1142,7 +2705,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#98b053",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0015",
@@ -1152,7 +2729,21 @@
    "stats": {
     "Branch length": "72 mm",
     "Grains carried": "19"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0015",
@@ -1163,7 +2754,21 @@
     "Grains": "19",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#95af58",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0016",
@@ -1173,7 +2778,21 @@
    "stats": {
     "Branch length": "69 mm",
     "Grains carried": "14"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0016",
@@ -1184,7 +2803,21 @@
     "Grains": "14",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#95b054",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0017",
@@ -1194,7 +2827,21 @@
    "stats": {
     "Branch length": "68 mm",
     "Grains carried": "19"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0017",
@@ -1205,7 +2852,21 @@
     "Grains": "19",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#96ad57",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0018",
@@ -1215,7 +2876,21 @@
    "stats": {
     "Branch length": "62 mm",
     "Grains carried": "19"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0018",
@@ -1226,7 +2901,21 @@
     "Grains": "19",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#92ab54",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0019",
@@ -1236,7 +2925,21 @@
    "stats": {
     "Branch length": "59 mm",
     "Grains carried": "16"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0019",
@@ -1247,7 +2950,21 @@
     "Grains": "16",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#96b158",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0020",
@@ -1257,7 +2974,21 @@
    "stats": {
     "Branch length": "64 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0020",
@@ -1268,7 +2999,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#97b055",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0021",
@@ -1278,7 +3023,21 @@
    "stats": {
     "Branch length": "54 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0021",
@@ -1289,7 +3048,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#98b057",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0022",
@@ -1299,7 +3072,21 @@
    "stats": {
     "Branch length": "54 mm",
     "Grains carried": "15"
-   }
+   },
+   "growth": {
+    "birth": 65.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 77.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0022",
@@ -1310,7 +3097,21 @@
     "Grains": "15",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.3,
+    "dur": 8,
+    "anchor": [
+     221.75,
+     1304.95,
+     -22.97
+    ],
+    "culm": 1,
+    "node": 5
+   },
+   "color0": "#94ad57",
+   "cbirth": 74.3,
+   "cdur": 26
   },
   {
    "id": "Internode_0011",
@@ -1320,7 +3121,21 @@
    "stats": {
     "Length": "88 mm",
     "Diameter": "10.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 40.6,
+    "dur": 9,
+    "anchor": [
+     4.61,
+     330.0,
+     5.16
+    ],
+    "culm": 2,
+    "node": 0
+   },
+   "color0": "#809c4b",
+   "cbirth": 65,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0011",
@@ -1329,7 +3144,21 @@
    "color": "#7d9952",
    "stats": {
     "Sheath length": "72 mm"
-   }
+   },
+   "growth": {
+    "birth": 20.5,
+    "dur": 12,
+    "anchor": [
+     4.61,
+     330.0,
+     5.16
+    ],
+    "culm": 2,
+    "node": 0
+   },
+   "color0": "#6f9648",
+   "cbirth": 55,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0011",
@@ -1339,7 +3168,21 @@
    "stats": {
     "Blade length": "319 mm",
     "Max width": "12 mm"
-   }
+   },
+   "growth": {
+    "birth": 22.5,
+    "dur": 14,
+    "anchor": [
+     12.5,
+     402.34,
+     13.98
+    ],
+    "culm": 2,
+    "node": 0
+   },
+   "color0": "#64a03e",
+   "cbirth": 40,
+   "cdur": 30
   },
   {
    "id": "Ligule_0011",
@@ -1348,6 +3191,17 @@
    "color": "#e0e3ca",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 28.5,
+    "dur": 4,
+    "anchor": [
+     12.5,
+     402.34,
+     13.98
+    ],
+    "culm": 2,
+    "node": 0
    }
   },
   {
@@ -1358,7 +3212,21 @@
    "stats": {
     "Length": "137 mm",
     "Diameter": "9.6 mm"
-   }
+   },
+   "growth": {
+    "birth": 46.6,
+    "dur": 9,
+    "anchor": [
+     14.24,
+     417.99,
+     15.93
+    ],
+    "culm": 2,
+    "node": 1
+   },
+   "color0": "#7d9c4a",
+   "cbirth": 70,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0012",
@@ -1367,7 +3235,21 @@
    "color": "#688b46",
    "stats": {
     "Sheath length": "110 mm"
-   }
+   },
+   "growth": {
+    "birth": 26.4,
+    "dur": 12,
+    "anchor": [
+     14.24,
+     417.99,
+     15.93
+    ],
+    "culm": 2,
+    "node": 1
+   },
+   "color0": "#648f42",
+   "cbirth": 63,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0012",
@@ -1377,7 +3259,21 @@
    "stats": {
     "Blade length": "406 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 28.4,
+    "dur": 14,
+    "anchor": [
+     28.81,
+     527.97,
+     32.33
+    ],
+    "culm": 2,
+    "node": 1
+   },
+   "color0": "#5c9939",
+   "cbirth": 52,
+   "cdur": 30
   },
   {
    "id": "Ligule_0012",
@@ -1386,6 +3282,17 @@
    "color": "#d7dcbf",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 34.5,
+    "dur": 4,
+    "anchor": [
+     28.81,
+     527.97,
+     32.33
+    ],
+    "culm": 2,
+    "node": 1
    }
   },
   {
@@ -1396,7 +3303,21 @@
    "stats": {
     "Length": "186 mm",
     "Diameter": "8.3 mm"
-   }
+   },
+   "growth": {
+    "birth": 52.6,
+    "dur": 9,
+    "anchor": [
+     31.97,
+     554.86,
+     35.87
+    ],
+    "culm": 2,
+    "node": 2
+   },
+   "color0": "#789c48",
+   "cbirth": 75,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0013",
@@ -1405,7 +3326,21 @@
    "color": "#598c3d",
    "stats": {
     "Sheath length": "138 mm"
-   }
+   },
+   "growth": {
+    "birth": 32.4,
+    "dur": 12,
+    "anchor": [
+     31.97,
+     554.86,
+     35.87
+    ],
+    "culm": 2,
+    "node": 2
+   },
+   "color0": "#5d903e",
+   "cbirth": 71,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0013",
@@ -1415,7 +3350,21 @@
    "stats": {
     "Blade length": "533 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 34.4,
+    "dur": 14,
+    "anchor": [
+     49.45,
+     693.15,
+     54.74
+    ],
+    "culm": 2,
+    "node": 2
+   },
+   "color0": "#599d3b",
+   "cbirth": 64,
+   "cdur": 30
   },
   {
    "id": "Ligule_0013",
@@ -1424,6 +3373,17 @@
    "color": "#e2e5cd",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 40.4,
+    "dur": 4,
+    "anchor": [
+     49.45,
+     693.15,
+     54.74
+    ],
+    "culm": 2,
+    "node": 2
    }
   },
   {
@@ -1434,7 +3394,21 @@
    "stats": {
     "Length": "254 mm",
     "Diameter": "7.1 mm"
-   }
+   },
+   "growth": {
+    "birth": 57.6,
+    "dur": 9,
+    "anchor": [
+     55.43,
+     740.62,
+     61.43
+    ],
+    "culm": 2,
+    "node": 3
+   },
+   "color0": "#749a49",
+   "cbirth": 80,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0014",
@@ -1443,7 +3417,21 @@
    "color": "#5f9547",
    "stats": {
     "Sheath length": "198 mm"
-   }
+   },
+   "growth": {
+    "birth": 39.2,
+    "dur": 12,
+    "anchor": [
+     55.43,
+     740.62,
+     61.43
+    ],
+    "culm": 2,
+    "node": 3
+   },
+   "color0": "#609443",
+   "cbirth": 79,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0014",
@@ -1453,7 +3441,21 @@
    "stats": {
     "Blade length": "567 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 41.2,
+    "dur": 14,
+    "anchor": [
+     79.75,
+     938.88,
+     90.03
+    ],
+    "culm": 2,
+    "node": 3
+   },
+   "color0": "#55993a",
+   "cbirth": 76,
+   "cdur": 30
   },
   {
    "id": "Ligule_0014",
@@ -1462,6 +3464,17 @@
    "color": "#dee3c2",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 47.2,
+    "dur": 4,
+    "anchor": [
+     79.75,
+     938.88,
+     90.03
+    ],
+    "culm": 2,
+    "node": 3
    }
   },
   {
@@ -1472,7 +3485,21 @@
    "stats": {
     "Length": "313 mm",
     "Diameter": "5.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 62.6,
+    "dur": 9,
+    "anchor": [
+     87.47,
+     994.81,
+     98.66
+    ],
+    "culm": 2,
+    "node": 4
+   },
+   "color0": "#709c45",
+   "cbirth": 85,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0015",
@@ -1481,7 +3508,21 @@
    "color": "#4d8641",
    "stats": {
     "Sheath length": "170 mm"
-   }
+   },
+   "growth": {
+    "birth": 47.7,
+    "dur": 12,
+    "anchor": [
+     87.47,
+     994.81,
+     98.66
+    ],
+    "culm": 2,
+    "node": 4
+   },
+   "color0": "#578c40",
+   "cbirth": 87,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0015",
@@ -1491,7 +3532,21 @@
    "stats": {
     "Blade length": "355 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 49.7,
+    "dur": 14,
+    "anchor": [
+     110.83,
+     1164.81,
+     126.37
+    ],
+    "culm": 2,
+    "node": 4
+   },
+   "color0": "#529638",
+   "cbirth": 88,
+   "cdur": 30
   },
   {
    "id": "Ligule_0015",
@@ -1500,6 +3555,17 @@
    "color": "#dcdfba",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 55.7,
+    "dur": 4,
+    "anchor": [
+     110.83,
+     1164.81,
+     126.37
+    ],
+    "culm": 2,
+    "node": 4
    }
   },
   {
@@ -1510,7 +3576,21 @@
    "stats": {
     "Rachis length": "196 mm",
     "Primary branches": "12"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "PanicleBranch_0023",
@@ -1520,7 +3600,21 @@
    "stats": {
     "Branch length": "70 mm",
     "Grains carried": "14"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0023",
@@ -1531,7 +3625,21 @@
     "Grains": "14",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#96ae52",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0024",
@@ -1541,7 +3649,21 @@
    "stats": {
     "Branch length": "81 mm",
     "Grains carried": "17"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0024",
@@ -1552,7 +3674,21 @@
     "Grains": "17",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#94ad57",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0025",
@@ -1562,7 +3698,21 @@
    "stats": {
     "Branch length": "62 mm",
     "Grains carried": "16"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0025",
@@ -1573,7 +3723,21 @@
     "Grains": "16",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#94ac54",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0026",
@@ -1583,7 +3747,21 @@
    "stats": {
     "Branch length": "67 mm",
     "Grains carried": "24"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0026",
@@ -1594,7 +3772,21 @@
     "Grains": "24",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#96af53",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0027",
@@ -1604,7 +3796,21 @@
    "stats": {
     "Branch length": "70 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0027",
@@ -1615,7 +3821,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#94ae54",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0028",
@@ -1625,7 +3845,21 @@
    "stats": {
     "Branch length": "62 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0028",
@@ -1636,7 +3870,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#96af56",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0029",
@@ -1646,7 +3894,21 @@
    "stats": {
     "Branch length": "61 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0029",
@@ -1657,7 +3919,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#96af55",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0030",
@@ -1667,7 +3943,21 @@
    "stats": {
     "Branch length": "56 mm",
     "Grains carried": "15"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0030",
@@ -1678,7 +3968,21 @@
     "Grains": "15",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#93ac54",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0031",
@@ -1688,7 +3992,21 @@
    "stats": {
     "Branch length": "67 mm",
     "Grains carried": "18"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0031",
@@ -1699,7 +4017,21 @@
     "Grains": "18",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#95ac54",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0032",
@@ -1709,7 +4041,21 @@
    "stats": {
     "Branch length": "60 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0032",
@@ -1720,7 +4066,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#95ae5a",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0033",
@@ -1730,7 +4090,21 @@
    "stats": {
     "Branch length": "58 mm",
     "Grains carried": "16"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0033",
@@ -1741,7 +4115,21 @@
     "Grains": "16",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#96ad59",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0034",
@@ -1751,7 +4139,21 @@
    "stats": {
     "Branch length": "57 mm",
     "Grains carried": "20"
-   }
+   },
+   "growth": {
+    "birth": 66.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0034",
@@ -1762,7 +4164,21 @@
     "Grains": "20",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.1,
+    "dur": 8,
+    "anchor": [
+     132.4,
+     1307.66,
+     150.5
+    ],
+    "culm": 2,
+    "node": 5
+   },
+   "color0": "#95b055",
+   "cbirth": 75.1,
+   "cdur": 26
   },
   {
    "id": "Internode_0016",
@@ -1772,7 +4188,21 @@
    "stats": {
     "Length": "93 mm",
     "Diameter": "10.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 41.2,
+    "dur": 9,
+    "anchor": [
+     -0.92,
+     330.0,
+     7.87
+    ],
+    "culm": 3,
+    "node": 0
+   },
+   "color0": "#819d4a",
+   "cbirth": 65,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0016",
@@ -1781,7 +4211,21 @@
    "color": "#83a549",
    "stats": {
     "Sheath length": "76 mm"
-   }
+   },
+   "growth": {
+    "birth": 25.0,
+    "dur": 12,
+    "anchor": [
+     -0.92,
+     330.0,
+     7.87
+    ],
+    "culm": 3,
+    "node": 0
+   },
+   "color0": "#729c44",
+   "cbirth": 55,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0016",
@@ -1791,7 +4235,21 @@
    "stats": {
     "Blade length": "321 mm",
     "Max width": "12 mm"
-   }
+   },
+   "growth": {
+    "birth": 27.0,
+    "dur": 14,
+    "anchor": [
+     -2.16,
+     405.56,
+     18.52
+    ],
+    "culm": 3,
+    "node": 0
+   },
+   "color0": "#68a242",
+   "cbirth": 40,
+   "cdur": 30
   },
   {
    "id": "Ligule_0016",
@@ -1800,6 +4258,17 @@
    "color": "#dfe1c5",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 33.0,
+    "dur": 4,
+    "anchor": [
+     -2.16,
+     405.56,
+     18.52
+    ],
+    "culm": 3,
+    "node": 0
    }
   },
   {
@@ -1810,7 +4279,21 @@
    "stats": {
     "Length": "145 mm",
     "Diameter": "9.6 mm"
-   }
+   },
+   "growth": {
+    "birth": 47.2,
+    "dur": 9,
+    "anchor": [
+     -2.46,
+     423.25,
+     21.08
+    ],
+    "culm": 3,
+    "node": 1
+   },
+   "color0": "#7d9c4c",
+   "cbirth": 70,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0017",
@@ -1819,7 +4302,21 @@
    "color": "#71a04a",
    "stats": {
     "Sheath length": "110 mm"
-   }
+   },
+   "growth": {
+    "birth": 31.0,
+    "dur": 12,
+    "anchor": [
+     -2.46,
+     423.25,
+     21.08
+    ],
+    "culm": 3,
+    "node": 1
+   },
+   "color0": "#699a45",
+   "cbirth": 63,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0017",
@@ -1829,7 +4326,21 @@
    "stats": {
     "Blade length": "395 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 33.0,
+    "dur": 14,
+    "anchor": [
+     -6.17,
+     533.57,
+     38.75
+    ],
+    "culm": 3,
+    "node": 1
+   },
+   "color0": "#5a9838",
+   "cbirth": 52,
+   "cdur": 30
   },
   {
    "id": "Ligule_0017",
@@ -1838,6 +4349,17 @@
    "color": "#dee2c8",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 39.0,
+    "dur": 4,
+    "anchor": [
+     -6.17,
+     533.57,
+     38.75
+    ],
+    "culm": 3,
+    "node": 1
    }
   },
   {
@@ -1848,7 +4370,21 @@
    "stats": {
     "Length": "197 mm",
     "Diameter": "8.3 mm"
-   }
+   },
+   "growth": {
+    "birth": 53.2,
+    "dur": 9,
+    "anchor": [
+     -6.8,
+     568.31,
+     44.15
+    ],
+    "culm": 3,
+    "node": 2
+   },
+   "color0": "#7a9d4a",
+   "cbirth": 75,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0018",
@@ -1857,7 +4393,21 @@
    "color": "#639945",
    "stats": {
     "Sheath length": "165 mm"
-   }
+   },
+   "growth": {
+    "birth": 36.9,
+    "dur": 12,
+    "anchor": [
+     -6.8,
+     568.31,
+     44.15
+    ],
+    "culm": 3,
+    "node": 2
+   },
+   "color0": "#629642",
+   "cbirth": 71,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0018",
@@ -1867,7 +4417,21 @@
    "stats": {
     "Blade length": "475 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 38.9,
+    "dur": 14,
+    "anchor": [
+     -12.33,
+     732.83,
+     70.81
+    ],
+    "culm": 3,
+    "node": 2
+   },
+   "color0": "#549236",
+   "cbirth": 64,
+   "cdur": 30
   },
   {
    "id": "Ligule_0018",
@@ -1876,6 +4440,17 @@
    "color": "#dee2c8",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 44.9,
+    "dur": 4,
+    "anchor": [
+     -12.33,
+     732.83,
+     70.81
+    ],
+    "culm": 3,
+    "node": 2
    }
   },
   {
@@ -1886,7 +4461,21 @@
    "stats": {
     "Length": "269 mm",
     "Diameter": "7.1 mm"
-   }
+   },
+   "growth": {
+    "birth": 58.2,
+    "dur": 9,
+    "anchor": [
+     -12.97,
+     765.17,
+     76.34
+    ],
+    "culm": 3,
+    "node": 3
+   },
+   "color0": "#769e48",
+   "cbirth": 80,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0019",
@@ -1895,7 +4484,21 @@
    "color": "#609149",
    "stats": {
     "Sheath length": "226 mm"
-   }
+   },
+   "growth": {
+    "birth": 43.7,
+    "dur": 12,
+    "anchor": [
+     -12.97,
+     765.17,
+     76.34
+    ],
+    "culm": 3,
+    "node": 3
+   },
+   "color0": "#609244",
+   "cbirth": 79,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0019",
@@ -1905,7 +4508,21 @@
    "stats": {
     "Blade length": "558 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 45.7,
+    "dur": 14,
+    "anchor": [
+     -19.0,
+     990.99,
+     118.61
+    ],
+    "culm": 3,
+    "node": 3
+   },
+   "color0": "#4d8e36",
+   "cbirth": 76,
+   "cdur": 30
   },
   {
    "id": "Ligule_0019",
@@ -1914,6 +4531,17 @@
    "color": "#d9dfba",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 51.7,
+    "dur": 4,
+    "anchor": [
+     -19.0,
+     990.99,
+     118.61
+    ],
+    "culm": 3,
+    "node": 3
    }
   },
   {
@@ -1924,7 +4552,21 @@
    "stats": {
     "Length": "332 mm",
     "Diameter": "5.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 63.2,
+    "dur": 9,
+    "anchor": [
+     -19.97,
+     1034.56,
+     126.96
+    ],
+    "culm": 3,
+    "node": 4
+   },
+   "color0": "#6e9747",
+   "cbirth": 85,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0020",
@@ -1933,7 +4575,21 @@
    "color": "#4f853c",
    "stats": {
     "Sheath length": "170 mm"
-   }
+   },
+   "growth": {
+    "birth": 52.2,
+    "dur": 12,
+    "anchor": [
+     -19.97,
+     1034.56,
+     126.96
+    ],
+    "culm": 3,
+    "node": 4
+   },
+   "color0": "#588c3e",
+   "cbirth": 87,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0020",
@@ -1943,7 +4599,21 @@
    "stats": {
     "Blade length": "401 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 54.2,
+    "dur": 14,
+    "anchor": [
+     -22.8,
+     1204.56,
+     161.94
+    ],
+    "culm": 3,
+    "node": 4
+   },
+   "color0": "#4a8b33",
+   "cbirth": 88,
+   "cdur": 30
   },
   {
    "id": "Ligule_0020",
@@ -1952,6 +4622,17 @@
    "color": "#dbdfbb",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 60.2,
+    "dur": 4,
+    "anchor": [
+     -22.8,
+     1204.56,
+     161.94
+    ],
+    "culm": 3,
+    "node": 4
    }
   },
   {
@@ -1962,7 +4643,21 @@
    "stats": {
     "Rachis length": "188 mm",
     "Primary branches": "12"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "PanicleBranch_0035",
@@ -1972,7 +4667,21 @@
    "stats": {
     "Branch length": "64 mm",
     "Grains carried": "20"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0035",
@@ -1983,7 +4692,21 @@
     "Grains": "20",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#96b058",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0036",
@@ -1993,7 +4716,21 @@
    "stats": {
     "Branch length": "64 mm",
     "Grains carried": "17"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0036",
@@ -2004,7 +4741,21 @@
     "Grains": "17",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#97b156",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0037",
@@ -2014,7 +4765,21 @@
    "stats": {
     "Branch length": "65 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0037",
@@ -2025,7 +4790,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#97b156",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0038",
@@ -2035,7 +4814,21 @@
    "stats": {
     "Branch length": "69 mm",
     "Grains carried": "16"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0038",
@@ -2046,7 +4839,21 @@
     "Grains": "16",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#96b158",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0039",
@@ -2056,7 +4863,21 @@
    "stats": {
     "Branch length": "77 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0039",
@@ -2067,7 +4888,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#93b053",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0040",
@@ -2077,7 +4912,21 @@
    "stats": {
     "Branch length": "68 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0040",
@@ -2088,7 +4937,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#97b055",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0041",
@@ -2098,7 +4961,21 @@
    "stats": {
     "Branch length": "55 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0041",
@@ -2109,7 +4986,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#93ad57",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0042",
@@ -2119,7 +5010,21 @@
    "stats": {
     "Branch length": "56 mm",
     "Grains carried": "14"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0042",
@@ -2130,7 +5035,21 @@
     "Grains": "14",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#97b058",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0043",
@@ -2140,7 +5059,21 @@
    "stats": {
     "Branch length": "64 mm",
     "Grains carried": "20"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0043",
@@ -2151,7 +5084,21 @@
     "Grains": "20",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#96af55",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0044",
@@ -2161,7 +5108,21 @@
    "stats": {
     "Branch length": "51 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0044",
@@ -2172,7 +5133,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#93ad54",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0045",
@@ -2182,7 +5157,21 @@
    "stats": {
     "Branch length": "57 mm",
     "Grains carried": "20"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0045",
@@ -2193,7 +5182,21 @@
     "Grains": "20",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#96b059",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0046",
@@ -2203,7 +5206,21 @@
    "stats": {
     "Branch length": "62 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 66.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 78.9,
+   "cdur": 28
   },
   {
    "id": "Grain_0046",
@@ -2214,7 +5231,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 68.9,
+    "dur": 8,
+    "anchor": [
+     -26.81,
+     1366.12,
+     196.38
+    ],
+    "culm": 3,
+    "node": 5
+   },
+   "color0": "#94ae56",
+   "cbirth": 75.9,
+   "cdur": 26
   },
   {
    "id": "Internode_0021",
@@ -2224,7 +5255,21 @@
    "stats": {
     "Length": "85 mm",
     "Diameter": "10.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 41.8,
+    "dur": 9,
+    "anchor": [
+     -9.07,
+     330.0,
+     5.45
+    ],
+    "culm": 4,
+    "node": 0
+   },
+   "color0": "#849f51",
+   "cbirth": 65,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0021",
@@ -2233,7 +5278,21 @@
    "color": "#7d9851",
    "stats": {
     "Sheath length": "69 mm"
-   }
+   },
+   "growth": {
+    "birth": 29.5,
+    "dur": 12,
+    "anchor": [
+     -9.07,
+     330.0,
+     5.45
+    ],
+    "culm": 4,
+    "node": 0
+   },
+   "color0": "#6f9548",
+   "cbirth": 55,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0021",
@@ -2243,7 +5302,21 @@
    "stats": {
     "Blade length": "339 mm",
     "Max width": "12 mm"
-   }
+   },
+   "growth": {
+    "birth": 31.5,
+    "dur": 14,
+    "anchor": [
+     -23.68,
+     398.81,
+     14.24
+    ],
+    "culm": 4,
+    "node": 0
+   },
+   "color0": "#629c3f",
+   "cbirth": 40,
+   "cdur": 30
   },
   {
    "id": "Ligule_0021",
@@ -2252,6 +5325,17 @@
    "color": "#dce0c4",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 37.5,
+    "dur": 4,
+    "anchor": [
+     -23.68,
+     398.81,
+     14.24
+    ],
+    "culm": 4,
+    "node": 0
    }
   },
   {
@@ -2262,7 +5346,21 @@
    "stats": {
     "Length": "132 mm",
     "Diameter": "9.6 mm"
-   }
+   },
+   "growth": {
+    "birth": 47.8,
+    "dur": 9,
+    "anchor": [
+     -27.17,
+     415.02,
+     16.33
+    ],
+    "culm": 4,
+    "node": 1
+   },
+   "color0": "#7d9c4b",
+   "cbirth": 70,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0022",
@@ -2271,7 +5369,21 @@
    "color": "#689644",
    "stats": {
     "Sheath length": "98 mm"
-   }
+   },
+   "growth": {
+    "birth": 35.5,
+    "dur": 12,
+    "anchor": [
+     -27.17,
+     415.02,
+     16.33
+    ],
+    "culm": 4,
+    "node": 1
+   },
+   "color0": "#649442",
+   "cbirth": 63,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0022",
@@ -2281,7 +5393,21 @@
    "stats": {
     "Blade length": "432 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 37.5,
+    "dur": 14,
+    "anchor": [
+     -48.95,
+     513.49,
+     27.38
+    ],
+    "culm": 4,
+    "node": 1
+   },
+   "color0": "#5a9939",
+   "cbirth": 52,
+   "cdur": 30
   },
   {
    "id": "Ligule_0022",
@@ -2290,6 +5416,17 @@
    "color": "#d7dcbb",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 43.5,
+    "dur": 4,
+    "anchor": [
+     -48.95,
+     513.49,
+     27.38
+    ],
+    "culm": 4,
+    "node": 1
    }
   },
   {
@@ -2300,7 +5437,21 @@
    "stats": {
     "Length": "179 mm",
     "Diameter": "8.3 mm"
-   }
+   },
+   "growth": {
+    "birth": 53.8,
+    "dur": 9,
+    "anchor": [
+     -56.49,
+     547.27,
+     31.92
+    ],
+    "culm": 4,
+    "node": 2
+   },
+   "color0": "#78a047",
+   "cbirth": 75,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0023",
@@ -2309,7 +5460,21 @@
    "color": "#659b49",
    "stats": {
     "Sheath length": "148 mm"
-   }
+   },
+   "growth": {
+    "birth": 41.4,
+    "dur": 12,
+    "anchor": [
+     -56.49,
+     547.27,
+     31.92
+    ],
+    "culm": 4,
+    "node": 2
+   },
+   "color0": "#639744",
+   "cbirth": 71,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0023",
@@ -2319,7 +5484,21 @@
    "stats": {
     "Blade length": "465 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 43.4,
+    "dur": 14,
+    "anchor": [
+     -89.18,
+     694.95,
+     52.47
+    ],
+    "culm": 4,
+    "node": 2
+   },
+   "color0": "#539237",
+   "cbirth": 64,
+   "cdur": 30
   },
   {
    "id": "Ligule_0023",
@@ -2328,6 +5507,17 @@
    "color": "#d8ddc0",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 49.4,
+    "dur": 4,
+    "anchor": [
+     -89.18,
+     694.95,
+     52.47
+    ],
+    "culm": 4,
+    "node": 2
    }
   },
   {
@@ -2338,7 +5528,21 @@
    "stats": {
     "Length": "246 mm",
     "Diameter": "7.1 mm"
-   }
+   },
+   "growth": {
+    "birth": 58.8,
+    "dur": 9,
+    "anchor": [
+     -96.67,
+     726.76,
+     56.97
+    ],
+    "culm": 4,
+    "node": 3
+   },
+   "color0": "#73994a",
+   "cbirth": 80,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0024",
@@ -2347,7 +5551,21 @@
    "color": "#528941",
    "stats": {
     "Sheath length": "187 mm"
-   }
+   },
+   "growth": {
+    "birth": 48.2,
+    "dur": 12,
+    "anchor": [
+     -96.67,
+     726.76,
+     56.97
+    ],
+    "culm": 4,
+    "node": 3
+   },
+   "color0": "#5a8e40",
+   "cbirth": 79,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0024",
@@ -2357,7 +5575,21 @@
    "stats": {
     "Blade length": "589 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 50.2,
+    "dur": 14,
+    "anchor": [
+     -139.45,
+     913.39,
+     86.35
+    ],
+    "culm": 4,
+    "node": 3
+   },
+   "color0": "#508e36",
+   "cbirth": 76,
+   "cdur": 30
   },
   {
    "id": "Ligule_0024",
@@ -2366,6 +5598,17 @@
    "color": "#d7dbbf",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 56.2,
+    "dur": 4,
+    "anchor": [
+     -139.45,
+     913.39,
+     86.35
+    ],
+    "culm": 4,
+    "node": 3
    }
   },
   {
@@ -2376,7 +5619,21 @@
    "stats": {
     "Length": "302 mm",
     "Diameter": "5.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 63.8,
+    "dur": 9,
+    "anchor": [
+     -154.26,
+     972.37,
+     95.26
+    ],
+    "culm": 4,
+    "node": 4
+   },
+   "color0": "#6d9647",
+   "cbirth": 85,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0025",
@@ -2385,7 +5642,21 @@
    "color": "#4e813c",
    "stats": {
     "Sheath length": "170 mm"
-   }
+   },
+   "growth": {
+    "birth": 56.7,
+    "dur": 12,
+    "anchor": [
+     -154.26,
+     972.37,
+     95.26
+    ],
+    "culm": 4,
+    "node": 4
+   },
+   "color0": "#588a3e",
+   "cbirth": 87,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0025",
@@ -2395,7 +5666,21 @@
    "stats": {
     "Blade length": "384 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 58.7,
+    "dur": 14,
+    "anchor": [
+     -196.15,
+     1142.37,
+     120.47
+    ],
+    "culm": 4,
+    "node": 4
+   },
+   "color0": "#4b8e33",
+   "cbirth": 88,
+   "cdur": 30
   },
   {
    "id": "Ligule_0025",
@@ -2404,6 +5689,17 @@
    "color": "#e2e4ce",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 64.7,
+    "dur": 4,
+    "anchor": [
+     -196.15,
+     1142.37,
+     120.47
+    ],
+    "culm": 4,
+    "node": 4
    }
   },
   {
@@ -2414,7 +5710,21 @@
    "stats": {
     "Rachis length": "202 mm",
     "Primary branches": "11"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "PanicleBranch_0047",
@@ -2424,7 +5734,21 @@
    "stats": {
     "Branch length": "65 mm",
     "Grains carried": "17"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0047",
@@ -2435,7 +5759,21 @@
     "Grains": "17",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#95af5c",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0048",
@@ -2445,7 +5783,21 @@
    "stats": {
     "Branch length": "64 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0048",
@@ -2456,7 +5808,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#92ae54",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0049",
@@ -2466,7 +5832,21 @@
    "stats": {
     "Branch length": "78 mm",
     "Grains carried": "24"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0049",
@@ -2477,7 +5857,21 @@
     "Grains": "24",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#94ad57",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0050",
@@ -2487,7 +5881,21 @@
    "stats": {
     "Branch length": "63 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0050",
@@ -2498,7 +5906,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#94ae57",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0051",
@@ -2508,7 +5930,21 @@
    "stats": {
     "Branch length": "72 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0051",
@@ -2519,7 +5955,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#94af5a",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0052",
@@ -2529,7 +5979,21 @@
    "stats": {
     "Branch length": "65 mm",
     "Grains carried": "18"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0052",
@@ -2540,7 +6004,21 @@
     "Grains": "18",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#93ad56",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0053",
@@ -2550,7 +6028,21 @@
    "stats": {
     "Branch length": "66 mm",
     "Grains carried": "20"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0053",
@@ -2561,7 +6053,21 @@
     "Grains": "20",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#95ad57",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0054",
@@ -2571,7 +6077,21 @@
    "stats": {
     "Branch length": "56 mm",
     "Grains carried": "20"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0054",
@@ -2582,7 +6102,21 @@
     "Grains": "20",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#96af56",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0055",
@@ -2592,7 +6126,21 @@
    "stats": {
     "Branch length": "62 mm",
     "Grains carried": "14"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0055",
@@ -2603,7 +6151,21 @@
     "Grains": "14",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#95af55",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0056",
@@ -2613,7 +6175,21 @@
    "stats": {
     "Branch length": "50 mm",
     "Grains carried": "20"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0056",
@@ -2624,7 +6200,21 @@
     "Grains": "20",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#93ad55",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0057",
@@ -2634,7 +6224,21 @@
    "stats": {
     "Branch length": "48 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#88a04a",
+   "cbirth": 79.7,
+   "cdur": 28
   },
   {
    "id": "Grain_0057",
@@ -2645,7 +6249,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 8,
+    "anchor": [
+     -231.72,
+     1274.66,
+     141.85
+    ],
+    "culm": 4,
+    "node": 5
+   },
+   "color0": "#90ac55",
+   "cbirth": 76.7,
+   "cdur": 26
   },
   {
    "id": "Internode_0026",
@@ -2655,7 +6273,21 @@
    "stats": {
     "Length": "87 mm",
     "Diameter": "10.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 42.4,
+    "dur": 9,
+    "anchor": [
+     -7.06,
+     330.0,
+     -4.17
+    ],
+    "culm": 5,
+    "node": 0
+   },
+   "color0": "#85a34d",
+   "cbirth": 65,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0026",
@@ -2664,7 +6296,21 @@
    "color": "#779946",
    "stats": {
     "Sheath length": "69 mm"
-   }
+   },
+   "growth": {
+    "birth": 34.0,
+    "dur": 12,
+    "anchor": [
+     -7.06,
+     330.0,
+     -4.17
+    ],
+    "culm": 5,
+    "node": 0
+   },
+   "color0": "#6c9642",
+   "cbirth": 55,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0026",
@@ -2674,7 +6320,21 @@
    "stats": {
     "Blade length": "306 mm",
     "Max width": "12 mm"
-   }
+   },
+   "growth": {
+    "birth": 36.0,
+    "dur": 14,
+    "anchor": [
+     -17.05,
+     398.75,
+     -10.06
+    ],
+    "culm": 5,
+    "node": 0
+   },
+   "color0": "#68a240",
+   "cbirth": 40,
+   "cdur": 30
   },
   {
    "id": "Ligule_0026",
@@ -2683,6 +6343,17 @@
    "color": "#dadeba",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 42.0,
+    "dur": 4,
+    "anchor": [
+     -17.05,
+     398.75,
+     -10.06
+    ],
+    "culm": 5,
+    "node": 0
    }
   },
   {
@@ -2693,7 +6364,21 @@
    "stats": {
     "Length": "136 mm",
     "Diameter": "9.6 mm"
-   }
+   },
+   "growth": {
+    "birth": 48.4,
+    "dur": 9,
+    "anchor": [
+     -19.78,
+     417.23,
+     -11.67
+    ],
+    "culm": 5,
+    "node": 1
+   },
+   "color0": "#7d9d4b",
+   "cbirth": 70,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0027",
@@ -2702,7 +6387,21 @@
    "color": "#769e4a",
    "stats": {
     "Sheath length": "99 mm"
-   }
+   },
+   "growth": {
+    "birth": 40.0,
+    "dur": 12,
+    "anchor": [
+     -19.78,
+     417.23,
+     -11.67
+    ],
+    "culm": 5,
+    "node": 1
+   },
+   "color0": "#6c9845",
+   "cbirth": 63,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0027",
@@ -2712,7 +6411,21 @@
    "stats": {
     "Blade length": "390 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 42.0,
+    "dur": 14,
+    "anchor": [
+     -32.68,
+     515.83,
+     -21.78
+    ],
+    "culm": 5,
+    "node": 1
+   },
+   "color0": "#60a03e",
+   "cbirth": 52,
+   "cdur": 30
   },
   {
    "id": "Ligule_0027",
@@ -2721,6 +6434,17 @@
    "color": "#e0e3cb",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 48.0,
+    "dur": 4,
+    "anchor": [
+     -32.68,
+     515.83,
+     -21.78
+    ],
+    "culm": 5,
+    "node": 1
    }
   },
   {
@@ -2731,7 +6455,21 @@
    "stats": {
     "Length": "184 mm",
     "Diameter": "8.3 mm"
-   }
+   },
+   "growth": {
+    "birth": 54.4,
+    "dur": 9,
+    "anchor": [
+     -38.45,
+     552.92,
+     -25.18
+    ],
+    "culm": 5,
+    "node": 2
+   },
+   "color0": "#769b48",
+   "cbirth": 75,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0028",
@@ -2740,7 +6478,21 @@
    "color": "#5e8b42",
    "stats": {
     "Sheath length": "151 mm"
-   }
+   },
+   "growth": {
+    "birth": 45.9,
+    "dur": 12,
+    "anchor": [
+     -38.45,
+     552.92,
+     -25.18
+    ],
+    "culm": 5,
+    "node": 2
+   },
+   "color0": "#608f40",
+   "cbirth": 71,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0028",
@@ -2750,7 +6502,21 @@
    "stats": {
     "Blade length": "472 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 47.9,
+    "dur": 14,
+    "anchor": [
+     -62.98,
+     704.41,
+     -38.46
+    ],
+    "culm": 5,
+    "node": 2
+   },
+   "color0": "#5b9a3d",
+   "cbirth": 64,
+   "cdur": 30
   },
   {
    "id": "Ligule_0028",
@@ -2759,6 +6525,17 @@
    "color": "#dde1be",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 53.9,
+    "dur": 4,
+    "anchor": [
+     -62.98,
+     704.41,
+     -38.46
+    ],
+    "culm": 5,
+    "node": 2
    }
   },
   {
@@ -2769,7 +6546,21 @@
    "stats": {
     "Length": "252 mm",
     "Diameter": "7.1 mm"
-   }
+   },
+   "growth": {
+    "birth": 59.4,
+    "dur": 9,
+    "anchor": [
+     -68.43,
+     737.07,
+     -41.67
+    ],
+    "culm": 5,
+    "node": 3
+   },
+   "color0": "#709845",
+   "cbirth": 80,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0029",
@@ -2778,7 +6569,21 @@
    "color": "#508d3d",
    "stats": {
     "Sheath length": "213 mm"
-   }
+   },
+   "growth": {
+    "birth": 52.7,
+    "dur": 12,
+    "anchor": [
+     -68.43,
+     737.07,
+     -41.67
+    ],
+    "culm": 5,
+    "node": 3
+   },
+   "color0": "#58903e",
+   "cbirth": 79,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0029",
@@ -2788,7 +6593,21 @@
    "stats": {
     "Blade length": "589 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 54.7,
+    "dur": 14,
+    "anchor": [
+     -106.69,
+     949.69,
+     -65.21
+    ],
+    "culm": 5,
+    "node": 3
+   },
+   "color0": "#4e8d36",
+   "cbirth": 76,
+   "cdur": 30
   },
   {
    "id": "Ligule_0029",
@@ -2797,6 +6616,17 @@
    "color": "#e2e6c9",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 60.7,
+    "dur": 4,
+    "anchor": [
+     -106.69,
+     949.69,
+     -65.21
+    ],
+    "culm": 5,
+    "node": 3
    }
   },
   {
@@ -2807,7 +6637,21 @@
    "stats": {
     "Length": "310 mm",
     "Diameter": "5.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 64.4,
+    "dur": 9,
+    "anchor": [
+     -113.85,
+     989.06,
+     -69.43
+    ],
+    "culm": 5,
+    "node": 4
+   },
+   "color0": "#719747",
+   "cbirth": 85,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0030",
@@ -2816,7 +6660,21 @@
    "color": "#49853c",
    "stats": {
     "Sheath length": "170 mm"
-   }
+   },
+   "growth": {
+    "birth": 61.2,
+    "dur": 12,
+    "anchor": [
+     -113.85,
+     989.06,
+     -69.43
+    ],
+    "culm": 5,
+    "node": 4
+   },
+   "color0": "#558c3e",
+   "cbirth": 87,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0030",
@@ -2826,7 +6684,21 @@
    "stats": {
     "Blade length": "354 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 63.2,
+    "dur": 14,
+    "anchor": [
+     -144.22,
+     1159.06,
+     -90.04
+    ],
+    "culm": 5,
+    "node": 4
+   },
+   "color0": "#4a8f32",
+   "cbirth": 88,
+   "cdur": 30
   },
   {
    "id": "Ligule_0030",
@@ -2835,6 +6707,17 @@
    "color": "#e1e5ca",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 69.2,
+    "dur": 4,
+    "anchor": [
+     -144.22,
+     1159.06,
+     -90.04
+    ],
+    "culm": 5,
+    "node": 4
    }
   },
   {
@@ -2845,7 +6728,21 @@
    "stats": {
     "Rachis length": "189 mm",
     "Primary branches": "10"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "PanicleBranch_0058",
@@ -2855,7 +6752,21 @@
    "stats": {
     "Branch length": "81 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0058",
@@ -2866,7 +6777,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#96b257",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0059",
@@ -2876,7 +6801,21 @@
    "stats": {
     "Branch length": "75 mm",
     "Grains carried": "16"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0059",
@@ -2887,7 +6826,21 @@
     "Grains": "16",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#95b156",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0060",
@@ -2897,7 +6850,21 @@
    "stats": {
     "Branch length": "77 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0060",
@@ -2908,7 +6875,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#94b05a",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0061",
@@ -2918,7 +6899,21 @@
    "stats": {
     "Branch length": "74 mm",
     "Grains carried": "16"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0061",
@@ -2929,7 +6924,21 @@
     "Grains": "16",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#94ad56",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0062",
@@ -2939,7 +6948,21 @@
    "stats": {
     "Branch length": "63 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0062",
@@ -2950,7 +6973,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#96b15a",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0063",
@@ -2960,7 +6997,21 @@
    "stats": {
     "Branch length": "64 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0063",
@@ -2971,7 +7022,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#94b056",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0064",
@@ -2981,7 +7046,21 @@
    "stats": {
     "Branch length": "67 mm",
     "Grains carried": "14"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0064",
@@ -2992,7 +7071,21 @@
     "Grains": "14",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#93b056",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0065",
@@ -3002,7 +7095,21 @@
    "stats": {
     "Branch length": "59 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0065",
@@ -3013,7 +7120,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#93af52",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0066",
@@ -3023,7 +7144,21 @@
    "stats": {
     "Branch length": "59 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0066",
@@ -3034,7 +7169,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#92b154",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0067",
@@ -3044,7 +7193,21 @@
    "stats": {
     "Branch length": "57 mm",
     "Grains carried": "19"
-   }
+   },
+   "growth": {
+    "birth": 68.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#87a04a",
+   "cbirth": 80.5,
+   "cdur": 28
   },
   {
    "id": "Grain_0067",
@@ -3055,7 +7218,21 @@
     "Grains": "19",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.5,
+    "dur": 8,
+    "anchor": [
+     -171.9,
+     1299.21,
+     -106.37
+    ],
+    "culm": 5,
+    "node": 5
+   },
+   "color0": "#91ad56",
+   "cbirth": 77.5,
+   "cdur": 26
   },
   {
    "id": "Internode_0031",
@@ -3065,7 +7242,21 @@
    "stats": {
     "Length": "93 mm",
     "Diameter": "10.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 43.0,
+    "dur": 9,
+    "anchor": [
+     -0.76,
+     330.0,
+     -7.28
+    ],
+    "culm": 6,
+    "node": 0
+   },
+   "color0": "#819d4d",
+   "cbirth": 65,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0031",
@@ -3074,7 +7265,21 @@
    "color": "#799751",
    "stats": {
     "Sheath length": "67 mm"
-   }
+   },
+   "growth": {
+    "birth": 38.5,
+    "dur": 12,
+    "anchor": [
+     -0.76,
+     330.0,
+     -7.28
+    ],
+    "culm": 6,
+    "node": 0
+   },
+   "color0": "#6d9548",
+   "cbirth": 55,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0031",
@@ -3084,7 +7289,21 @@
    "stats": {
     "Blade length": "343 mm",
     "Max width": "12 mm"
-   }
+   },
+   "growth": {
+    "birth": 40.5,
+    "dur": 14,
+    "anchor": [
+     -1.78,
+     397.04,
+     -17.07
+    ],
+    "culm": 6,
+    "node": 0
+   },
+   "color0": "#649c44",
+   "cbirth": 40,
+   "cdur": 30
   },
   {
    "id": "Ligule_0031",
@@ -3093,6 +7312,17 @@
    "color": "#dbdec5",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 46.5,
+    "dur": 4,
+    "anchor": [
+     -1.78,
+     397.04,
+     -17.07
+    ],
+    "culm": 6,
+    "node": 0
    }
   },
   {
@@ -3103,7 +7333,21 @@
    "stats": {
     "Length": "144 mm",
     "Diameter": "9.6 mm"
-   }
+   },
+   "growth": {
+    "birth": 49.0,
+    "dur": 9,
+    "anchor": [
+     -2.18,
+     422.85,
+     -20.93
+    ],
+    "culm": 6,
+    "node": 1
+   },
+   "color0": "#81a04a",
+   "cbirth": 70,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0032",
@@ -3112,7 +7356,21 @@
    "color": "#6b9743",
    "stats": {
     "Sheath length": "115 mm"
-   }
+   },
+   "growth": {
+    "birth": 44.5,
+    "dur": 12,
+    "anchor": [
+     -2.18,
+     422.85,
+     -20.93
+    ],
+    "culm": 6,
+    "node": 1
+   },
+   "color0": "#669541",
+   "cbirth": 63,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0032",
@@ -3122,7 +7380,21 @@
    "stats": {
     "Blade length": "388 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 46.5,
+    "dur": 14,
+    "anchor": [
+     -4.63,
+     538.17,
+     -39.42
+    ],
+    "culm": 6,
+    "node": 1
+   },
+   "color0": "#5a933a",
+   "cbirth": 52,
+   "cdur": 30
   },
   {
    "id": "Ligule_0032",
@@ -3131,6 +7403,17 @@
    "color": "#dfe4c5",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 52.5,
+    "dur": 4,
+    "anchor": [
+     -4.63,
+     538.17,
+     -39.42
+    ],
+    "culm": 6,
+    "node": 1
    }
   },
   {
@@ -3141,7 +7424,21 @@
    "stats": {
     "Length": "196 mm",
     "Diameter": "8.3 mm"
-   }
+   },
+   "growth": {
+    "birth": 55.0,
+    "dur": 9,
+    "anchor": [
+     -5.11,
+     567.29,
+     -44.05
+    ],
+    "culm": 6,
+    "node": 2
+   },
+   "color0": "#769949",
+   "cbirth": 75,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0033",
@@ -3150,7 +7447,21 @@
    "color": "#5b8743",
    "stats": {
     "Sheath length": "164 mm"
-   }
+   },
+   "growth": {
+    "birth": 50.4,
+    "dur": 12,
+    "anchor": [
+     -5.11,
+     567.29,
+     -44.05
+    ],
+    "culm": 6,
+    "node": 2
+   },
+   "color0": "#5e8d41",
+   "cbirth": 71,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0033",
@@ -3160,7 +7471,21 @@
    "stats": {
     "Blade length": "538 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 52.4,
+    "dur": 14,
+    "anchor": [
+     -9.19,
+     731.62,
+     -70.54
+    ],
+    "culm": 6,
+    "node": 2
+   },
+   "color0": "#519236",
+   "cbirth": 64,
+   "cdur": 30
   },
   {
    "id": "Ligule_0033",
@@ -3169,6 +7494,17 @@
    "color": "#daddc1",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 58.4,
+    "dur": 4,
+    "anchor": [
+     -9.19,
+     731.62,
+     -70.54
+    ],
+    "culm": 6,
+    "node": 2
    }
   },
   {
@@ -3179,7 +7515,21 @@
    "stats": {
     "Length": "268 mm",
     "Diameter": "7.1 mm"
-   }
+   },
+   "growth": {
+    "birth": 60.0,
+    "dur": 9,
+    "anchor": [
+     -9.75,
+     763.3,
+     -75.99
+    ],
+    "culm": 6,
+    "node": 3
+   },
+   "color0": "#759e4a",
+   "cbirth": 80,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0034",
@@ -3188,7 +7538,21 @@
    "color": "#55993e",
    "stats": {
     "Sheath length": "211 mm"
-   }
+   },
+   "growth": {
+    "birth": 57.2,
+    "dur": 12,
+    "anchor": [
+     -9.75,
+     763.3,
+     -75.99
+    ],
+    "culm": 6,
+    "node": 3
+   },
+   "color0": "#5b963f",
+   "cbirth": 79,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0034",
@@ -3198,7 +7562,21 @@
    "stats": {
     "Blade length": "566 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 59.2,
+    "dur": 14,
+    "anchor": [
+     -12.23,
+     973.84,
+     -112.09
+    ],
+    "culm": 6,
+    "node": 3
+   },
+   "color0": "#529838",
+   "cbirth": 76,
+   "cdur": 30
   },
   {
    "id": "Ligule_0034",
@@ -3207,6 +7585,17 @@
    "color": "#dcdfbb",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 65.2,
+    "dur": 4,
+    "anchor": [
+     -12.23,
+     973.84,
+     -112.09
+    ],
+    "culm": 6,
+    "node": 3
    }
   },
   {
@@ -3217,7 +7606,21 @@
    "stats": {
     "Length": "330 mm",
     "Diameter": "5.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.0,
+    "dur": 9,
+    "anchor": [
+     -13.36,
+     1031.54,
+     -123.01
+    ],
+    "culm": 6,
+    "node": 4
+   },
+   "color0": "#74a045",
+   "cbirth": 85,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0035",
@@ -3226,7 +7629,21 @@
    "color": "#529a3e",
    "stats": {
     "Sheath length": "170 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.7,
+    "dur": 12,
+    "anchor": [
+     -13.36,
+     1031.54,
+     -123.01
+    ],
+    "culm": 6,
+    "node": 4
+   },
+   "color0": "#5a963f",
+   "cbirth": 87,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0035",
@@ -3236,7 +7653,21 @@
    "stats": {
     "Blade length": "370 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 67.7,
+    "dur": 14,
+    "anchor": [
+     -18.09,
+     1201.54,
+     -157.23
+    ],
+    "culm": 6,
+    "node": 4
+   },
+   "color0": "#4c9133",
+   "cbirth": 88,
+   "cdur": 30
   },
   {
    "id": "Ligule_0035",
@@ -3245,6 +7676,17 @@
    "color": "#e0e5c7",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 73.7,
+    "dur": 4,
+    "anchor": [
+     -18.09,
+     1201.54,
+     -157.23
+    ],
+    "culm": 6,
+    "node": 4
    }
   },
   {
@@ -3255,7 +7697,21 @@
    "stats": {
     "Rachis length": "203 mm",
     "Primary branches": "12"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "PanicleBranch_0068",
@@ -3265,7 +7721,21 @@
    "stats": {
     "Branch length": "83 mm",
     "Grains carried": "16"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0068",
@@ -3276,7 +7746,21 @@
     "Grains": "16",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#98af56",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0069",
@@ -3286,7 +7770,21 @@
    "stats": {
     "Branch length": "79 mm",
     "Grains carried": "17"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0069",
@@ -3297,7 +7795,21 @@
     "Grains": "17",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#94ab54",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0070",
@@ -3307,7 +7819,21 @@
    "stats": {
     "Branch length": "77 mm",
     "Grains carried": "24"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0070",
@@ -3318,7 +7844,21 @@
     "Grains": "24",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#96b057",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0071",
@@ -3328,7 +7868,21 @@
    "stats": {
     "Branch length": "64 mm",
     "Grains carried": "19"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0071",
@@ -3339,7 +7893,21 @@
     "Grains": "19",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#99b058",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0072",
@@ -3349,7 +7917,21 @@
    "stats": {
     "Branch length": "67 mm",
     "Grains carried": "17"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0072",
@@ -3360,7 +7942,21 @@
     "Grains": "17",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#93ab54",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0073",
@@ -3370,7 +7966,21 @@
    "stats": {
     "Branch length": "66 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0073",
@@ -3381,7 +7991,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#96ac55",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0074",
@@ -3391,7 +8015,21 @@
    "stats": {
     "Branch length": "70 mm",
     "Grains carried": "18"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0074",
@@ -3402,7 +8040,21 @@
     "Grains": "18",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#92ab54",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0075",
@@ -3412,7 +8064,21 @@
    "stats": {
     "Branch length": "59 mm",
     "Grains carried": "24"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0075",
@@ -3423,7 +8089,21 @@
     "Grains": "24",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#98b057",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0076",
@@ -3433,7 +8113,21 @@
    "stats": {
     "Branch length": "66 mm",
     "Grains carried": "14"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0076",
@@ -3444,7 +8138,21 @@
     "Grains": "14",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#95ae57",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0077",
@@ -3454,7 +8162,21 @@
    "stats": {
     "Branch length": "59 mm",
     "Grains carried": "18"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0077",
@@ -3465,7 +8187,21 @@
     "Grains": "18",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#99b157",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0078",
@@ -3475,7 +8211,21 @@
    "stats": {
     "Branch length": "59 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0078",
@@ -3486,7 +8236,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#94ac57",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0079",
@@ -3496,7 +8260,21 @@
    "stats": {
     "Branch length": "61 mm",
     "Grains carried": "22"
-   }
+   },
+   "growth": {
+    "birth": 69.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 81.3,
+   "cdur": 28
   },
   {
    "id": "Grain_0079",
@@ -3507,7 +8285,21 @@
     "Grains": "22",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 71.3,
+    "dur": 8,
+    "anchor": [
+     -21.56,
+     1361.68,
+     -190.56
+    ],
+    "culm": 6,
+    "node": 5
+   },
+   "color0": "#95ab54",
+   "cbirth": 78.3,
+   "cdur": 26
   },
   {
    "id": "Internode_0036",
@@ -3517,7 +8309,21 @@
    "stats": {
     "Length": "93 mm",
     "Diameter": "10.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 43.6,
+    "dur": 9,
+    "anchor": [
+     6.66,
+     330.0,
+     -5.9
+    ],
+    "culm": 7,
+    "node": 0
+   },
+   "color0": "#85a150",
+   "cbirth": 65,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0036",
@@ -3526,7 +8332,21 @@
    "color": "#7aa04a",
    "stats": {
     "Sheath length": "68 mm"
-   }
+   },
+   "growth": {
+    "birth": 43.0,
+    "dur": 12,
+    "anchor": [
+     6.66,
+     330.0,
+     -5.9
+    ],
+    "culm": 7,
+    "node": 0
+   },
+   "color0": "#6e9a45",
+   "cbirth": 55,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0036",
@@ -3536,7 +8356,21 @@
    "stats": {
     "Blade length": "313 mm",
     "Max width": "12 mm"
-   }
+   },
+   "growth": {
+    "birth": 45.0,
+    "dur": 14,
+    "anchor": [
+     15.38,
+     398.06,
+     -13.62
+    ],
+    "culm": 7,
+    "node": 0
+   },
+   "color0": "#649d40",
+   "cbirth": 40,
+   "cdur": 30
   },
   {
    "id": "Ligule_0036",
@@ -3545,6 +8379,17 @@
    "color": "#dbdfc0",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 51.0,
+    "dur": 4,
+    "anchor": [
+     15.38,
+     398.06,
+     -13.62
+    ],
+    "culm": 7,
+    "node": 0
    }
   },
   {
@@ -3555,7 +8400,21 @@
    "stats": {
     "Length": "144 mm",
     "Diameter": "9.6 mm"
-   }
+   },
+   "growth": {
+    "birth": 49.6,
+    "dur": 9,
+    "anchor": [
+     18.59,
+     422.85,
+     -16.47
+    ],
+    "culm": 7,
+    "node": 1
+   },
+   "color0": "#7a9a4a",
+   "cbirth": 70,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0037",
@@ -3564,7 +8423,21 @@
    "color": "#6d9347",
    "stats": {
     "Sheath length": "109 mm"
-   }
+   },
+   "growth": {
+    "birth": 49.0,
+    "dur": 12,
+    "anchor": [
+     18.59,
+     422.85,
+     -16.47
+    ],
+    "culm": 7,
+    "node": 1
+   },
+   "color0": "#679343",
+   "cbirth": 63,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0037",
@@ -3574,7 +8447,21 @@
    "stats": {
     "Blade length": "432 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 51.0,
+    "dur": 14,
+    "anchor": [
+     34.56,
+     531.59,
+     -31.44
+    ],
+    "culm": 7,
+    "node": 1
+   },
+   "color0": "#5f9d3c",
+   "cbirth": 52,
+   "cdur": 30
   },
   {
    "id": "Ligule_0037",
@@ -3583,6 +8470,17 @@
    "color": "#dce0bf",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 57.0,
+    "dur": 4,
+    "anchor": [
+     34.56,
+     531.59,
+     -31.44
+    ],
+    "culm": 7,
+    "node": 1
    }
   },
   {
@@ -3593,7 +8491,21 @@
    "stats": {
     "Length": "196 mm",
     "Diameter": "8.3 mm"
-   }
+   },
+   "growth": {
+    "birth": 55.6,
+    "dur": 9,
+    "anchor": [
+     39.39,
+     567.29,
+     -35.71
+    ],
+    "culm": 7,
+    "node": 2
+   },
+   "color0": "#7ca248",
+   "cbirth": 75,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0038",
@@ -3602,7 +8514,21 @@
    "color": "#5c8e40",
    "stats": {
     "Sheath length": "145 mm"
-   }
+   },
+   "growth": {
+    "birth": 54.9,
+    "dur": 12,
+    "anchor": [
+     39.39,
+     567.29,
+     -35.71
+    ],
+    "culm": 7,
+    "node": 2
+   },
+   "color0": "#5e9040",
+   "cbirth": 71,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0038",
@@ -3612,7 +8538,21 @@
    "stats": {
     "Blade length": "516 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 56.9,
+    "dur": 14,
+    "anchor": [
+     60.0,
+     712.29,
+     -51.26
+    ],
+    "culm": 7,
+    "node": 2
+   },
+   "color0": "#559538",
+   "cbirth": 64,
+   "cdur": 30
   },
   {
    "id": "Ligule_0038",
@@ -3621,6 +8561,17 @@
    "color": "#dbdfbe",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 62.9,
+    "dur": 4,
+    "anchor": [
+     60.0,
+     712.29,
+     -51.26
+    ],
+    "culm": 7,
+    "node": 2
    }
   },
   {
@@ -3631,7 +8582,21 @@
    "stats": {
     "Length": "268 mm",
     "Diameter": "7.1 mm"
-   }
+   },
+   "growth": {
+    "birth": 60.6,
+    "dur": 9,
+    "anchor": [
+     67.28,
+     763.31,
+     -57.7
+    ],
+    "culm": 7,
+    "node": 3
+   },
+   "color0": "#739748",
+   "cbirth": 80,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0039",
@@ -3640,7 +8605,21 @@
    "color": "#558f3b",
    "stats": {
     "Sheath length": "217 mm"
-   }
+   },
+   "growth": {
+    "birth": 61.7,
+    "dur": 12,
+    "anchor": [
+     67.28,
+     763.31,
+     -57.7
+    ],
+    "culm": 7,
+    "node": 3
+   },
+   "color0": "#5b913d",
+   "cbirth": 79,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0039",
@@ -3650,7 +8629,21 @@
    "stats": {
     "Blade length": "552 mm",
     "Max width": "16 mm"
-   }
+   },
+   "growth": {
+    "birth": 63.7,
+    "dur": 14,
+    "anchor": [
+     99.93,
+     980.49,
+     -87.49
+    ],
+    "culm": 7,
+    "node": 3
+   },
+   "color0": "#508e37",
+   "cbirth": 76,
+   "cdur": 30
   },
   {
    "id": "Ligule_0039",
@@ -3659,6 +8652,17 @@
    "color": "#dee3c2",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 69.7,
+    "dur": 4,
+    "anchor": [
+     99.93,
+     980.49,
+     -87.49
+    ],
+    "culm": 7,
+    "node": 3
    }
   },
   {
@@ -3669,7 +8673,21 @@
    "stats": {
     "Length": "330 mm",
     "Diameter": "5.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 65.6,
+    "dur": 9,
+    "anchor": [
+     107.75,
+     1031.55,
+     -94.41
+    ],
+    "culm": 7,
+    "node": 4
+   },
+   "color0": "#729b47",
+   "cbirth": 85,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0040",
@@ -3678,7 +8696,21 @@
    "color": "#548f42",
    "stats": {
     "Sheath length": "170 mm"
-   }
+   },
+   "growth": {
+    "birth": 70.2,
+    "dur": 12,
+    "anchor": [
+     107.75,
+     1031.55,
+     -94.41
+    ],
+    "culm": 7,
+    "node": 4
+   },
+   "color0": "#5a9140",
+   "cbirth": 87,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0040",
@@ -3688,7 +8720,21 @@
    "stats": {
     "Blade length": "372 mm",
     "Max width": "14 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.2,
+    "dur": 14,
+    "anchor": [
+     133.02,
+     1201.55,
+     -116.54
+    ],
+    "culm": 7,
+    "node": 4
+   },
+   "color0": "#4e8e36",
+   "cbirth": 88,
+   "cdur": 30
   },
   {
    "id": "Ligule_0040",
@@ -3697,6 +8743,17 @@
    "color": "#d9dcc0",
    "stats": {
     "Collar height": "4 mm"
+   },
+   "growth": {
+    "birth": 78.2,
+    "dur": 4,
+    "anchor": [
+     133.02,
+     1201.55,
+     -116.54
+    ],
+    "culm": 7,
+    "node": 4
    }
   },
   {
@@ -3707,7 +8764,21 @@
    "stats": {
     "Rachis length": "201 mm",
     "Primary branches": "11"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "PanicleBranch_0080",
@@ -3717,7 +8788,21 @@
    "stats": {
     "Branch length": "83 mm",
     "Grains carried": "20"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0080",
@@ -3728,7 +8813,21 @@
     "Grains": "20",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#94ac56",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0081",
@@ -3738,7 +8837,21 @@
    "stats": {
     "Branch length": "69 mm",
     "Grains carried": "20"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0081",
@@ -3749,7 +8862,21 @@
     "Grains": "20",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#96ad57",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0082",
@@ -3759,7 +8886,21 @@
    "stats": {
     "Branch length": "73 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0082",
@@ -3770,7 +8911,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#98af55",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0083",
@@ -3780,7 +8935,21 @@
    "stats": {
     "Branch length": "67 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0083",
@@ -3791,7 +8960,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#9ab056",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0084",
@@ -3801,7 +8984,21 @@
    "stats": {
     "Branch length": "68 mm",
     "Grains carried": "14"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0084",
@@ -3812,7 +9009,21 @@
     "Grains": "14",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#96af57",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0085",
@@ -3822,7 +9033,21 @@
    "stats": {
     "Branch length": "58 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0085",
@@ -3833,7 +9058,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#92aa54",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0086",
@@ -3843,7 +9082,21 @@
    "stats": {
     "Branch length": "64 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0086",
@@ -3854,7 +9107,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#92aa55",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0087",
@@ -3864,7 +9131,21 @@
    "stats": {
     "Branch length": "54 mm",
     "Grains carried": "15"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0087",
@@ -3875,7 +9156,21 @@
     "Grains": "15",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#95ae58",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0088",
@@ -3885,7 +9180,21 @@
    "stats": {
     "Branch length": "51 mm",
     "Grains carried": "21"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0088",
@@ -3896,7 +9205,21 @@
     "Grains": "21",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#95af54",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0089",
@@ -3906,7 +9229,21 @@
    "stats": {
     "Branch length": "57 mm",
     "Grains carried": "15"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0089",
@@ -3917,7 +9254,21 @@
     "Grains": "15",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#99b058",
+   "cbirth": 79.1,
+   "cdur": 26
   },
   {
    "id": "PanicleBranch_0090",
@@ -3927,7 +9278,21 @@
    "stats": {
     "Branch length": "53 mm",
     "Grains carried": "23"
-   }
+   },
+   "growth": {
+    "birth": 70.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#89a04a",
+   "cbirth": 82.1,
+   "cdur": 28
   },
   {
    "id": "Grain_0090",
@@ -3938,7 +9303,21 @@
     "Grains": "23",
     "Grain size": "\u2248 8 \u00d7 3.2 mm",
     "Awn length": "9\u201317 mm"
-   }
+   },
+   "growth": {
+    "birth": 72.1,
+    "dur": 8,
+    "anchor": [
+     159.26,
+     1361.69,
+     -139.79
+    ],
+    "culm": 7,
+    "node": 5
+   },
+   "color0": "#94af58",
+   "cbirth": 79.1,
+   "cdur": 26
   }
  ],
  "concepts": [
@@ -4787,5 +10166,223 @@
     "Grain_0090"
    ]
   }
+ ],
+ "growthCulms": [
+  [
+   [
+    3.74,
+    96.97,
+    0.0
+   ],
+   [
+    6.61,
+    150.84,
+    -1.85
+   ],
+   [
+    14.5,
+    204.71,
+    0.2
+   ],
+   [
+    23.28,
+    280.12,
+    1.6
+   ],
+   [
+    37.9,
+    344.77,
+    -2.53
+   ]
+  ],
+  [
+   [
+    15.81,
+    87.75,
+    -1.99
+   ],
+   [
+    26.61,
+    136.49,
+    -1.58
+   ],
+   [
+    37.8,
+    185.24,
+    -5.11
+   ],
+   [
+    54.42,
+    253.49,
+    -4.91
+   ],
+   [
+    76.6,
+    311.98,
+    -8.06
+   ]
+  ],
+  [
+   [
+    9.63,
+    87.99,
+    10.77
+   ],
+   [
+    17.73,
+    136.87,
+    19.94
+   ],
+   [
+    23.46,
+    185.76,
+    25.56
+   ],
+   [
+    32.04,
+    254.19,
+    37.23
+   ],
+   [
+    44.94,
+    312.85,
+    51.84
+   ]
+  ],
+  [
+   [
+    -1.54,
+    93.25,
+    13.2
+   ],
+   [
+    -4.35,
+    145.06,
+    23.07
+   ],
+   [
+    -6.17,
+    196.86,
+    32.2
+   ],
+   [
+    -7.0,
+    269.39,
+    50.62
+   ],
+   [
+    -6.84,
+    331.56,
+    69.41
+   ]
+  ],
+  [
+   [
+    -18.1,
+    85.02,
+    10.88
+   ],
+   [
+    -29.33,
+    132.25,
+    15.59
+   ],
+   [
+    -40.18,
+    179.48,
+    25.05
+   ],
+   [
+    -57.59,
+    245.61,
+    38.29
+   ],
+   [
+    -77.47,
+    302.29,
+    46.6
+   ]
+  ],
+  [
+   [
+    -12.72,
+    87.23,
+    -7.5
+   ],
+   [
+    -18.67,
+    135.69,
+    -13.51
+   ],
+   [
+    -29.98,
+    184.15,
+    -16.49
+   ],
+   [
+    -45.42,
+    252.0,
+    -27.76
+   ],
+   [
+    -58.05,
+    310.15,
+    -36.93
+   ]
+  ],
+  [
+   [
+    -1.42,
+    92.85,
+    -13.65
+   ],
+   [
+    -2.93,
+    144.43,
+    -23.12
+   ],
+   [
+    -4.64,
+    196.02,
+    -31.94
+   ],
+   [
+    -3.61,
+    268.24,
+    -47.02
+   ],
+   [
+    -8.19,
+    330.14,
+    -67.55
+   ]
+  ],
+  [
+   [
+    11.93,
+    92.85,
+    -10.57
+   ],
+   [
+    20.79,
+    144.44,
+    -19.24
+   ],
+   [
+    27.89,
+    196.02,
+    -21.99
+   ],
+   [
+    40.47,
+    268.24,
+    -36.71
+   ],
+   [
+    51.52,
+    330.14,
+    -45.37
+   ]
+  ]
  ]
 }

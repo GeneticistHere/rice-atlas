@@ -7,11 +7,24 @@ export const SYSTEMS: {id:SystemId;name:string;color:string;description:string}[
  {id:'Stem',name:'Culms',color:'#93a352',description:'The culm is the jointed stem of the rice plant: hollow internodes separated by solid nodes. A single plant tillers from its base into many culms, each able to carry its own panicle.'},
  {id:'Root',name:'Root system',color:'#a8825b',description:'Rice grows a dense, fibrous mass of adventitious roots from the tillering crown. They anchor the plant in puddled soil and take up the water and nutrients that fill the grain.'}
 ];
-export interface Part {id:string;name:string;conceptId:string;system:SystemId;color?:string;stats?:Record<string,string>;chunk:number;positions:number;normals:number;indices:number;tints:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
+export interface OrganGrowth {birth:number;dur:number;anchor:[number,number,number];culm:number;node:number}
+export interface Part {id:string;name:string;conceptId:string;system:SystemId;color?:string;color0?:string;cbirth?:number;cdur?:number;growth?:OrganGrowth;stats?:Record<string,string>;chunk:number;positions:number;normals:number;indices:number;tints:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
 export interface Concept {id:string;name:string;elements:string[]}
-export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number}
+export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number;growthCulms?:number[][][]}
 export type View = 'three-quarter'|'front'|'back'|'side';
-export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number;labels:boolean}
+export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number;labels:boolean;day:number}
+export const SEASON_END=120;
+export function phenology(day:number){
+ if(day<6)return 'Germination';
+ if(day<18)return 'Seedling';
+ if(day<42)return 'Tillering';
+ if(day<60)return 'Stem elongation';
+ if(day<68)return 'Booting & heading';
+ if(day<76)return 'Flowering';
+ if(day<100)return 'Grain filling';
+ if(day<115)return 'Ripening';
+ return 'Mature';
+}
 export type StageId = 'seedling'|'tillering'|'heading'|'maturity';
 export const STAGES:{id:StageId;name:string;description:string}[] = [
  {id:'seedling',name:'Seedling',description:'A single shoot a few weeks after germination: the first leaves and the beginnings of the root system.'},

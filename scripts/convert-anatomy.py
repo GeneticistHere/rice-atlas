@@ -45,9 +45,13 @@ for element in metadata['elements']:
     part={'id':element['id'],'name':record.get('name',name),'conceptId':record.get('conceptId',element['conceptId']),'system':system,'chunk':chunk,'positions':po,'normals':no,'indices':io,'tints':to,'vertexCount':len(vertices)//3,'indexCount':len(indices),'bounds':bounds}
     if element.get('color'):part['color']=element['color']
     if element.get('stats'):part['stats']=element['stats']
+    if element.get('color0'):part['color0']=element['color0']
+    if element.get('cbirth') is not None:part['cbirth']=element['cbirth'];part['cdur']=element['cdur']
+    g=element.get('growth')
+    if g:part['growth']={'birth':g['birth'],'dur':g['dur'],'anchor':[round(v*.001,5) for v in g['anchor']],'culm':g.get('culm',-1),'node':g.get('node',-1)}
     parts.append(part)
     total_triangles+=len(indices)//3
 (out/f'{base}-{chunk}.bin').write_bytes(blob);chunks.append({'url':f'/models/{base}-{chunk}.bin','bytes':len(blob)})
-manifest={'version':'Oryza sativa FSPM 1.0','parts':parts,'chunks':chunks,'triangles':total_triangles,'concepts':[{k:v for k,v in c.items() if k in ['id','name','elements']} for c in metadata['concepts']]}
+manifest={'version':'Oryza sativa FSPM 1.0','parts':parts,'chunks':chunks,'triangles':total_triangles,'concepts':[{k:v for k,v in c.items() if k in ['id','name','elements']} for c in metadata['concepts']],'growthCulms':[[[round(v*.001,5) for v in vec] for vec in culm] for culm in metadata.get('growthCulms',[])]}
 (out/f'{base}.json').write_text(json.dumps(manifest,separators=(',',':')))
 print(json.dumps({'parts':len(parts),'concepts':len(manifest['concepts']),'triangles':total_triangles,'bytes':sum(c['bytes'] for c in chunks),'chunks':len(chunks),'systems':sorted(set(p['system'] for p in parts))},indent=2))

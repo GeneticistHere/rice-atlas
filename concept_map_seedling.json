@@ -8,6 +8,17 @@
    "stats": {
     "Tillers": "1",
     "Roots": "14"
+   },
+   "growth": {
+    "birth": 0,
+    "dur": 12,
+    "anchor": [
+     0,
+     98.91,
+     0
+    ],
+    "culm": -1,
+    "node": -1
    }
   },
   {
@@ -17,6 +28,17 @@
    "color": "#ab9668",
    "stats": {
     "Grain size": "\u2248 8 \u00d7 3.3 mm"
+   },
+   "growth": {
+    "birth": 0,
+    "dur": 3,
+    "anchor": [
+     7.52,
+     93.51,
+     3.69
+    ],
+    "culm": -1,
+    "node": -1
    }
   },
   {
@@ -27,7 +49,21 @@
    "stats": {
     "Root length": "91 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 4.0,
+    "dur": 22,
+    "anchor": [
+     2.61,
+     103.1,
+     0.92
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c3af8b",
+   "cbirth": 12.0,
+   "cdur": 30
   },
   {
    "id": "Root_0002",
@@ -37,7 +73,21 @@
    "stats": {
     "Root length": "90 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 5.8,
+    "dur": 22,
+    "anchor": [
+     3.39,
+     103.3,
+     -0.12
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c2b08f",
+   "cbirth": 13.8,
+   "cdur": 30
   },
   {
    "id": "Root_0003",
@@ -47,7 +97,21 @@
    "stats": {
     "Root length": "96 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 8.5,
+    "dur": 22,
+    "anchor": [
+     -0.45,
+     102.69,
+     2.97
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0b08c",
+   "cbirth": 16.5,
+   "cdur": 30
   },
   {
    "id": "Root_0004",
@@ -57,7 +121,21 @@
    "stats": {
     "Root length": "94 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 11.6,
+    "dur": 22,
+    "anchor": [
+     -0.04,
+     103.11,
+     2.21
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c2b08e",
+   "cbirth": 19.6,
+   "cdur": 30
   },
   {
    "id": "Root_0005",
@@ -67,7 +145,21 @@
    "stats": {
     "Root length": "105 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 15.0,
+    "dur": 22,
+    "anchor": [
+     1.15,
+     103.03,
+     -2.55
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0ac86",
+   "cbirth": 23.0,
+   "cdur": 30
   },
   {
    "id": "Root_0006",
@@ -77,7 +169,21 @@
    "stats": {
     "Root length": "100 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 18.7,
+    "dur": 22,
+    "anchor": [
+     1.06,
+     102.19,
+     -3.04
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c2ae88",
+   "cbirth": 26.7,
+   "cdur": 30
   },
   {
    "id": "Root_0007",
@@ -87,7 +193,21 @@
    "stats": {
     "Root length": "98 mm",
     "Laterals": "0"
-   }
+   },
+   "growth": {
+    "birth": 22.6,
+    "dur": 22,
+    "anchor": [
+     2.35,
+     102.5,
+     -1.49
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#bea983",
+   "cbirth": 30.6,
+   "cdur": 30
   },
   {
    "id": "Root_0008",
@@ -97,7 +217,21 @@
    "stats": {
     "Root length": "94 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 26.7,
+    "dur": 22,
+    "anchor": [
+     -0.05,
+     101.83,
+     -2.28
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0ac86",
+   "cbirth": 34.7,
+   "cdur": 30
   },
   {
    "id": "Root_0009",
@@ -107,7 +241,21 @@
    "stats": {
     "Root length": "90 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 31.1,
+    "dur": 22,
+    "anchor": [
+     2.2,
+     103.68,
+     -1.29
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c2b089",
+   "cbirth": 39.1,
+   "cdur": 30
   },
   {
    "id": "Root_0010",
@@ -117,7 +265,21 @@
    "stats": {
     "Root length": "94 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 35.5,
+    "dur": 22,
+    "anchor": [
+     2.22,
+     103.34,
+     0.56
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#beaa82",
+   "cbirth": 43.5,
+   "cdur": 30
   },
   {
    "id": "Root_0011",
@@ -127,7 +289,21 @@
    "stats": {
     "Root length": "90 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 40.2,
+    "dur": 22,
+    "anchor": [
+     -0.08,
+     102.02,
+     -3.43
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0ac86",
+   "cbirth": 48.2,
+   "cdur": 30
   },
   {
    "id": "Root_0012",
@@ -137,7 +313,21 @@
    "stats": {
     "Root length": "94 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 44.9,
+    "dur": 22,
+    "anchor": [
+     -1.67,
+     103.72,
+     -1.93
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0ae86",
+   "cbirth": 52.9,
+   "cdur": 30
   },
   {
    "id": "Root_0013",
@@ -147,7 +337,21 @@
    "stats": {
     "Root length": "92 mm",
     "Laterals": "1"
-   }
+   },
+   "growth": {
+    "birth": 49.8,
+    "dur": 22,
+    "anchor": [
+     2.24,
+     102.81,
+     2.71
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c0ae86",
+   "cbirth": 57.8,
+   "cdur": 30
   },
   {
    "id": "Root_0014",
@@ -157,7 +361,21 @@
    "stats": {
     "Root length": "93 mm",
     "Laterals": "2"
-   }
+   },
+   "growth": {
+    "birth": 54.9,
+    "dur": 22,
+    "anchor": [
+     -2.3,
+     102.01,
+     1.51
+    ],
+    "culm": -1,
+    "node": -1
+   },
+   "color0": "#c4b08c",
+   "cbirth": 62.9,
+   "cdur": 30
   },
   {
    "id": "Internode_0001",
@@ -167,7 +385,21 @@
    "stats": {
     "Length": "14 mm",
     "Diameter": "4.4 mm"
-   }
+   },
+   "growth": {
+    "birth": 40,
+    "dur": 9,
+    "anchor": [
+     0.0,
+     110.0,
+     0.0
+    ],
+    "culm": 0,
+    "node": 0
+   },
+   "color0": "#7aa24d",
+   "cbirth": 65,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0001",
@@ -176,7 +408,21 @@
    "color": "#6a9b43",
    "stats": {
     "Sheath length": "10 mm"
-   }
+   },
+   "growth": {
+    "birth": 4,
+    "dur": 12,
+    "anchor": [
+     0.0,
+     110.0,
+     0.0
+    ],
+    "culm": 0,
+    "node": 0
+   },
+   "color0": "#669741",
+   "cbirth": 55,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0001",
@@ -186,7 +432,21 @@
    "stats": {
     "Blade length": "90 mm",
     "Max width": "4 mm"
-   }
+   },
+   "growth": {
+    "birth": 6,
+    "dur": 14,
+    "anchor": [
+     0.4,
+     120.25,
+     0.0
+    ],
+    "culm": 0,
+    "node": 0
+   },
+   "color0": "#5c933f",
+   "cbirth": 40,
+   "cdur": 30
   },
   {
    "id": "Ligule_0001",
@@ -195,6 +455,17 @@
    "color": "#e3e7cb",
    "stats": {
     "Collar height": "2 mm"
+   },
+   "growth": {
+    "birth": 12,
+    "dur": 4,
+    "anchor": [
+     0.4,
+     120.25,
+     0.0
+    ],
+    "culm": 0,
+    "node": 0
    }
   },
   {
@@ -205,7 +476,21 @@
    "stats": {
     "Length": "16 mm",
     "Diameter": "3.8 mm"
-   }
+   },
+   "growth": {
+    "birth": 46,
+    "dur": 9,
+    "anchor": [
+     0.56,
+     123.77,
+     0.0
+    ],
+    "culm": 0,
+    "node": 1
+   },
+   "color0": "#75a349",
+   "cbirth": 70,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0002",
@@ -214,7 +499,21 @@
    "color": "#69a443",
    "stats": {
     "Sheath length": "12 mm"
-   }
+   },
+   "growth": {
+    "birth": 12,
+    "dur": 12,
+    "anchor": [
+     0.56,
+     123.77,
+     0.0
+    ],
+    "culm": 0,
+    "node": 1
+   },
+   "color0": "#659c41",
+   "cbirth": 63,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0002",
@@ -224,7 +523,21 @@
    "stats": {
     "Blade length": "144 mm",
     "Max width": "6 mm"
-   }
+   },
+   "growth": {
+    "birth": 14,
+    "dur": 14,
+    "anchor": [
+     2.79,
+     135.7,
+     -0.65
+    ],
+    "culm": 0,
+    "node": 1
+   },
+   "color0": "#57923b",
+   "cbirth": 52,
+   "cdur": 30
   },
   {
    "id": "Ligule_0002",
@@ -233,6 +546,17 @@
    "color": "#e2e4cf",
    "stats": {
     "Collar height": "2 mm"
+   },
+   "growth": {
+    "birth": 20,
+    "dur": 4,
+    "anchor": [
+     2.79,
+     135.7,
+     -0.65
+    ],
+    "culm": 0,
+    "node": 1
    }
   },
   {
@@ -243,7 +567,21 @@
    "stats": {
     "Length": "16 mm",
     "Diameter": "3.3 mm"
-   }
+   },
+   "growth": {
+    "birth": 52,
+    "dur": 9,
+    "anchor": [
+     3.51,
+     139.41,
+     -0.85
+    ],
+    "culm": 0,
+    "node": 2
+   },
+   "color0": "#6d9947",
+   "cbirth": 75,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0003",
@@ -252,7 +590,21 @@
    "color": "#588e43",
    "stats": {
     "Sheath length": "13 mm"
-   }
+   },
+   "growth": {
+    "birth": 22,
+    "dur": 12,
+    "anchor": [
+     3.51,
+     139.41,
+     -0.85
+    ],
+    "culm": 0,
+    "node": 2
+   },
+   "color0": "#5c9041",
+   "cbirth": 71,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0003",
@@ -262,7 +614,21 @@
    "stats": {
     "Blade length": "181 mm",
     "Max width": "6 mm"
-   }
+   },
+   "growth": {
+    "birth": 24,
+    "dur": 14,
+    "anchor": [
+     5.95,
+     152.86,
+     -2.03
+    ],
+    "culm": 0,
+    "node": 2
+   },
+   "color0": "#519138",
+   "cbirth": 64,
+   "cdur": 30
   },
   {
    "id": "Ligule_0003",
@@ -271,6 +637,17 @@
    "color": "#dee2cb",
    "stats": {
     "Collar height": "2 mm"
+   },
+   "growth": {
+    "birth": 30,
+    "dur": 4,
+    "anchor": [
+     5.95,
+     152.86,
+     -2.03
+    ],
+    "culm": 0,
+    "node": 2
    }
   },
   {
@@ -281,7 +658,21 @@
    "stats": {
     "Length": "17 mm",
     "Diameter": "2.7 mm"
-   }
+   },
+   "growth": {
+    "birth": 57,
+    "dur": 9,
+    "anchor": [
+     6.41,
+     155.68,
+     -2.24
+    ],
+    "culm": 0,
+    "node": 3
+   },
+   "color0": "#6c9942",
+   "cbirth": 80,
+   "cdur": 30
   },
   {
    "id": "LeafSheath_0004",
@@ -290,7 +681,21 @@
    "color": "#559b3a",
    "stats": {
     "Sheath length": "10 mm"
-   }
+   },
+   "growth": {
+    "birth": 34,
+    "dur": 12,
+    "anchor": [
+     6.41,
+     155.68,
+     -2.24
+    ],
+    "culm": 0,
+    "node": 3
+   },
+   "color0": "#5b973c",
+   "cbirth": 79,
+   "cdur": 30
   },
   {
    "id": "LeafBlade_0004",
@@ -300,7 +705,21 @@
    "stats": {
     "Blade length": "207 mm",
     "Max width": "7 mm"
-   }
+   },
+   "growth": {
+    "birth": 36,
+    "dur": 14,
+    "anchor": [
+     6.54,
+     165.82,
+     -1.62
+    ],
+    "culm": 0,
+    "node": 3
+   },
+   "color0": "#519238",
+   "cbirth": 76,
+   "cdur": 30
   },
   {
    "id": "Ligule_0004",
@@ -309,6 +728,17 @@
    "color": "#e3e5c7",
    "stats": {
     "Collar height": "2 mm"
+   },
+   "growth": {
+    "birth": 42,
+    "dur": 4,
+    "anchor": [
+     6.54,
+     165.82,
+     -1.62
+    ],
+    "culm": 0,
+    "node": 3
    }
   }
  ],
@@ -403,5 +833,29 @@
     "Ligule_0004"
    ]
   }
+ ],
+ "growthCulms": [
+  [
+   [
+    0.56,
+    13.77,
+    0.0
+   ],
+   [
+    2.95,
+    15.64,
+    -0.85
+   ],
+   [
+    2.9,
+    16.27,
+    -1.39
+   ],
+   [
+    0.15,
+    16.89,
+    1.14
+   ]
+  ]
  ]
 }

@@ -294,7 +294,8 @@ STAGES = {
 OUT_DIR = ""
 elements, system_map, concept_members, counter = [], {}, {}, {}
 
-def add_part(prefix, name, concept_id, system, mesh, extra_concepts=(), color=None, stats=None):
+def add_part(prefix, name, concept_id, system, mesh, extra_concepts=(), color=None, stats=None,
+             growth=None, color0=None, ctrans=None):
     counter[prefix] = counter.get(prefix, 0) + 1
     pid = f"{prefix}_{counter[prefix]:04d}"
     verts, faces, tints = mesh
@@ -304,6 +305,14 @@ def add_part(prefix, name, concept_id, system, mesh, extra_concepts=(), color=No
         element["color"] = color
     if stats:
         element["stats"] = stats
+    if growth:
+        element["growth"] = {"birth": round(growth["birth"], 1), "dur": round(growth["dur"], 1),
+                             "anchor": [round(v, 2) for v in growth["anchor"]],
+                             "culm": growth.get("culm", -1), "node": growth.get("node", -1)}
+    if color0:
+        element["color0"] = color0
+    if ctrans:
+        element["cbirth"], element["cdur"] = round(ctrans[0], 1), round(ctrans[1], 1)
     elements.append(element)
     system_map[pid] = system
     for cid in (concept_id, *extra_concepts):
@@ -333,7 +342,8 @@ def culm_line(base, azimuth, lean_deg, height, bow, node_heights=()):
     return at
 
 def build_blade(cfg, base, frames_dir_az, rank, tiller_name, concept_extra, sway_seed,
-                color=None, name_override=None, droop_add=0.0, senescence=None):
+                color=None, name_override=None, droop_add=0.0, senescence=None,
+                growth=None, color0=None, ctrans=None):
     length, wmax, e0d, droopd = cfg["leaf_ranks"][rank]
     length *= random.uniform(0.92, 1.08)
     e0 = math.radians(e0d+random.uniform(-4, 4))
@@ -388,10 +398,13 @@ def build_blade(cfg, base, frames_dir_az, rank, tiller_name, concept_extra, sway
     is_flag = cfg["flag"] and rank == len(cfg["leaf_ranks"])-1 and name_override is None
     name = name_override or (f"{tiller_name} · Flag leaf blade" if is_flag else f"{tiller_name} · Leaf blade {rank+1}")
     cid = "FlagLeaves" if is_flag else "Blades"
+    final = color or vary(cfg["blade_colors"][rank], dl=0.035)
     add_part("LeafBlade", name, cid, "Leaves", (verts, faces, tints),
              extra_concepts=(("Blades",) if is_flag else ()) + concept_extra,
-             color=color or vary(cfg["blade_colors"][rank], dl=0.035),
-             stats={"Blade length": f"{length:.0f} mm", "Max width": f"{wmax:.0f} mm"})
+             color=final,
+             stats={"Blade length": f"{length:.0f} mm", "Max width": f"{wmax:.0f} mm"},
+             growth=growth, color0=color0 or mix_hex(final, '#5da23e', 0.5),
+             ctrans=ctrans or (40+rank*12, 30))
 
 def grains_along(pan, bpts, bframes, spiral, count, branch_meshes, grain_meshes,
                  s_from=0.15, ripeness=1.0):
@@ -441,9 +454,12 @@ def droop_curve(start, d0, length, droop, steps=10):
         pts.append(q)
     return pts
 
-def build_panicle(cfg, tip, tip_dir, azimuth, tiller_name, concept_extra):
+def build_panicle(cfg, tip, tip_dir, azimuth, tiller_name, concept_extra,
+                  culm=-1, node=-1, heading=63.0):
     """Rachis with spiral primary branches densely set with grains. Returns rachis points."""
     pan = cfg["panicle"]
+    pan_growth = {"birth": heading, "dur": 8, "anchor": list(tip), "culm": culm, "node": node}
+    grain_growth = {"birth": heading+2, "dur": 8, "anchor": list(tip), "culm": culm, "node": node}
     rachis_len = random.uniform(*pan["rachis"])
     n = 30
     pts, p = [tip], tip
@@ -462,7 +478,8 @@ def build_panicle(cfg, tip, tip_dir, azimuth, tiller_name, concept_extra):
     add_part("PanicleAxis", f"{tiller_name} · Panicle rachis", "Panicles", "Panicle",
              tube(pts, radii, segments=8, cap_end=True), extra_concepts=concept_extra,
              color=vary(axis_color, dl=0.02),
-             stats={"Rachis length": f"{rachis_len:.0f} mm", "Primary branches": str(num_branches)})
+             stats={"Rachis length": f"{rachis_len:.0f} mm", "Primary branches": str(num_branches)},
+             growth=pan_growth, color0=mix_hex(axis_color, '#87a04a', 0.6), ctrans=(heading+12, 28))
     frames = transport_frames(pts)
     for j in range(num_branches):
         s_b = 0.12 + 0.8*j/(num_branches-1)
@@ -492,18 +509,22 @@ def build_panicle(cfg, tip, tip_dir, azimuth, tiller_name, concept_extra):
         add_part("PanicleBranch", f"{tiller_name} · Panicle branch {j+1}", "Panicles", "Panicle",
                  merge(branch_meshes), extra_concepts=concept_extra,
                  color=vary(axis_color, dl=0.03),
-                 stats={"Branch length": f"{blen:.0f} mm", "Grains carried": str(total)})
+                 stats={"Branch length": f"{blen:.0f} mm", "Grains carried": str(total)},
+                 growth=pan_growth, color0=mix_hex(axis_color, '#87a04a', 0.6), ctrans=(heading+12, 28))
+        gcolor = vary(mix_hex(pan["grain_a"], pan["grain_b"],
+                              min(1, max(0, ripeness+random.uniform(-0.15, 0.15)))), dl=0.035)
         add_part("Grain", f"{tiller_name} · Grains, branch {j+1}", "Grains", "Grain",
                  merge(grain_meshes), extra_concepts=concept_extra,
-                 color=vary(mix_hex(pan["grain_a"], pan["grain_b"],
-                                    min(1, max(0, ripeness+random.uniform(-0.15, 0.15)))), dl=0.035),
+                 color=gcolor,
                  stats={"Grains": str(total),
                         "Grain size": f"≈ {sum(pan['grain_len'])/2:.0f} × {sum(pan['grain_w'])/2:.1f} mm",
-                        "Awn length": f"{pan['awn'][0]}–{pan['awn'][1]} mm"})
+                        "Awn length": f"{pan['awn'][0]}–{pan['awn'][1]} mm"},
+                 growth=grain_growth, color0=mix_hex(gcolor, '#8fae55', 0.7), ctrans=(heading+9, 26))
     return pts
 
-def build_grain_cutaway(pan, anchor, azimuth):
+def build_grain_cutaway(pan, anchor, azimuth, culm=-1, node=-1, heading=63.0):
     """A grain sliced longitudinally: husk shell, starchy endosperm, and embryo."""
+    cut_growth = {"birth": heading+4, "dur": 7, "anchor": list(anchor), "culm": culm, "node": node}
     base_dir = v_norm((math.cos(azimuth)*0.3, -1.0, math.sin(azimuth)*0.3))
     ped_end = v_add(anchor, v_scale(base_dir, 10))
     gaxis = v_norm(v_add(base_dir, (0, -0.2, 0)))
@@ -517,15 +538,18 @@ def build_grain_cutaway(pan, anchor, azimuth):
             half_grain_mesh(gcenter, a, s1, s2, length, width, thickness, cap=False)]
     add_part("Cutaway", "Grain cutaway · Lemma & palea (husk)", "GrainCutaway", "Grain",
              merge(husk), color='#d0a035',
-             stats={"Grain size": f"{length:.0f} × {width:.1f} mm"})
+             stats={"Grain size": f"{length:.0f} × {width:.1f} mm"},
+             growth=cut_growth, color0='#8fae55', ctrans=(heading+9, 26))
     endo_c = v_add(gcenter, v_scale(s2, 0.18))
     add_part("Cutaway", "Grain cutaway · Endosperm", "GrainCutaway", "Grain",
              half_grain_mesh(endo_c, a, s1, s2, length*0.86, width*0.84, thickness*0.8, cap=True),
-             color='#efe8d6', stats={"Share of grain": "≈ 90 %"})
+             color='#efe8d6', stats={"Share of grain": "≈ 90 %"},
+             growth=cut_growth, color0='#d9e0c2', ctrans=(heading+9, 26))
     emb_c = v_add(v_add(gcenter, v_scale(a, -length*0.27)), v_scale(s2, 0.12))
     add_part("Cutaway", "Grain cutaway · Embryo", "GrainCutaway", "Grain",
              grain_mesh(emb_c, a, s1, length=3.1, width=1.9, thickness=1.5, lat=6, lon=8),
-             color='#bb8f3e', stats={"Share of grain": "≈ 3 %"})
+             color='#bb8f3e', stats={"Share of grain": "≈ 3 %"},
+             growth=cut_growth)
 
 # --------------------------------------------------------------- stage build
 def build_stage(stage, cfg):
@@ -537,6 +561,18 @@ def build_stage(stage, cfg):
     os.makedirs(OUT_DIR)
     random.seed(7)
 
+    # ---- developmental calendar (days after sowing, ~120-day season) ----
+    LEAF_BIRTH = [6, 14, 24, 36, 52]      # main-culm leaf appearance (phyllochron rhythm)
+    STAGGER = [0, 7, 14, 22, 32]          # leaf stagger within a tiller
+    ELONG = [40, 46, 52, 57, 62]          # internode elongation windows
+    def tiller_birth(t):
+        return 0 if t == 0 else 18 + (t-1)*4.5
+    def leaf_birth(t, ni):
+        return LEAF_BIRTH[ni] if t == 0 else tiller_birth(t) + STAGGER[ni]*0.85
+    def heading_day(t):
+        return 63.0 if t == 0 else 64.5 + t*0.8
+    growth_culms = []
+
     crown_y = cfg["crown_y"]
     crown_r = cfg["r0"]*2.4
     crown_pts = [(0, crown_y-crown_r*2.1, 0), (0, crown_y-crown_r, 0),
@@ -546,7 +582,8 @@ def build_stage(stage, cfg):
              tube(crown_pts, crown_radii, segments=14, cap_start=True, cap_end=True,
                   tint_fn=lambda k, m: (0.72+0.28*k/(m-1),)*3),
              color=vary(cfg["crown_color"]),
-             stats={"Tillers": str(cfg["tillers"]), "Roots": str(cfg["roots"])})
+             stats={"Tillers": str(cfg["tillers"]), "Roots": str(cfg["roots"])},
+             growth={"birth": 0, "dur": 12, "anchor": list(crown_pts[0])})
 
     if cfg.get("seed_husk"):
         # the spent seed still clinging to the crown of a young plant
@@ -556,7 +593,8 @@ def build_stage(stage, cfg):
                  grain_mesh(husk_center, husk_axis, (0, 0, 1),
                             length=7.8, width=3.3, thickness=2.3, tint=(0.95, 0.9, 0.8)),
                  color='#ab9668',
-                 stats={"Grain size": "≈ 8 × 3.3 mm"})
+                 stats={"Grain size": "≈ 8 × 3.3 mm"},
+                 growth={"birth": 0, "dur": 3, "anchor": list(husk_center)})
 
     print(f"[{stage}] roots...")
     for r in range(cfg["roots"]):
@@ -593,9 +631,13 @@ def build_stage(stage, cfg):
                 ld = v_norm(v_add(ld, (random.uniform(-.3, .3), -0.28, random.uniform(-.3, .3))))
             ls = catmull_rom(lp, 3)
             parts.append(tube(ls, [0.55*(1 - 0.8*i/(len(ls)-1)) for i in range(len(ls))], segments=5))
+        rcol = vary(cfg["root_color"], dl=0.06)
+        rbirth = 4 + 56*(r/max(1, cfg["roots"]))**1.3
         add_part("Root", f"Adventitious root {r+1}", "Roots", "Root", merge(parts),
-                 color=vary(cfg["root_color"], dl=0.06),
-                 stats={"Root length": f"{polyline_length(smooth):.0f} mm", "Laterals": str(laterals)})
+                 color=rcol,
+                 stats={"Root length": f"{polyline_length(smooth):.0f} mm", "Laterals": str(laterals)},
+                 growth={"birth": rbirth, "dur": 22, "anchor": list(start)},
+                 color0=mix_hex(rcol, '#cabc98', 0.6), ctrans=(rbirth+8, 30))
 
     print(f"[{stage}] tillers, leaves{', panicles' if cfg['panicle'] else ''}...")
     for t in range(cfg["tillers"]):
@@ -616,6 +658,7 @@ def build_stage(stage, cfg):
             acc += ilen
             node_heights.append(acc)
         line = culm_line(base, az, lean, height, bow, node_heights)
+        culm_vecs = []
         h = 0.0
         for ni, ilen in enumerate(internode_lengths):
             samples = 12
@@ -632,12 +675,17 @@ def build_stage(stage, cfg):
                 mm = _ilen*k/(m-1)
                 t = min(1.0, mm/14.0)
                 return (0.68*(1-t) + (0.97 + 0.13*k/(m-1))*t,)*3
+            culm_vecs.append([round(v, 2) for v in v_sub(line(h+ilen), line(h))])
+            icol = vary(cfg["internode_colors"][ni], dl=0.025)
             add_part("Internode", f"{tiller_name} · Internode {ni+1}", "Culms", "Stem",
                      tube(pts, radii, segments=12, cap_start=True, cap_end=True,
                           tint_fn=internode_tint),
                      extra_concepts=(tiller_concept,),
-                     color=vary(cfg["internode_colors"][ni], dl=0.025),
-                     stats={"Length": f"{ilen:.0f} mm", "Diameter": f"{2*r0:.1f} mm"})
+                     color=icol,
+                     stats={"Length": f"{ilen:.0f} mm", "Diameter": f"{2*r0:.1f} mm"},
+                     growth={"birth": ELONG[ni]+(0 if t == 0 else min(4, (t-1)*0.6)), "dur": 9,
+                             "anchor": list(pts[0]), "culm": t, "node": ni},
+                     color0=mix_hex(icol, '#6f9a45', 0.55), ctrans=(65+ni*5, 30))
 
             # leaf sheath wrapping the culm from this node upward
             last = ni == len(internode_lengths)-1
@@ -646,16 +694,21 @@ def build_stage(stage, cfg):
             spts = [line(h + sheath_len*k/(s_samples-1)) for k in range(s_samples)]
             sradii = [r0 + cfg["sheath_extra"] - cfg["sheath_extra"]*0.55*k/(s_samples-1) for k in range(s_samples)]
             sradii[-1] *= 1.35                                  # flare at the ligule
+            lb = leaf_birth(t, ni)
+            scol = vary(cfg["sheath_colors"][ni], dl=0.03)
             add_part("LeafSheath", f"{tiller_name} · Leaf sheath {ni+1}", "Sheaths", "Sheath",
                      tube(spts, sradii, segments=10, cap_start=True, cap_end=True,
                           tint_fn=lambda k, m: (0.78+0.3*k/(m-1),)*3),
                      extra_concepts=(tiller_concept,),
-                     color=vary(cfg["sheath_colors"][ni], dl=0.03),
-                     stats={"Sheath length": f"{sheath_len:.0f} mm"})
+                     color=scol,
+                     stats={"Sheath length": f"{sheath_len:.0f} mm"},
+                     growth={"birth": lb-2, "dur": 12, "anchor": list(spts[0]), "culm": t, "node": ni},
+                     color0=mix_hex(scol, '#61933f', 0.5), ctrans=(55+ni*8, 30))
 
             leaf_az = az + (ni % 2)*math.pi + random.uniform(-0.28, 0.28)
             top_p = line(h + sheath_len)
-            build_blade(cfg, top_p, leaf_az, ni, tiller_name, (tiller_concept,), sway_seed=t*10+ni)
+            build_blade(cfg, top_p, leaf_az, ni, tiller_name, (tiller_concept,), sway_seed=t*10+ni,
+                        growth={"birth": lb, "dur": 14, "anchor": list(top_p), "culm": t, "node": ni})
 
             # ligule collar and two auricle horns at the sheath-blade junction
             lig_h = cfg["ligule_h"]
@@ -673,24 +726,33 @@ def build_stage(stage, cfg):
             add_part("Ligule", f"{tiller_name} · Ligule & auricles {ni+1}", "Ligules", "Sheath",
                      merge(lig_meshes), extra_concepts=(tiller_concept,),
                      color=vary('#dde1c4', dl=0.03),
-                     stats={"Collar height": f"{lig_h:.0f} mm"})
+                     stats={"Collar height": f"{lig_h:.0f} mm"},
+                     growth={"birth": lb+6, "dur": 4, "anchor": list(top_p), "culm": t, "node": ni})
             h += ilen
 
         if cfg.get("dead_leaves") and t in (2, 5):
             # a fully senesced lower leaf still hanging on
-            build_blade(cfg, line(internode_lengths[0]*0.8), az+2.3+random.uniform(-0.3, 0.3), 0,
+            dead_base = line(internode_lengths[0]*0.8)
+            build_blade(cfg, dead_base, az+2.3+random.uniform(-0.3, 0.3), 0,
                         tiller_name, (tiller_concept,), sway_seed=t*10+9,
                         color=vary('#9c7f45', dl=0.04),
                         name_override=f"{tiller_name} · Senescent leaf",
-                        droop_add=48, senescence=1.0)
+                        droop_add=48, senescence=1.0,
+                        growth={"birth": leaf_birth(t, 0), "dur": 14,
+                                "anchor": list(dead_base), "culm": t, "node": 0},
+                        color0='#6b9440', ctrans=(52, 22))
 
+        growth_culms.append(culm_vecs)
         if cfg["panicle"]:
             tip = line(height)
             tip_dir = v_norm(v_sub(line(height), line(height-30)))
             panicle_az = az if t > 0 else random.uniform(0, 2*math.pi)
-            rachis_pts = build_panicle(cfg, tip, tip_dir, panicle_az, tiller_name, (tiller_concept,))
+            hd = heading_day(t)
+            rachis_pts = build_panicle(cfg, tip, tip_dir, panicle_az, tiller_name, (tiller_concept,),
+                                       culm=t, node=len(internode_lengths), heading=hd)
             if t == 0 and cfg["cutaway"]:
-                build_grain_cutaway(cfg["panicle"], rachis_pts[8], panicle_az)
+                build_grain_cutaway(cfg["panicle"], rachis_pts[8], panicle_az,
+                                    culm=t, node=len(internode_lengths), heading=hd)
 
     concept_names = {
         "Roots": "Fibrous root system",
@@ -711,7 +773,7 @@ def build_stage(stage, cfg):
                 for cid, members in concept_members.items() if members]
 
     with open(f"concept_map_{stage}.json", "w") as f:
-        json.dump({"elements": elements, "concepts": concepts}, f, indent=1)
+        json.dump({"elements": elements, "concepts": concepts, "growthCulms": growth_culms}, f, indent=1)
     with open(f"system_map_{stage}.json", "w") as f:
         json.dump(system_map, f, indent=1)
     print(f"[{stage}] {len(elements)} organ meshes across {len(concepts)} concepts.")

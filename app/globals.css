@@ -113,3 +113,14 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 /* One-click assembled / every-piece jumps on the slider endpoints. */
 .slider-endpoints button{font-size:10px;color:#7c8793;padding:4px 5px;border-radius:6px;min-height:24px}
 .slider-endpoints button:hover{color:#263b48;background:#18253608}
+
+/* Growth timeline: two control rows share the dock. */
+.bottom-dock{width:520px}
+.dock-controls{flex:1;min-width:0;display:flex;flex-direction:column;gap:13px}
+.grow-control{padding-bottom:12px;border-bottom:1px solid #18253610}
+.grow-row{display:flex;align-items:center;gap:10px}
+.grow-row [data-slot=slider]{flex:1;padding:9px 0}
+.grow-play{min-width:34px;width:34px;height:34px;border:1px solid var(--border);border-radius:9px;color:#263b48;background:#ffffffd9;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.grow-play:hover{background:#fff}
+.phenology-tag{font-size:10px;font-weight:500;letter-spacing:.05em;color:#5b7a52;background:#eef3ea;border:1px solid #4f86361a;border-radius:999px;padding:3px 9px;margin-left:auto;margin-right:9px;white-space:nowrap}
+@media(max-width:767px){.bottom-dock{width:auto}.dock-controls{gap:10px}.grow-control{padding-bottom:9px}.phenology-tag{font-size:9px;padding:2px 7px}}
