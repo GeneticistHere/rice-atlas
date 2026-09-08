@@ -6,7 +6,7 @@ import {mergeGeometries} from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 import {createExplosionLayout} from './explosion-layout';
 import {decodeModelResponse} from './model-download';
 import {PointerTap} from './pointer-tap';
-import {SYSTEMS,type Atlas,type SceneState} from './anatomy';
+import {SYSTEMS,devRate,type Atlas,type SceneState} from './anatomy';
 interface Props {atlas:Atlas;state:SceneState;onSelect:(id:string)=>void;onProgress:(n:number)=>void;onError:(s:string)=>void}
 export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:Props){
  const host=useRef<HTMLDivElement>(null),latest=useRef(state),select=useRef(onSelect);
@@ -38,6 +38,9 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   // Per-organ tint (linear RGB), falling back to the system color.
   const colorData=new Float32Array(width*4),colorTexture=new T.DataTexture(colorData,width,1,T.RGBAFormat,T.FloatType);
   atlas.parts.forEach((p,i)=>{const c=new T.Color(p.color??SYSTEMS.find(s=>s.id===p.system)?.color??'#aebbb8');colorData.set([c.r,c.g,c.b,1],i*4);});colorTexture.needsUpdate=true;
+  const materials:T.Material[]=[],geometries:T.BufferGeometry[]=[],pickers:(T.Mesh|undefined)[]=[],centers=atlas.parts.map(p=>new T.Vector3().fromArray(p.bounds[0]).add(new T.Vector3().fromArray(p.bounds[1])).multiplyScalar(.5));
+  // Frame the camera on this stage's actual plant height rather than a fixed adult size.
+  const plantHeight=atlas.parts.reduce((m,p)=>Math.max(m,p.bounds[1][1]),.3),midY=Math.min(.9,Math.max(.16,plantHeight*.5)),hscale=Math.min(1.1,Math.max(.22,plantHeight/1.7));
   // Growth simulation: per-organ anchor + growth factor texture, young→ripe color pairs,
   // and per-culm internode vectors so organs ride downward while internodes are unelongated.
   const growthData=new Float32Array(width*4),growthTexture=new T.DataTexture(growthData,width,1,T.RGBAFormat,T.FloatType);
@@ -51,9 +54,16 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   const smooth01=(t:number)=>{const c=Math.max(0,Math.min(1,t));return c*c*(3-2*c);};
   const organGrow=(p:(typeof atlas.parts)[number],day:number)=>p.growth?smooth01((day-p.growth.birth)/Math.max(.1,p.growth.dur)):1;
   const tmpColor=new T.Color();
-  const materials:T.Material[]=[],geometries:T.BufferGeometry[]=[],pickers:(T.Mesh|undefined)[]=[],centers=atlas.parts.map(p=>new T.Vector3().fromArray(p.bounds[0]).add(new T.Vector3().fromArray(p.bounds[1])).multiplyScalar(.5));
-  // Frame the camera on this stage's actual plant height rather than a fixed adult size.
-  const plantHeight=atlas.parts.reduce((m,p)=>Math.max(m,p.bounds[1][1]),.3),midY=Math.min(.9,Math.max(.16,plantHeight*.5)),hscale=Math.min(1.1,Math.max(.22,plantHeight/1.7));
+  // Mechanics: a per-organ rotation quaternion drives panicle nodding and lodging.
+  const rotData=new Float32Array(width*4),rotTexture=new T.DataTexture(rotData,width,1,T.RGBAFormat,T.FloatType);
+  for(let i=0;i<width;i++)rotData[i*4+3]=1;rotTexture.needsUpdate=true;
+  const culmBase=culmVecs.map((_,ci)=>{const pi=culmIndex[ci]?.[0];return pi!=null&&pi>=0&&atlas.parts[pi].growth?new T.Vector3().fromArray(atlas.parts[pi].growth!.anchor):new T.Vector3(0,.33,0);});
+  // one nod axis per culm, horizontal and perpendicular to that panicle's outward direction
+  const panicleAxis=culmVecs.map((_,ci)=>{const pi=atlas.parts.findIndex(p=>p.system==='Panicle'&&p.growth?.culm===ci&&p.name.includes('rachis'));if(pi<0)return null;const dir=centers[pi].clone().sub(anchors[pi]);dir.y=0;if(dir.lengthSq()<1e-8)dir.set(1,0,0);dir.normalize();return new T.Vector3(-dir.z,0,dir.x);});
+  const lodgeAxis=culmVecs.map(()=>{const a=Math.random()*Math.PI*2;return new T.Vector3(Math.cos(a),0,Math.sin(a));});
+  const lodgeSeverity=culmVecs.map(()=>.4+Math.random()*.6);
+  const nodQ=new T.Quaternion(),lodgeQ=new T.Quaternion(),tmpV=new T.Vector3();
+  const N_PALE=new T.Color('#a9ab63'),DRY_DULL=new T.Color('#8b9070'),STERILE_PALE=new T.Color('#d8d2b0');
   const offsets:T.Vector3[]=[],bounds=atlas.parts.map(p=>new T.Box3(new T.Vector3().fromArray(p.bounds[0]),new T.Vector3().fromArray(p.bounds[1])));
   let packingWidth=1,packingHeight=1;
   const markerPositions=new Float32Array(atlas.parts.length*3),markerGeometry=new T.BufferGeometry();markerGeometry.setAttribute('position',new T.BufferAttribute(markerPositions,3));
@@ -123,15 +133,16 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   // Shared time/sway uniforms drive a gentle wind in both the beauty and shadow passes.
   const timeU={value:0},swayU={value:0},reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
   const SWAY_VERTEX='float swayGate = smoothstep(0.25, 1.6, transformed.y); float swayPhase = time*1.35 + position.y*2.1 + position.x*1.6 + partIndex*0.13; transformed += vec3(sin(swayPhase), 0.0, 0.8*cos(swayPhase*0.77)) * (sway * 0.009 * swayGate);';
-  const GROW_VERTEX='vec4 grow = texture2D(growthState, stateUv); transformed = grow.xyz + (transformed - grow.xyz) * grow.w;';
+  const GROW_VERTEX='vec4 grow = texture2D(growthState, stateUv); vec3 gpv = (transformed - grow.xyz) * grow.w; gpv += 2.0 * cross(rq.xyz, cross(rq.xyz, gpv) + rq.w * gpv); transformed = grow.xyz + gpv;';
   const FINISH:Record<string,{rough:number;env:number}>={Leaves:{rough:.48,env:.5},Sheath:{rough:.55,env:.4},Stem:{rough:.62,env:.35},Grain:{rough:.42,env:.6},Panicle:{rough:.6,env:.35},Root:{rough:.85,env:.15}};
   const materialFor=(system:string)=>{
    const finish=FINISH[system]??{rough:.62,env:.35};
    const m=new T.MeshStandardMaterial({color:SYSTEMS.find(s=>s.id===system)?.color??'#aebbb8',metalness:.05,roughness:finish.rough,side:T.DoubleSide});m.envMapIntensity=finish.env;
    m.onBeforeCompile=shader=>{
-    shader.uniforms.partState={value:partTexture};shader.uniforms.selectionState={value:selectionTexture};shader.uniforms.colorState={value:colorTexture};shader.uniforms.growthState={value:growthTexture};shader.uniforms.stateWidth={value:width};shader.uniforms.time=timeU;shader.uniforms.sway=swayU;
-    shader.vertexShader='attribute float partIndex; attribute vec3 tint; uniform sampler2D partState; uniform sampler2D selectionState; uniform sampler2D colorState; uniform sampler2D growthState; uniform float stateWidth; uniform float time; uniform float sway; varying float partVisible; varying float partSelected; varying vec3 partColor; varying vec3 vTint;\n'+shader.vertexShader;
-    shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); '+GROW_VERTEX+' '+SWAY_VERTEX+'\nvec4 state = texture2D(partState, stateUv); transformed += state.xyz; partVisible = state.w; partSelected = texture2D(selectionState, stateUv).r; partColor = texture2D(colorState, stateUv).rgb; vTint = tint * 2.0;');
+    shader.uniforms.partState={value:partTexture};shader.uniforms.selectionState={value:selectionTexture};shader.uniforms.colorState={value:colorTexture};shader.uniforms.growthState={value:growthTexture};shader.uniforms.rotState={value:rotTexture};shader.uniforms.stateWidth={value:width};shader.uniforms.time=timeU;shader.uniforms.sway=swayU;
+    shader.vertexShader='attribute float partIndex; attribute vec3 tint; uniform sampler2D partState; uniform sampler2D selectionState; uniform sampler2D colorState; uniform sampler2D growthState; uniform sampler2D rotState; uniform float stateWidth; uniform float time; uniform float sway; varying float partVisible; varying float partSelected; varying vec3 partColor; varying vec3 vTint;\n'+shader.vertexShader;
+    shader.vertexShader=shader.vertexShader.replace('#include <beginnormal_vertex>','#include <beginnormal_vertex>\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); vec4 rq = texture2D(rotState, stateUv); objectNormal = objectNormal + 2.0 * cross(rq.xyz, cross(rq.xyz, objectNormal) + rq.w * objectNormal);');
+    shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\n'+GROW_VERTEX+' '+SWAY_VERTEX+'\nvec4 state = texture2D(partState, stateUv); transformed += state.xyz; partVisible = state.w; partSelected = texture2D(selectionState, stateUv).r; partColor = texture2D(colorState, stateUv).rgb; vTint = tint * 2.0;');
     shader.fragmentShader='varying float partVisible; varying float partSelected; varying vec3 partColor; varying vec3 vTint;\n'+shader.fragmentShader;
     // Thin organs are single-surface sheets; light whichever side faces the camera.
     if(system==='Leaves')shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nif (dot(normal, normalize(vViewPosition)) < 0.0) normal = -normal;');
@@ -145,9 +156,9 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   // Shadow pass: replicate the wind and per-part offsets, and skip hidden organs.
   const depthMaterial=new T.MeshDepthMaterial({depthPacking:T.RGBADepthPacking});
   depthMaterial.onBeforeCompile=shader=>{
-   shader.uniforms.partState={value:partTexture};shader.uniforms.growthState={value:growthTexture};shader.uniforms.stateWidth={value:width};shader.uniforms.time=timeU;shader.uniforms.sway=swayU;
-   shader.vertexShader='attribute float partIndex; uniform sampler2D partState; uniform sampler2D growthState; uniform float stateWidth; uniform float time; uniform float sway; varying float partVisible;\n'+shader.vertexShader;
-   shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); '+GROW_VERTEX+' '+SWAY_VERTEX+'\nvec4 state = texture2D(partState, stateUv); transformed += state.xyz; partVisible = state.w;');
+   shader.uniforms.partState={value:partTexture};shader.uniforms.growthState={value:growthTexture};shader.uniforms.rotState={value:rotTexture};shader.uniforms.stateWidth={value:width};shader.uniforms.time=timeU;shader.uniforms.sway=swayU;
+   shader.vertexShader='attribute float partIndex; uniform sampler2D partState; uniform sampler2D growthState; uniform sampler2D rotState; uniform float stateWidth; uniform float time; uniform float sway; varying float partVisible;\n'+shader.vertexShader;
+   shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvec2 stateUv = vec2((partIndex + 0.5) / stateWidth, 0.5); vec4 rq = texture2D(rotState, stateUv); '+GROW_VERTEX+' '+SWAY_VERTEX+'\nvec4 state = texture2D(partState, stateUv); transformed += state.xyz; partVisible = state.w;');
    shader.fragmentShader='varying float partVisible;\n'+shader.fragmentShader;
    shader.fragmentShader=shader.fragmentShader.replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\nif (partVisible < 0.5) discard;');
   };
@@ -196,7 +207,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
   const clock=new T.Clock();let lastExtent=-1,lastLabels=false,lastDayFitted=-1;
   const animate=()=>{
    if(disposed)return;frame=requestAnimationFrame(animate);const dt=Math.min(clock.getDelta(),.05),s=latest.current;
-   const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate||lastState?.day!==s.day;
+   const changed=lastState?.visible!==s.visible||lastState?.selected!==s.selected||lastState?.isolate!==s.isolate||lastState?.day!==s.day||lastState?.env!==s.env;
    const moving=Math.abs(amount-s.explode)>.0001;
    if(moving){amount=T.MathUtils.damp(amount,s.explode,8,dt);dirty=true;}
    if(s.labels!==lastLabels){lastLabels=s.labels;dirty=true;}
@@ -211,22 +222,59 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError}:P
     const nextLayoutKey=visibleParts.map(p=>p.id).join(',')+':'+camera.aspect.toFixed(3);
     if(nextLayoutKey!==layoutKey){const layout=createExplosionLayout(visibleParts,camera.aspect);packingWidth=layout.width;packingHeight=layout.height;atlas.parts.forEach((p,i)=>{const cell=layout.cells.get(p.id);offsets[i]=cell?new T.Vector3(cell.x,cell.y+.85,0):centers[i].clone();});layoutKey=nextLayoutKey;if(amount>.05&&!s.isolate)fit(s.view,Math.max(0,(amount-.3)/.7));}
 
-    // In explode or isolate views the plant is shown fully grown; the timeline drives the assembled view.
-    const eday=amount>.05?120:s.day;
+    // In explode or isolate views the plant is shown fully grown under optimal conditions;
+    // the timeline and environment drive the assembled view. Development runs on thermal time.
+    const inspecting=amount>.05||s.isolate;
+    const env=inspecting?{n:.85,w:1,t:28}:s.env;
+    const eday=inspecting?120:Math.min(120,s.day*devRate(env.t));
+    const drought=1-env.w;
+    const sterility=smooth01((env.t-33)/6);
+    const nSat=Math.min(1,env.n/.85);
+    const tillersAlive=2+Math.round(6*nSat);
+    // lodging: only over-fertilized, heavy, well-watered canopies go down late in the season
+    const lodgeRisk=env.n>.9&&eday>95?smooth01((env.n-.9)/.1)*smooth01((eday-95)/15)*smooth01((env.w-.3)/.4)*(1-.7*sterility):0;
     const prefixes=culmVecs.map((vecs,ci)=>{const arr=[new T.Vector3()];const acc=new T.Vector3();vecs.forEach((v,ni)=>{const pi=culmIndex[ci][ni];acc.addScaledVector(v,1-(pi>=0?(eday>=119.5?1:organGrow(atlas.parts[pi],eday)):1));arr.push(acc.clone());});return arr;});
     atlas.parts.forEach((p,i)=>{
      const c=centers[i],destination=offsets[i];let dx=0,dy=0,dz=0;
      if(amount<=.45){const t=amount/.45;const group=SYSTEMS.findIndex(sys=>sys.id===p.system);const angle=group/SYSTEMS.length*Math.PI*2;dx=Math.sin(angle)*t*.48*hscale;dy=(c.y-midY)*t*.28;dz=Math.cos(angle)*t*.48*hscale;}
      else {const t=(amount-.45)/.55,group=SYSTEMS.findIndex(sys=>sys.id===p.system),angle=group/SYSTEMS.length*Math.PI*2;dx=T.MathUtils.lerp(Math.sin(angle)*.48*hscale,destination.x-c.x,t);dy=T.MathUtils.lerp((c.y-midY)*.28,destination.y-c.y,t);dz=T.MathUtils.lerp(Math.cos(angle)*.48*hscale,-c.z,t);}
-     const g=eday>=119.5?1:organGrow(p,eday);
-     if(eday<119.5&&p.growth&&p.growth.culm>=0){const pre=prefixes[p.growth.culm];if(pre){const d=pre[Math.min(Math.max(p.growth.node,0),pre.length-1)];dx-=d.x;dy-=d.y;dz-=d.z;}}
+     let g=eday>=119.5?1:organGrow(p,eday);
+     const culm=p.growth?.culm??-1;
+     if(eday<119.5&&p.growth&&culm>=0){const pre=prefixes[culm];if(pre){const d=pre[Math.min(Math.max(p.growth.node,0),pre.length-1)];dx-=d.x;dy-=d.y;dz-=d.z;}}
+     // source-sink responses: low N shrinks panicles, drought shrinks blades, heat sterilizes grains
+     if(p.system==='Panicle'||p.system==='Grain')g*=(.78+.22*nSat)*(1-.12*drought);
+     if(p.system==='Grain')g*=1-.3*sterility;
+     if(p.system==='Leaves')g*=1-.12*drought;
+     // mechanics: panicles emerge erect and nod as they fill; overloaded culms lodge late season
+     let qx=0,qy=0,qz=0,qw=1;
+     const isPanicleOrgan=(p.system==='Panicle'||p.system==='Grain')&&p.growth&&p.growth.node>=culmVecs[culm]?.length;
+     let rotated=false;
+     if(!inspecting&&isPanicleOrgan&&culm>=0&&panicleAxis[culm]){
+      const fill=smooth01((eday-(p.growth!.birth+6))/28)*(1-.55*sterility)*(1-.35*drought);
+      const nod=T.MathUtils.degToRad(58)*(1-fill);
+      if(nod>.01){nodQ.setFromAxisAngle(panicleAxis[culm]!,-nod);rotated=true;}else nodQ.identity();
+     }else nodQ.identity();
+     const la=!inspecting&&lodgeRisk>0&&culm>=0?lodgeRisk*lodgeSeverity[culm]*T.MathUtils.degToRad(55):0;
+     if(la>.01){
+      lodgeQ.setFromAxisAngle(lodgeAxis[culm],la);
+      // the lodge rotation pivots at the culm base, not the organ's own anchor
+      tmpV.copy(anchors[i]).sub(culmBase[culm]).applyQuaternion(lodgeQ).add(culmBase[culm]).sub(anchors[i]);
+      dx+=tmpV.x;dy+=tmpV.y;dz+=tmpV.z;
+      lodgeQ.multiply(nodQ);
+      qx=lodgeQ.x;qy=lodgeQ.y;qz=lodgeQ.z;qw=lodgeQ.w;
+     }else if(rotated){qx=nodQ.x;qy=nodQ.y;qz=nodQ.z;qw=nodQ.w;}
+     rotData.set([qx,qy,qz,qw],i*4);
      growthData.set([anchors[i].x,anchors[i].y,anchors[i].z,g],i*4);
      const cb=p.cbirth??-1;
      const ct=cb<0?1:smooth01((eday-cb)/Math.max(.1,p.cdur??1));
-     tmpColor.copy(youngColors[i]).lerp(ripeColors[i],ct);colorData.set([tmpColor.r,tmpColor.g,tmpColor.b,1],i*4);
-     const selected=selection.has(p.id);data.set([dx,dy,dz,(s.isolate?selected:visible.has(p.system)||selected)&&g>.02?1:0],i*4);selectedData[i*4]=selected&&!s.isolate?255:0;
+     tmpColor.copy(youngColors[i]).lerp(ripeColors[i],ct);
+     if(p.system==='Leaves'||p.system==='Sheath'){tmpColor.lerp(N_PALE,(1-nSat)*.5);tmpColor.lerp(DRY_DULL,drought*.32);}
+     if(p.system==='Grain')tmpColor.lerp(STERILE_PALE,sterility*.65);
+     colorData.set([tmpColor.r,tmpColor.g,tmpColor.b,1],i*4);
+     const suppressed=!inspecting&&culm>=tillersAlive&&culm>0;
+     const selected=selection.has(p.id);data.set([dx,dy,dz,(s.isolate?selected:visible.has(p.system)||selected)&&g>.02&&!suppressed?1:0],i*4);selectedData[i*4]=selected&&!s.isolate?255:0;
      markerPositions.set(data[i*4+3]>.5?[c.x+dx,c.y+dy,c.z+dz]:[10000,10000,10000],i*3);const mesh=pickers[i];if(mesh){mesh.position.set(dx,dy,dz);mesh.updateMatrix();mesh.updateMatrixWorld(true);}
-    });partTexture.needsUpdate=true;selectionTexture.needsUpdate=true;growthTexture.needsUpdate=true;colorTexture.needsUpdate=true;markerGeometry.attributes.position.needsUpdate=true;lastState=s;lastExtent=amount;dirty=true;
+    });partTexture.needsUpdate=true;selectionTexture.needsUpdate=true;growthTexture.needsUpdate=true;colorTexture.needsUpdate=true;rotTexture.needsUpdate=true;markerGeometry.attributes.position.needsUpdate=true;lastState=s;lastExtent=amount;dirty=true;
    }
    if(s.view!==lastView||s.reset!==lastReset){fit(s.view,amount);lastView=s.view;lastReset=s.reset;lastDayFitted=s.day;}
    if(Math.abs(lastDayFitted-s.day)>.4&&amount<.1&&!s.isolate){fit(s.view,amount);lastDayFitted=s.day;}

@@ -124,3 +124,12 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 .grow-play:hover{background:#fff}
 .phenology-tag{font-size:10px;font-weight:500;letter-spacing:.05em;color:#5b7a52;background:#eef3ea;border:1px solid #4f86361a;border-radius:999px;padding:3px 9px;margin-left:auto;margin-right:9px;white-space:nowrap}
 @media(max-width:767px){.bottom-dock{width:auto}.dock-controls{gap:10px}.grow-control{padding-bottom:9px}.phenology-tag{font-size:9px;padding:2px 7px}}
+
+/* Environment sliders in the systems panel. */
+.env-section{border-top:1px solid #18253612;padding:12px 3px 4px}
+.env-title{font-size:11px;font-weight:600;letter-spacing:.09em;color:#68727d;text-transform:uppercase;margin-bottom:10px}
+.env-row{display:flex;align-items:center;gap:10px;min-height:32px}
+.env-row label{font-size:11px;color:#65717e;width:56px;flex-shrink:0}
+.env-row [data-slot=slider]{flex:1;padding:8px 0}
+.env-row span{font-size:10px;font-variant-numeric:tabular-nums;color:#7c8793;width:34px;text-align:right;flex-shrink:0}
+@media(max-width:767px){.env-row{min-height:40px}.env-row label{font-size:12px}}

@@ -12,8 +12,12 @@ export interface Part {id:string;name:string;conceptId:string;system:SystemId;co
 export interface Concept {id:string;name:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number;growthCulms?:number[][][]}
 export type View = 'three-quarter'|'front'|'back'|'side';
-export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number;labels:boolean;day:number}
+export interface Environment {n:number;w:number;t:number}
+export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number;labels:boolean;day:number;env:Environment}
 export const SEASON_END=120;
+export const DEFAULT_ENV:Environment={n:.85,w:1,t:28};
+// Development runs on thermal time: cool seasons stretch it, hot ones compress it.
+export const devRate=(t:number)=>Math.max(.5,Math.min(1.35,(t-8)/20));
 export function phenology(day:number){
  if(day<6)return 'Germination';
  if(day<18)return 'Seedling';
