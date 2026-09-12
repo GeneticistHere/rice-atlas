@@ -1,11 +1,13 @@
 # Rice Plant Atlas
 
-An interactive 3D atlas of a rice plant (*Oryza sativa*) built with React, Three.js, and shadcn/ui. Explore a procedurally generated plant across **four growth stages** — seedling, tillering, heading, and maturity — with up to **394 individually selectable organs** in **6 botanical systems**, from single awned grains on a panicle branch down to individual adventitious roots.
+An interactive 3D atlas of a rice plant (*Oryza sativa*) built with React, Three.js, and shadcn/ui. A procedurally generated plant grows through a full **120-day season** in a reflective paddy scene, with **530 individually selectable organs** in **6 botanical systems**, from single awned grains on a panicle branch down to individual adventitious roots.
 
 ## Explore
 
 - Orbit, zoom, and tap any organ on the plant to inspect it — with real morphometrics (blade length and width, internode diameter, grains per branch) in the detail panel.
-- Switch growth stages: a four-leaf seedling, a vivid green tillering plant, green semi-erect panicles at heading, and the golden nodding plant at maturity.
+- **Grow the plant**: scrub or play the season timeline from germination to maturity. Development runs on thermal time, phenology stages are named as you go, and a live **yield readout** (filled grains, grams per plant, t/ha) responds to everything below.
+- **Stress the environment**: nitrogen, water, and temperature sliders drive source–sink responses — small pale panicles under low N, shrunken blades in drought, tiller suppression — and an optional **heat wave at flowering** sterilizes exactly the panicles whose flowering window it overlaps. Over-fertilized, well-watered canopies can lodge late in the season.
+- **Photo mode**: a path-traced still of the current plant and paddy, with physically rendered water reflections, saveable as PNG.
 - Toggle **figure labels**: textbook-style callouts naming the canonical organs, clickable and drawn with leader lines.
 - Take the **guided tour** — "follow the grain" from the roots up through culms, sheaths, blades, the flag leaf, and the panicle, ending inside a grain.
 - Toggle botanical systems (grains, panicle branches, leaf blades, sheaths, culms, roots) or use the Shoot / Panicle / Roots presets.
@@ -34,10 +36,11 @@ The geometry is a functional-structural plant model generated entirely in code b
 - A **fibrous root system** of 44 adventitious roots with fine laterals.
 - **Per-organ color**: every organ carries its own tint — lower leaves and internodes age toward straw yellow, upper blades stay deep green, and each panicle ripens on its own schedule — rendered through a per-part color texture in the shader.
 - **Finer organs**: a ligule-and-auricle collar at every sheath–blade junction, and a grain sliced in cross-section on the main culm's panicle, with the husk, endosperm, and embryo as separate selectable parts.
-- **Four stages** from one parameterized generator: each stage has its own architecture, organ counts, palettes, and panicle state.
+- **Four stages** from one parameterized generator — seedling, tillering, heading, maturity — each with its own architecture, organ counts, palettes, and panicle state. The viewer animates the maturity architecture continuously through the season; all four stages are exported as glTF.
 - **Per-vertex shading**: every vertex carries a tint multiplier — base-to-tip blade gradients with senescent browned tips, dark node rings and waxy bloom on the internodes, roots darkening toward the crown, and grains ripening basally-first along each branch.
 - **Surface detail**: parallel-vein corrugation and a keeled midrib on every blade, five lemma ridges on every grain, culms that kink slightly at each node, a spent seed on the seedling's crown, and senesced brown leaves hanging at maturity.
-- **Studio realism**: soft shadow mapping (with a custom depth pass so hidden organs cast no shadows), per-system material finish, backlit-leaf translucency, and a gentle idle wind that stills when you isolate an organ (and honors reduced-motion preferences).
+- **A living paddy**: the plant stands on a mud hummock in still water that mirrors it to a fogged horizon, under a gradient sky whose light follows the season — cool clear mornings while the crop is vegetative, a high neutral sun mid-season, low amber light as the grain ripens. Pollen motes drift on the wind and thicken around anthesis.
+- **Rendering**: soft shadow mapping (with a custom depth pass so hidden organs cast no shadows), per-system material finish, backlit-leaf translucency, HDR bloom that steps aside in the technical atlas and isolate views, eased cinematic camera moves, and a gentle idle wind that stills when you isolate an organ (and honors reduced-motion preferences).
 
 Proportions and architecture follow the real plant, but this is a conceptual educational model, not a scan of a specimen.
 
