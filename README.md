@@ -17,6 +17,15 @@ An interactive 3D atlas of a rice plant (*Oryza sativa*) built with React, Three
 - Search named structures - flag leaves, panicle rachises, ligules, the grain in cross-section.
 - Isolate a selected organ and read a short botanical explanation.
 
+## The interface in action
+
+| | |
+|:---:|:---:|
+| **Tap to inspect and search** - select any organ for real morphometrics, isolate it, or find a named structure | **Figure labels and guided tour** - textbook callouts, then an eight-stop tour from the roots to the grain |
+| ![Tapping a panicle branch opens its detail panel with branch length and grain count, then the search panel isolates the main culm](docs/demo-inspect.gif) | ![Figure labels name the canonical organs, then the guided tour visits the root system and the culms](docs/demo-tour.gif) |
+| **Stress the environment** - nitrogen, water, and a heat wave at flowering, with the yield readout responding live | **Take it apart** - solo a system, explode every organ into a spaced inventory, orbit, and enter the path-traced photo mode |
+| ![Lowering nitrogen and water shrinks the canopy and the yield readout, and the heat wave at flowering sterilizes panicles](docs/demo-environment.gif) | ![The grains system alone, then the plant explodes into separated organs, rotates, and renders in photo mode](docs/demo-anatomy.gif) |
+
 ## Run locally
 
 Requires Node.js 22.13 or newer. No API keys or accounts are needed.
