@@ -1,5 +1,7 @@
 # Rice Plant Atlas
 
+![A rice plant growing through a 120-day season in a reflective paddy, from germination to golden maturity](docs/demo.gif)
+
 An interactive 3D atlas of a rice plant (*Oryza sativa*) built with React, Three.js, and shadcn/ui. A procedurally generated plant grows through a full **120-day season** in a reflective paddy scene, with **530 individually selectable organs** in **6 botanical systems**, from single awned grains on a panicle branch down to individual adventitious roots.
 
 ## Explore
