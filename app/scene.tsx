@@ -289,7 +289,7 @@ export default function AnatomyScene({atlas,state,onSelect,onProgress,onError,on
   // Shared time/sway uniforms drive a gentle wind in both the beauty and shadow passes.
   const timeU={value:0},swayU={value:0},reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
   moteDrift.value=reduceMotion?0:1;
-  // The phase depends only on rest position so touching organs sway as one piece —
+  // The phase depends only on rest position so touching organs sway as one piece -
   // a per-part phase term detaches panicles from culm tips and grains from branches.
   const SWAY_VERTEX='float swayGate = smoothstep(0.25, 1.6, transformed.y); float swayPhase = time*1.35 + position.y*2.1 + position.x*1.6; transformed += vec3(sin(swayPhase), 0.0, 0.8*cos(swayPhase*0.77)) * (sway * 0.009 * swayGate);';
   const GROW_VERTEX='vec4 grow = texture2D(growthState, stateUv); vec3 gpv = (transformed - grow.xyz) * grow.w; gpv += 2.0 * cross(rq.xyz, cross(rq.xyz, gpv) + rq.w * gpv); transformed = grow.xyz + gpv;';

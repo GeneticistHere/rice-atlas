@@ -1,7 +1,7 @@
 {
   "name": "rice-plant-atlas",
   "version": "1.0.0",
-  "description": "Interactive 3D atlas of a rice plant (Oryza sativa) growing through a 120-day season in a living paddy — procedural FSPM geometry, environmental simulation, and a path-traced photo mode.",
+  "description": "Interactive 3D atlas of a rice plant (Oryza sativa) growing through a 120-day season in a living paddy - procedural FSPM geometry, environmental simulation, and a path-traced photo mode.",
   "private": true,
   "engines": {
     "node": ">=22.13.0"
